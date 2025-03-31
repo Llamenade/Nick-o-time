@@ -392,19 +392,16 @@ theme_override_styles/focus = SubResource("StyleBoxTexture_aw4pm")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_jbg7k")
 theme_override_styles/normal = SubResource("StyleBoxTexture_12xvn")
 
-[node name="cog1" type="Node2D" parent="Center/Industrial_Age/Button8"]
+[node name="Cog_1" type="Sprite2D" parent="Center/Industrial_Age/Button8"]
+process_mode = 3
 position = Vector2(19, 19)
-
-[node name="Cog_1" type="Sprite2D" parent="Center/Industrial_Age/Button8/cog1"]
-process_mode = 3
 texture = ExtResource("12_e6iiq")
 
-[node name="cog2" type="Node2D" parent="Center/Industrial_Age/Button8"]
-position = Vector2(109, 19)
-
-[node name="Cog_2" type="Sprite2D" parent="Center/Industrial_Age/Button8/cog2"]
+[node name="Cog_2" type="Sprite2D" parent="Center/Industrial_Age/Button8"]
 process_mode = 3
+position = Vector2(19, 19)
 texture = ExtResource("12_e6iiq")
+offset = Vector2(90, 0)
 
 [node name="Stone_Age" type="Node2D" parent="Center"]
 process_mode = 3
