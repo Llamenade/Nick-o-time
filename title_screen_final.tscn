@@ -1,0 +1,68 @@
+[gd_scene load_steps=5 format=3 uid="uid://bjwstmtbwwump"]
+
+[ext_resource type="Script" uid="uid://bnnsmmh0mia25" path="res://title_screen.gd" id="1_cbind"]
+[ext_resource type="PackedScene" uid="uid://duxf4iwwplk02" path="res://notfinalscenes/title_screen.tscn" id="1_qyeod"]
+[ext_resource type="Theme" uid="uid://cw4t4ausswxid" path="res://Nick O. Time Assets/nikotime/newgame.tres" id="3_a7344"]
+[ext_resource type="Theme" uid="uid://bfjxxqkg0w2ms" path="res://Nick O. Time Assets/nikotime/quit_theme.tres" id="4_eknjh"]
+
+[node name="Title_Screen_Final" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_cbind")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+stretch_shrink = 3
+
+[node name="SubViewport" type="SubViewport" parent="CanvasLayer/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(640, 360)
+render_target_update_mode = 4
+
+[node name="Title_Screen" parent="CanvasLayer/SubViewportContainer/SubViewport" instance=ExtResource("1_qyeod")]
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer2"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.00002, 0.99844)
+size_flags_vertical = 4
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer2/HBoxContainer"]
+z_index = 14
+layout_mode = 2
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="Seperator2" type="Control" parent="CanvasLayer2/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="New_Game" type="Button" parent="CanvasLayer2/HBoxContainer/VBoxContainer"]
+z_index = 12
+texture_filter = 1
+custom_minimum_size = Vector2(192, 51)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme = ExtResource("3_a7344")
+action_mode = 0
+
+[node name="Seperator3" type="Control" parent="CanvasLayer2/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Quit_Game" type="Button" parent="CanvasLayer2/HBoxContainer/VBoxContainer"]
+texture_filter = 1
+custom_minimum_size = Vector2(64, 51)
+layout_mode = 2
+theme = ExtResource("4_eknjh")

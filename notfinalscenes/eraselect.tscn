@@ -1,0 +1,547 @@
+[gd_scene load_steps=50 format=3 uid="uid://djer4jfwcq4ll"]
+
+[ext_resource type="Script" uid="uid://dsyy8hacib6mr" path="res://eraselect.gd" id="1_xdc4v"]
+[ext_resource type="Texture2D" uid="uid://dbiikkglmjipr" path="res://Nick O. Time Assets/hub/eraselect/dinosaur/dinosaurhover.png" id="2_u4ghk"]
+[ext_resource type="Texture2D" uid="uid://dswedcaetv5y3" path="res://Nick O. Time Assets/hub/eraselect/dinosaur/dinosaurnormal.png" id="3_ernjp"]
+[ext_resource type="Texture2D" uid="uid://bhym520xxhjht" path="res://Nick O. Time Assets/hub/eraselect/gunpowder/gunpowderhoveralt.png" id="4_a0f4b"]
+[ext_resource type="Shader" uid="uid://burg1kocvxqml" path="res://pause.gdshader" id="4_ernjp"]
+[ext_resource type="Texture2D" uid="uid://cg5sncayqsdha" path="res://Nick O. Time Assets/hub/eraselect/ice/icehover.png" id="4_f12va"]
+[ext_resource type="Texture2D" uid="uid://dqyughjgcev2k" path="res://Nick O. Time Assets/hub/eraselect/ice/icenormal.png" id="5_7pxa0"]
+[ext_resource type="Texture2D" uid="uid://dfmiw6sya0vwy" path="res://Nick O. Time Assets/hub/eraselect/clockbackground.png" id="5_e80fu"]
+[ext_resource type="Texture2D" uid="uid://5bd3r8rsdg81" path="res://Nick O. Time Assets/hub/eraselect/gunpowder/gunpowdernormalalt.png" id="6_fi5ao"]
+[ext_resource type="Texture2D" uid="uid://3333i8527jne" path="res://Nick O. Time Assets/hub/eraselect/stone/stonehover.png" id="6_lla6e"]
+[ext_resource type="Texture2D" uid="uid://dt7ph2uxo8t12" path="res://Nick O. Time Assets/hub/eraselect/medieval/medievalhover.png" id="6_tkx47"]
+[ext_resource type="Texture2D" uid="uid://cpi1aueyunjy6" path="res://Nick O. Time Assets/hub/eraselect/stone/stonenormal.png" id="7_lla6e"]
+[ext_resource type="Texture2D" uid="uid://5x1jy26snshn" path="res://Nick O. Time Assets/hub/eraselect/medieval/medievalnormal.png" id="7_ouhtr"]
+[ext_resource type="Texture2D" uid="uid://cwcc4ukqs460p" path="res://Nick O. Time Assets/hub/eraselect/bronze/bronzehover.png" id="8_nboi5"]
+[ext_resource type="Texture2D" uid="uid://4bv3pba84fmw" path="res://Nick O. Time Assets/hub/eraselect/iron/ironhover.png" id="8_qqtaj"]
+[ext_resource type="Texture2D" uid="uid://c8ynh3iil8iyx" path="res://Nick O. Time Assets/hub/eraselect/bronze/bronzenormal.png" id="9_52ica"]
+[ext_resource type="Texture2D" uid="uid://j33vrqvbsca0" path="res://Nick O. Time Assets/hub/eraselect/iron/ironnormal.png" id="9_b0d7j"]
+[ext_resource type="FontFile" uid="uid://d2hyaen0c6in1" path="res://fonts/Minercraftory.ttf" id="14_b0d7j"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e80fu"]
+texture = ExtResource("2_u4ghk")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_esnts"]
+texture = ExtResource("2_u4ghk")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mpl5u"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hfscq"]
+texture = ExtResource("3_ernjp")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_udhfg"]
+texture = ExtResource("4_a0f4b")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ijacn"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fi5ao"]
+texture = ExtResource("6_fi5ao")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f12va"]
+texture = ExtResource("4_f12va")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m3sv1"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lla6e"]
+texture = ExtResource("5_7pxa0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bovlk"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0r51a"]
+texture = ExtResource("6_tkx47")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tdd76"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a0f4b"]
+texture = ExtResource("7_ouhtr")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jbg7k"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nboi5"]
+texture = ExtResource("6_lla6e")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e6iiq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_52ica"]
+texture = ExtResource("7_lla6e")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yl5gj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_15u35"]
+texture = ExtResource("8_qqtaj")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0awo8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tkx47"]
+texture = ExtResource("9_b0d7j")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_glbd2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qqtaj"]
+texture = ExtResource("8_nboi5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7t7b4"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b0d7j"]
+texture = ExtResource("9_52ica")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p6l82"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_e80fu"]
+shader = ExtResource("4_ernjp")
+shader_parameter/lod = 0.0
+
+[sub_resource type="Animation" id="Animation_e80fu"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/lod")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Center:modulate:r")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Center:modulate:g")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Center:modulate:b")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Center:modulate:a")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("TextureRect:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ernjp"]
+resource_name = "pause"
+length = 0.3
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/lod")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.15, 0, 0.15, 0, 0.704, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Center:modulate:r")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.15, 0, 0.15, 0, 1, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Center:modulate:g")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.15, 0, 0.15, 0, 1, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Center:modulate:b")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.15, 0, 0.15, 0, 1, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Center:modulate:a")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.15, 0, 0.15, 0, 1, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("TextureRect:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_esnts"]
+_data = {
+&"RESET": SubResource("Animation_e80fu"),
+&"pause": SubResource("Animation_ernjp")
+}
+
+[node name="EraSelect" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xdc4v")
+
+[node name="Center" type="Node2D" parent="."]
+process_mode = 3
+modulate = Color(1, 1, 1, 0)
+z_index = 11
+position = Vector2(1090, 3510)
+scale = Vector2(3, 3)
+
+[node name="Dinosaur_Age" type="Node2D" parent="Center"]
+process_mode = 3
+position = Vector2(-43, -839)
+
+[node name="Button1" type="Button" parent="Center/Dinosaur_Age"]
+process_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -65.0
+offset_top = -19.0
+offset_right = 65.0
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = SubResource("StyleBoxTexture_e80fu")
+theme_override_styles/hover = SubResource("StyleBoxTexture_esnts")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mpl5u")
+theme_override_styles/normal = SubResource("StyleBoxTexture_hfscq")
+
+[node name="Gunpowder_Age" type="Node2D" parent="Center"]
+process_mode = 3
+position = Vector2(43.0001, 839)
+rotation = -3.14159
+
+[node name="Button7" type="Button" parent="Center/Gunpowder_Age"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -66.0
+offset_top = -20.0
+offset_right = 66.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = SubResource("StyleBoxTexture_udhfg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ijacn")
+theme_override_styles/normal = SubResource("StyleBoxTexture_fi5ao")
+
+[node name="Ice_Age" type="Node2D" parent="Center"]
+process_mode = 3
+position = Vector2(382.261, -748.095)
+rotation = -5.75959
+
+[node name="Button2" type="Button" parent="Center/Ice_Age"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -65.0
+offset_top = -19.0
+offset_right = 65.0
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = SubResource("StyleBoxTexture_f12va")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_m3sv1")
+theme_override_styles/normal = SubResource("StyleBoxTexture_lla6e")
+
+[node name="Apocalypse_Age" type="Node2D" parent="Center"]
+process_mode = 3
+position = Vector2(-456.739, -705.095)
+rotation = -0.523599
+
+[node name="Button12" type="Button" parent="Center/Apocalypse_Age"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.5
+offset_top = -17.0
+offset_right = 64.5
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/pressed = SubResource("StyleBoxTexture_bovlk")
+text = "Apocalypse Age"
+
+[node name="Medieval_Age" type="Node2D" parent="Center"]
+process_mode = 3
+position = Vector2(456.739, 705.095)
+rotation = -3.66519
+
+[node name="Button6" type="Button" parent="Center/Medieval_Age"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -65.0
+offset_top = -19.0
+offset_right = 65.0
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = SubResource("StyleBoxTexture_0r51a")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_tdd76")
+theme_override_styles/normal = SubResource("StyleBoxTexture_a0f4b")
+
+[node name="Industrial_Age" type="Node2D" parent="Center"]
+process_mode = 3
+position = Vector2(-382.261, 748.095)
+rotation = -2.61799
+
+[node name="Button8" type="Button" parent="Center/Industrial_Age"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -17.0
+offset_right = 64.0
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/pressed = SubResource("StyleBoxTexture_jbg7k")
+text = "Industrial Age"
+
+[node name="Stone_Age" type="Node2D" parent="Center"]
+process_mode = 3
+position = Vector2(705.095, -456.739)
+rotation = -5.23599
+
+[node name="Button3" type="Button" parent="Center/Stone_Age"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -65.0
+offset_top = -19.0
+offset_right = 65.0
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = SubResource("StyleBoxTexture_nboi5")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_e6iiq")
+theme_override_styles/normal = SubResource("StyleBoxTexture_52ica")
+
+[node name="Future_Age" type="Node2D" parent="Center"]
+process_mode = 3
+position = Vector2(-748.095, -382.261)
+rotation = -1.0472
+
+[node name="Button11" type="Button" parent="Center/Future_Age"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -17.0
+offset_right = 64.0
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/pressed = SubResource("StyleBoxTexture_yl5gj")
+text = "Future Age"
+
+[node name="Iron_Age" type="Node2D" parent="Center"]
+position = Vector2(748.095, 382.261)
+rotation = -4.18879
+
+[node name="Button5" type="Button" parent="Center/Iron_Age"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -65.0
+offset_top = -19.0
+offset_right = 65.0
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = SubResource("StyleBoxTexture_15u35")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_0awo8")
+theme_override_styles/normal = SubResource("StyleBoxTexture_tkx47")
+
+[node name="War_Age" type="Node2D" parent="Center"]
+position = Vector2(-705.095, 456.739)
+rotation = -2.0944
+
+[node name="Button9" type="Button" parent="Center/War_Age"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -17.0
+offset_right = 64.0
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/pressed = SubResource("StyleBoxTexture_glbd2")
+text = "War Age"
+
+[node name="Bronze_Age" type="Node2D" parent="Center"]
+position = Vector2(839, -43)
+rotation = -4.71239
+
+[node name="Button4" type="Button" parent="Center/Bronze_Age"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -65.0
+offset_top = -19.0
+offset_right = 65.0
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = SubResource("StyleBoxTexture_qqtaj")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_7t7b4")
+theme_override_styles/normal = SubResource("StyleBoxTexture_b0d7j")
+
+[node name="Modern_Age" type="Node2D" parent="Center"]
+position = Vector2(-839, 43)
+rotation = -1.5708
+
+[node name="Button10" type="Button" parent="Center/Modern_Age"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -17.0
+offset_right = 64.0
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/pressed = SubResource("StyleBoxTexture_p6l82")
+text = "Modern Age"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = 9
+texture_filter = 1
+material = SubResource("ShaderMaterial_e80fu")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+process_mode = 3
+libraries = {
+&"": SubResource("AnimationLibrary_esnts")
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+z_index = 10
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_e80fu")
+
+[node name="Label" type="RichTextLabel" parent="."]
+z_index = 10
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -479.0
+offset_bottom = 68.0
+grow_horizontal = 0
+theme_override_colors/default_color = Color(0.806161, 0.806161, 0.806161, 1)
+theme_override_fonts/normal_font = ExtResource("14_b0d7j")
+theme_override_font_sizes/normal_font_size = 40
+text = "Dinosaur Age"
+horizontal_alignment = 1
+vertical_alignment = 1

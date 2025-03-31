@@ -1,0 +1,17 @@
+~ start
+
+...: [wait=1] its finally that time... [wait=1] nick
+...: I can finally bestow my power upon you
+...: to bring order and peace to the timeline
+...: Are you up for the challenge?
+- Yes
+	do show_clock()
+- No
+	do quit_on_no()
+Father Time: [wait=2] here... [wait=0.5] take this clock
+Father Time: and with it the power to travel time
+Father Time: and bring peace
+- Ok
+	do to_game_on_ok()
+
+=> END

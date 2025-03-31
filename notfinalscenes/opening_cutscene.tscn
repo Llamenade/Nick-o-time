@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://cepy7sth3vg1f"]
+
+[ext_resource type="Script" uid="uid://cvcmvt30h0ctm" path="res://Nick O. Time Assets/nikotime/opening_cutscene.gd" id="1_ueos4"]
+[ext_resource type="Resource" uid="uid://dx8rgrofbi237" path="res://dialogue/openingscene.dialogue" id="2_cjbby"]
+[ext_resource type="PackedScene" uid="uid://djyqp0funp8oe" path="res://Nick O. Time Assets/nikotime/transition_screen.tscn" id="2_ueos4"]
+[ext_resource type="Texture2D" uid="uid://daob3t0y6kgo" path="res://Nick O. Time Assets/titlescreen/opening_cutscene_background.png" id="3_k7xk1"]
+
+[node name="Opening_Cutscene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ueos4")
+dialogue_resource = ExtResource("2_cjbby")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_k7xk1")
+stretch_mode = 5
+
+[node name="TransitionScreen" parent="TextureRect" instance=ExtResource("2_ueos4")]
+layout_mode = 1

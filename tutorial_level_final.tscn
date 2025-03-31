@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4l532d6i2uj7"]
+
+[ext_resource type="PackedScene" uid="uid://trgqs7wgrk2w" path="res://notfinalscenes/platform.tscn" id="1_3gs1v"]
+
+[node name="Tutorial_Level_Final" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+stretch_shrink = 3
+
+[node name="SubViewport" type="SubViewport" parent="CanvasLayer/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(640, 360)
+render_target_update_mode = 4
+
+[node name="Node2D" parent="CanvasLayer/SubViewportContainer/SubViewport" instance=ExtResource("1_3gs1v")]
