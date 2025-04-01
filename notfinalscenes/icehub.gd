@@ -8,7 +8,7 @@ extends Node3D
 # Store the globe's rotation as Euler angles
 var rotation_x: float = 90
 var rotation_z: float = 0  # Tilt (up/down)
-var rotation_y: float = 0  # Spin (left/right)
+var rotation_y: float = 24  # Spin (left/right)
 
 # Function to apply texture directly to the sphere
 	

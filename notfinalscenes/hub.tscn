@@ -1,32 +1,21 @@
-[gd_scene load_steps=13 format=3 uid="uid://dr37dgv808p2t"]
+[gd_scene load_steps=12 format=3 uid="uid://dr37dgv808p2t"]
 
 [ext_resource type="Script" uid="uid://1j4gddcl6dcy" path="res://hub.gd" id="1_hjueh"]
-[ext_resource type="Texture2D" uid="uid://b5mwvkmcny457" path="res://Nick O. Time Assets/hub/mercator.png" id="2_hjueh"]
+[ext_resource type="Texture2D" uid="uid://b5mwvkmcny457" path="res://Nick O. Time Assets/hub/mercator.png" id="2_g73tb"]
 [ext_resource type="Shader" uid="uid://dmsdlaivdn51h" path="res://outline.gdshader" id="3_w7r13"]
 
-[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_w7r13"]
-shading_mode = 0
-specular_mode = 1
-albedo_texture = ExtResource("2_hjueh")
-orm_texture = ExtResource("2_hjueh")
-heightmap_scale = 1.15
-texture_filter = 0
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w7r13"]
-render_priority = 1
-albedo_texture = ExtResource("2_hjueh")
-emission_enabled = true
-emission_texture = ExtResource("2_hjueh")
-backlight = Color(1, 1, 1, 1)
-texture_filter = 0
-
-[sub_resource type="SphereMesh" id="SphereMesh_ysrp0"]
-lightmap_size_hint = Vector2i(3, 4)
-material = SubResource("StandardMaterial3D_w7r13")
+[sub_resource type="SphereMesh" id="SphereMesh_g73tb"]
 radial_segments = 128
 rings = 64
 
 [sub_resource type="Skin" id="Skin_w7r13"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_syogv"]
+albedo_texture = ExtResource("2_g73tb")
+emission_enabled = true
+emission_energy_multiplier = 0.8
+emission_texture = ExtResource("2_g73tb")
+texture_filter = 0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ysrp0"]
 render_priority = 0
@@ -50,12 +39,12 @@ script = ExtResource("1_hjueh")
 [node name="Sphere" type="MeshInstance3D" parent="."]
 transform = Transform3D(1.91069e-15, 4.37114e-08, -1, 1, -4.37114e-08, 0, -4.37114e-08, -1, -4.37114e-08, 0, 0, 0)
 sorting_use_aabb_center = false
-material_override = SubResource("ORMMaterial3D_w7r13")
 cast_shadow = 0
 gi_mode = 0
 gi_lightmap_texel_scale = 0.01
-mesh = SubResource("SphereMesh_ysrp0")
+mesh = SubResource("SphereMesh_g73tb")
 skin = SubResource("Skin_w7r13")
+surface_material_override/0 = SubResource("StandardMaterial3D_syogv")
 
 [node name="outline" type="MeshInstance3D" parent="."]
 transform = Transform3D(1.90799e-15, 4.36496e-08, -0.998587, 0.998587, -4.36496e-08, 0, -4.36496e-08, -0.998587, -4.36496e-08, 0, 0, 0)

@@ -2,8 +2,10 @@ extends Control
 
 @onready var center: Node2D = $Center
 @onready var label: RichTextLabel = $Label
-@onready var cog_1: Node2D = $Center/Industrial_Age/Button8/cog1  # Now uses Node2D
-@onready var cog_2: Node2D = $Center/Industrial_Age/Button8/cog2  # Now uses Node2D
+@onready var cog_1: Node2D = $Center/Industrial_Age/Button8/cog1
+@onready var cog_2: Node2D = $Center/Industrial_Age/Button8/cog2
+@onready var ice_filter: Control = $icefilter/controlicefilter
+@onready var sphere: MeshInstance3D = $Sphere
 
 @onready var buttons: Array = [
 	$Center/Dinosaur_Age/Button1, $Center/Ice_Age/Button2, $Center/Stone_Age/Button3,
@@ -25,27 +27,65 @@ var button_names: Array = [
 ]
 
 @export var tween_duration: float = 0.05
-@export var cog_rotation_speed: float = 100  # Adjust rotation speed
+@export var cog_rotation_speed: float = 100
+@export var ice_texture: Texture
+@export var default_texture: Texture
+
+@onready var subviewport = $"../SubViewportContainer/SubViewport"  # Adjust path if needed
+
+var hub_scene = preload("res://notfinalscenes/hub.tscn")  # Preload hub scene
+var icehub_scene = preload("res://notfinalscenes/icehub.tscn")  # Preload icehub scene
+var current_instance: Node = null  # Track the current scene instance
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	buttons[current_index].grab_focus()
 	$AnimationPlayer.play("RESET")
 
-	for button in buttons:
-		button.pivot_offset = button.size / 2
-		button.scale = Vector2(0.5, 0.5)
+	# Initialize ice filter transparency
+	ice_filter.modulate.a = 0.0  
 
+	# Set up button scaling and connections
 	for i in range(buttons.size()):
+		buttons[i].pivot_offset = buttons[i].size / 2
+		buttons[i].scale = Vector2(0.5, 0.5)
 		buttons[i].connect("pressed", Callable(self, "_on_button_pressed").bind(i))
+
+	# Instantiate the hub scene on start
+	switch_scene(hub_scene)
 
 func _process(delta: float) -> void:
 	btn_focused(buttons[current_index])
 
-	# Rotate cogs **only** when Button8 is focused
+	# Rotate cogs only when Button8 is focused
 	if rotating_cogs:
 		cog_1.rotation_degrees += cog_rotation_speed * delta  # Clockwise
 		cog_2.rotation_degrees -= cog_rotation_speed * delta  # Counterclockwise
+
+func _on_button_pressed(index: int) -> void:
+	label.text = button_names[index]
+	
+	# Check if "Ice Age" is selected
+	var is_ice_age = (button_names[index] == "Ice Age")
+	fade_ice_filter(is_ice_age)  # Apply fade effect
+
+	# Load the correct scene
+	if is_ice_age:
+		switch_scene(icehub_scene)
+	else:
+		switch_scene(hub_scene)
+
+	resume()
+
+func switch_scene(new_scene: PackedScene) -> void:
+	# Remove the current scene if one exists
+	if current_instance:
+		subviewport.remove_child(current_instance)
+		current_instance.queue_free()  # Free memory
+	
+	# Instantiate and add the new scene
+	current_instance = new_scene.instantiate()
+	subviewport.add_child(current_instance)
 
 func btn_focused(button: Button):
 	button.pivot_offset = button.size / 2
@@ -55,7 +95,6 @@ func btn_focused(button: Button):
 	else:
 		start_tween(button, "scale", Vector2(0.5, 0.5), tween_duration)
 
-	# Check if Industrial Age (Button8) is focused
 	rotating_cogs = (button == buttons[7])  # Index 7 is Button8
 
 	button.position = button.position.floor()
@@ -65,10 +104,6 @@ func toggle_menu() -> void:
 	get_tree().paused = true
 	last_focused_button = current_index
 	buttons[last_focused_button].grab_focus()
-
-func _on_button_pressed(index: int) -> void:
-	label.text = button_names[index]
-	resume()
 
 func resume() -> void:
 	$AnimationPlayer.play_backwards("pause")
@@ -113,3 +148,8 @@ func start_tween(object: Object, property: String, final_val: Variant, duration:
 	var tween = create_tween()
 	tween.tween_property(object, property, final_val, duration)
 	object.set_meta("active_tween", tween)
+
+# Fades the IceFilter in or out over 0.2 seconds
+func fade_ice_filter(visible: bool):
+	var tween = create_tween()
+	tween.tween_property(ice_filter, "modulate:a", 1.0 if visible else 0.0, 0.2)

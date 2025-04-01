@@ -20,6 +20,7 @@ run/size/viewport_width=1920
 [autoload]
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+Global="*res://global.gd"
 
 [dialogue_manager]
 
@@ -29,7 +30,6 @@ runtime/balloon_path="res://dialogue/balloon.tscn"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-window/size/mode=3
 window/size/borderless=true
 window/stretch/mode="viewport"
 

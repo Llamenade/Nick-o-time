@@ -1,9 +1,7 @@
-[gd_scene load_steps=72 format=3 uid="uid://djer4jfwcq4ll"]
+[gd_scene load_steps=70 format=3 uid="uid://djer4jfwcq4ll"]
 
 [ext_resource type="Script" uid="uid://dsyy8hacib6mr" path="res://eraselect.gd" id="1_xdc4v"]
-[ext_resource type="Texture2D" uid="uid://brhb4x1jx5mru" path="res://Nick O. Time Assets/hub/eraselect/ice/mercatoriceage.png" id="2_12xvn"]
 [ext_resource type="Texture2D" uid="uid://dbiikkglmjipr" path="res://Nick O. Time Assets/hub/eraselect/dinosaur/dinosaurhover.png" id="2_u4ghk"]
-[ext_resource type="Texture2D" uid="uid://b5mwvkmcny457" path="res://Nick O. Time Assets/hub/mercator.png" id="3_cx2l6"]
 [ext_resource type="Texture2D" uid="uid://dswedcaetv5y3" path="res://Nick O. Time Assets/hub/eraselect/dinosaur/dinosaurnormal.png" id="3_ernjp"]
 [ext_resource type="Texture2D" uid="uid://bhym520xxhjht" path="res://Nick O. Time Assets/hub/eraselect/gunpowder/gunpowderhoveralt.png" id="4_a0f4b"]
 [ext_resource type="Shader" uid="uid://burg1kocvxqml" path="res://pause.gdshader" id="4_ernjp"]
@@ -280,23 +278,15 @@ particle_flag_disable_z = true
 emission_shape_offset = Vector3(970, -30, 0)
 emission_shape = 3
 emission_box_extents = Vector3(1000, 10, 1)
-angle_min = 66.8
-angle_max = 720.0
+angle_min = -720.0
+angle_max = -720.0
 angular_velocity_min = -1.60933e-05
 angular_velocity_max = -1.60933e-05
-gravity = Vector3(0, 175, 0)
-hue_variation_min = 0.00999998
-hue_variation_max = 0.00999998
-turbulence_enabled = true
-turbulence_noise_strength = 0.0
-turbulence_noise_scale = 2.03
-turbulence_noise_speed_random = 0.49
-turbulence_influence_min = 0.01
-turbulence_influence_max = 0.05
+gravity = Vector3(0, 150, 0)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_p6l82"]
 shader = ExtResource("4_ernjp")
-shader_parameter/lod = 0.7
+shader_parameter/lod = 0.6
 
 [node name="EraSelect" type="Control"]
 texture_filter = 1
@@ -307,8 +297,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_xdc4v")
-ice_texture = ExtResource("2_12xvn")
-default_texture = ExtResource("3_cx2l6")
 
 [node name="Center" type="Node2D" parent="."]
 process_mode = 3
@@ -627,28 +615,20 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="icefilter" type="CanvasLayer" parent="."]
+visible = false
 follow_viewport_enabled = true
 
-[node name="controlicefilter" type="Control" parent="icefilter"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Snow" type="GPUParticles2D" parent="icefilter/controlicefilter"]
-amount = 150
+[node name="Snow" type="GPUParticles2D" parent="icefilter"]
+amount = 100
 texture = ExtResource("26_p6l82")
-lifetime = 4.5
+lifetime = 3.5
 visibility_rect = Rect2(0, 0, 1920, 1080)
 process_material = SubResource("ParticleProcessMaterial_aw4pm")
 
-[node name="filter" type="ColorRect" parent="icefilter/controlicefilter"]
-modulate = Color(1, 1, 1, 0.384314)
+[node name="filter" type="ColorRect" parent="icefilter"]
+modulate = Color(1, 1, 1, 0.294118)
 z_index = 50
 texture_filter = 1
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -656,9 +636,8 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0.282353, 0.698039)
 
-[node name="iceblur" type="ColorRect" parent="icefilter/controlicefilter"]
+[node name="iceblur" type="ColorRect" parent="icefilter"]
 material = SubResource("ShaderMaterial_p6l82")
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
