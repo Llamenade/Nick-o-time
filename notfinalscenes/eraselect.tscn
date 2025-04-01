@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://djer4jfwcq4ll"]
+[gd_scene load_steps=63 format=3 uid="uid://djer4jfwcq4ll"]
 
 [ext_resource type="Script" uid="uid://dsyy8hacib6mr" path="res://eraselect.gd" id="1_xdc4v"]
 [ext_resource type="Texture2D" uid="uid://dbiikkglmjipr" path="res://Nick O. Time Assets/hub/eraselect/dinosaur/dinosaurhover.png" id="2_u4ghk"]
@@ -21,6 +21,10 @@
 [ext_resource type="Texture2D" uid="uid://s0vch63gxor3" path="res://Nick O. Time Assets/hub/eraselect/industrial/industrialnormal.png" id="11_jbg7k"]
 [ext_resource type="Texture2D" uid="uid://dcb6ih5e3fieh" path="res://Nick O. Time Assets/hub/eraselect/industrial/cog.png" id="12_e6iiq"]
 [ext_resource type="FontFile" uid="uid://d2hyaen0c6in1" path="res://fonts/Minercraftory.ttf" id="14_b0d7j"]
+[ext_resource type="Texture2D" uid="uid://dv3utomibn3db" path="res://Nick O. Time Assets/hub/eraselect/future/futurehover.png" id="15_0awo8"]
+[ext_resource type="Texture2D" uid="uid://cdmhab3unqpx2" path="res://Nick O. Time Assets/hub/eraselect/future/futurenormal.png" id="16_glbd2"]
+[ext_resource type="Texture2D" uid="uid://d2wpkbf2806gd" path="res://Nick O. Time Assets/hub/eraselect/war/warhover.png" id="17_e6iiq"]
+[ext_resource type="Texture2D" uid="uid://oclwttfpvouk" path="res://Nick O. Time Assets/hub/eraselect/war/warnormal.png" id="18_yl5gj"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e80fu"]
 texture = ExtResource("2_u4ghk")
@@ -75,7 +79,13 @@ texture = ExtResource("6_lla6e")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_52ica"]
 texture = ExtResource("7_lla6e")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lx1sv"]
+texture = ExtResource("15_0awo8")
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yl5gj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fqaj8"]
+texture = ExtResource("16_glbd2")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_15u35"]
 texture = ExtResource("8_qqtaj")
@@ -85,7 +95,13 @@ texture = ExtResource("8_qqtaj")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tkx47"]
 texture = ExtResource("9_b0d7j")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cx2l6"]
+texture = ExtResource("17_e6iiq")
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_glbd2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4ymcl"]
+texture = ExtResource("18_yl5gj")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qqtaj"]
 texture = ExtResource("8_nboi5")
@@ -299,9 +315,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -66.0
-offset_top = -20.0
+offset_top = -18.9999
 offset_right = 66.0
-offset_bottom = 25.0
+offset_bottom = 26.0001
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/focus = SubResource("StyleBoxTexture_udhfg")
@@ -372,7 +388,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_a0f4b")
 
 [node name="Industrial_Age" type="Node2D" parent="Center"]
 process_mode = 3
-position = Vector2(-382.261, 748.095)
+position = Vector2(-382.306, 748.839)
 rotation = -2.61799
 
 [node name="Button8" type="Button" parent="Center/Industrial_Age"]
@@ -438,14 +454,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -64.0
-offset_top = -17.0
-offset_right = 64.0
-offset_bottom = 21.0
+offset_left = -65.0
+offset_top = -19.0
+offset_right = 65.0
+offset_bottom = 26.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/focus = SubResource("StyleBoxTexture_lx1sv")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_yl5gj")
-text = "Future Age"
+theme_override_styles/normal = SubResource("StyleBoxTexture_fqaj8")
 
 [node name="Iron_Age" type="Node2D" parent="Center"]
 position = Vector2(748.095, 382.261)
@@ -468,7 +485,7 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_0awo8")
 theme_override_styles/normal = SubResource("StyleBoxTexture_tkx47")
 
 [node name="War_Age" type="Node2D" parent="Center"]
-position = Vector2(-705.095, 456.739)
+position = Vector2(-705.294, 458.394)
 rotation = -2.0944
 
 [node name="Button9" type="Button" parent="Center/War_Age"]
@@ -477,14 +494,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -64.0
-offset_top = -17.0
-offset_right = 64.0
-offset_bottom = 21.0
+offset_left = -65.0
+offset_top = -18.0
+offset_right = 65.0
+offset_bottom = 27.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/focus = SubResource("StyleBoxTexture_cx2l6")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_glbd2")
-text = "War Age"
+theme_override_styles/normal = SubResource("StyleBoxTexture_4ymcl")
 
 [node name="Bronze_Age" type="Node2D" parent="Center"]
 position = Vector2(839, -43)
