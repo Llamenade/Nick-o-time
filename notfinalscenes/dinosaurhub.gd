@@ -3,13 +3,12 @@ extends Node3D
 @export var rotation_speed: float = 1  # Sensitivity of rotation (degrees per frame)
 @export var max_up: float = 180
 @export var max_down: float = 0      # Max tilt angle to avoid flipping (degrees)
-@onready var sphere = $Sphere
- # Reference to your sphere node
+@onready var sphere = $Sphere  # Reference to your sphere node
 
 # Store the globe's rotation as Euler angles
 var rotation_x: float = 90
 var rotation_z: float = 0  # Tilt (up/down)
-var rotation_y: float = 24
+var rotation_y: float = -45  # Spin (left/right)
 
 # Function to apply texture directly to the sphere
 	
@@ -35,10 +34,8 @@ func _process(delta):
 	rotation_x = clamp(rotation_x, 5, 175)
 
 	# Reset the sphere's rotation to identity to avoid gimbal lock issues
-	
-	sphere.transform.basis = Basis()
+	sphere.transform.basis = Basis()  # Clear existing rotation
 
 	# Apply rotations in a specific order: Y (spin) first, then X (tilt)
 	sphere.rotate_y(deg_to_rad(rotation_y))  # Horizontal spin
 	sphere.rotate_x(deg_to_rad(rotation_x))
-	

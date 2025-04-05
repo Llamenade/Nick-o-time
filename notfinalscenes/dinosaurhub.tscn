@@ -1,25 +1,25 @@
-[gd_scene load_steps=12 format=3 uid="uid://dr37dgv808p2t"]
+[gd_scene load_steps=12 format=3 uid="uid://ccxjpwxdgm4u"]
 
-[ext_resource type="Script" uid="uid://1j4gddcl6dcy" path="res://hub.gd" id="1_hjueh"]
-[ext_resource type="Texture2D" uid="uid://b5mwvkmcny457" path="res://Nick O. Time Assets/hub/mercator.png" id="2_g73tb"]
-[ext_resource type="Shader" uid="uid://dmsdlaivdn51h" path="res://outline.gdshader" id="3_w7r13"]
+[ext_resource type="Script" uid="uid://c8rr4mqwob88o" path="res://notfinalscenes/dinosaurhub.gd" id="1_g73jt"]
+[ext_resource type="Texture2D" uid="uid://mjcd71b8mhe2" path="res://Nick O. Time Assets/hub/eraselect/dinosaur/mercatordinosaurage.png" id="2_dgng3"]
+[ext_resource type="Shader" uid="uid://dmsdlaivdn51h" path="res://outline.gdshader" id="3_n5fdj"]
 
-[sub_resource type="SphereMesh" id="SphereMesh_g73tb"]
+[sub_resource type="SphereMesh" id="SphereMesh_amvbb"]
 radial_segments = 128
 rings = 64
 
 [sub_resource type="Skin" id="Skin_w7r13"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_syogv"]
-albedo_texture = ExtResource("2_g73tb")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pxvv6"]
+albedo_texture = ExtResource("2_dgng3")
 emission_enabled = true
 emission_energy_multiplier = 0.8
-emission_texture = ExtResource("2_g73tb")
+emission_texture = ExtResource("2_dgng3")
 texture_filter = 0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_g73tb"]
 render_priority = 0
-shader = ExtResource("3_w7r13")
+shader = ExtResource("3_n5fdj")
 shader_parameter/outline_width = 0.004
 shader_parameter/outline_color = Color(1, 1, 1, 1)
 
@@ -33,8 +33,8 @@ shader_parameter/outline_color = Color(1, 1, 1, 1)
 shading_mode = 0
 albedo_color = Color(0, 0, 0, 1)
 
-[node name="hub" type="Node3D"]
-script = ExtResource("1_hjueh")
+[node name="dinosaurhub" type="Node3D"]
+script = ExtResource("1_g73jt")
 
 [node name="Sphere" type="MeshInstance3D" parent="."]
 transform = Transform3D(1.91069e-15, 4.37114e-08, -1, 1, -4.37114e-08, 0, -4.37114e-08, -1, -4.37114e-08, 0, 0, 0)
@@ -42,9 +42,9 @@ sorting_use_aabb_center = false
 cast_shadow = 0
 gi_mode = 0
 gi_lightmap_texel_scale = 0.01
-mesh = SubResource("SphereMesh_g73tb")
+mesh = SubResource("SphereMesh_amvbb")
 skin = SubResource("Skin_w7r13")
-surface_material_override/0 = SubResource("StandardMaterial3D_syogv")
+surface_material_override/0 = SubResource("StandardMaterial3D_pxvv6")
 
 [node name="outline" type="MeshInstance3D" parent="."]
 transform = Transform3D(1.90799e-15, 4.36496e-08, -0.998587, 0.998587, -4.36496e-08, 0, -4.36496e-08, -0.998587, -4.36496e-08, 0, 0, 0)

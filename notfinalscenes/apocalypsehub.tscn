@@ -1,8 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://dr37dgv808p2t"]
+[gd_scene load_steps=14 format=3 uid="uid://bhevc5dh2wnwt"]
 
-[ext_resource type="Script" uid="uid://1j4gddcl6dcy" path="res://hub.gd" id="1_hjueh"]
-[ext_resource type="Texture2D" uid="uid://b5mwvkmcny457" path="res://Nick O. Time Assets/hub/mercator.png" id="2_g73tb"]
-[ext_resource type="Shader" uid="uid://dmsdlaivdn51h" path="res://outline.gdshader" id="3_w7r13"]
+[ext_resource type="Script" uid="uid://1j4gddcl6dcy" path="res://hub.gd" id="1_mjhjl"]
+[ext_resource type="Texture2D" uid="uid://b5mwvkmcny457" path="res://Nick O. Time Assets/hub/mercator.png" id="2_owhvu"]
+[ext_resource type="Shader" uid="uid://16f6ikyyguwx" path="res://fire.gdshader" id="3_454w4"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_g73tb"]
 radial_segments = 128
@@ -11,19 +11,29 @@ rings = 64
 [sub_resource type="Skin" id="Skin_w7r13"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_syogv"]
-albedo_texture = ExtResource("2_g73tb")
+albedo_texture = ExtResource("2_owhvu")
 emission_enabled = true
 emission_energy_multiplier = 0.8
-emission_texture = ExtResource("2_g73tb")
+emission_texture = ExtResource("2_owhvu")
 texture_filter = 0
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_g73tb"]
-render_priority = 0
-shader = ExtResource("3_w7r13")
-shader_parameter/outline_width = 0.004
-shader_parameter/outline_color = Color(1, 1, 1, 1)
+[sub_resource type="Gradient" id="Gradient_6i7xy"]
 
-[sub_resource type="SphereMesh" id="SphereMesh_syogv"]
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_7wft2"]
+color_ramp = SubResource("Gradient_6i7xy")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_85gs3"]
+render_priority = 6
+shader = ExtResource("3_454w4")
+shader_parameter/fire_color = Vector4(1, 0.4, 0, 1)
+shader_parameter/fire_intensity = 0.6
+shader_parameter/fire_speed = 0.2
+shader_parameter/fire_distortion = 1.0
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_7wft2")
+
+[sub_resource type="SphereMesh" id="SphereMesh_mjhjl"]
+radius = 0.61
+height = 1.22
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6eldl"]
 
@@ -34,7 +44,7 @@ shading_mode = 0
 albedo_color = Color(0, 0, 0, 1)
 
 [node name="hub" type="Node3D"]
-script = ExtResource("1_hjueh")
+script = ExtResource("1_mjhjl")
 
 [node name="Sphere" type="MeshInstance3D" parent="."]
 transform = Transform3D(1.91069e-15, 4.37114e-08, -1, 1, -4.37114e-08, 0, -4.37114e-08, -1, -4.37114e-08, 0, 0, 0)
@@ -48,9 +58,11 @@ surface_material_override/0 = SubResource("StandardMaterial3D_syogv")
 
 [node name="outline" type="MeshInstance3D" parent="."]
 transform = Transform3D(1.90799e-15, 4.36496e-08, -0.998587, 0.998587, -4.36496e-08, 0, -4.36496e-08, -0.998587, -4.36496e-08, 0, 0, 0)
-material_override = SubResource("ShaderMaterial_g73tb")
+material_override = SubResource("ShaderMaterial_85gs3")
+material_overlay = SubResource("ShaderMaterial_85gs3")
+cast_shadow = 0
 gi_lightmap_texel_scale = 0.01
-mesh = SubResource("SphereMesh_syogv")
+mesh = SubResource("SphereMesh_mjhjl")
 skin = SubResource("Skin_w7r13")
 surface_material_override/0 = SubResource("ShaderMaterial_6eldl")
 

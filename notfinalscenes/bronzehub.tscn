@@ -1,0 +1,100 @@
+[gd_scene load_steps=19 format=3 uid="uid://ccfxj8qhuqhe0"]
+
+[ext_resource type="Script" uid="uid://1j4gddcl6dcy" path="res://hub.gd" id="1_6b2to"]
+[ext_resource type="Texture2D" uid="uid://b5mwvkmcny457" path="res://Nick O. Time Assets/hub/mercator.png" id="2_g1ogj"]
+[ext_resource type="Shader" uid="uid://heojd5prwl52" path="res://sandstorm.gdshader" id="3_73mwn"]
+[ext_resource type="Shader" uid="uid://dmsdlaivdn51h" path="res://outline.gdshader" id="4_6n43u"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_g73tb"]
+radial_segments = 128
+rings = 64
+
+[sub_resource type="Skin" id="Skin_w7r13"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_syogv"]
+albedo_texture = ExtResource("2_g1ogj")
+emission_enabled = true
+emission_energy_multiplier = 0.8
+emission_texture = ExtResource("2_g1ogj")
+texture_filter = 0
+
+[sub_resource type="Gradient" id="Gradient_6i7xy"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_7wft2"]
+color_ramp = SubResource("Gradient_6i7xy")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bdmpc"]
+render_priority = 6
+shader = ExtResource("3_73mwn")
+shader_parameter/sand_color = Vector4(0.8, 0.7, 0.5, 1)
+shader_parameter/sand_intensity = 0.5
+shader_parameter/sand_speed = 0.15
+shader_parameter/sand_distortion = 1.0
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_7wft2")
+
+[sub_resource type="SphereMesh" id="SphereMesh_t54hq"]
+radius = 0.585
+height = 1.17
+radial_segments = 128
+rings = 64
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6eldl"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_hjueh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hjueh"]
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_itlmx"]
+render_priority = 0
+shader = ExtResource("4_6n43u")
+shader_parameter/outline_width = 0.004
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_apucp"]
+
+[sub_resource type="Skin" id="Skin_kf5r1"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_a60gx"]
+
+[node name="bronzehub" type="Node3D"]
+script = ExtResource("1_6b2to")
+
+[node name="Sphere" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.91069e-15, 4.37114e-08, -1, 1, -4.37114e-08, 0, -4.37114e-08, -1, -4.37114e-08, 0, 0, 0)
+sorting_use_aabb_center = false
+cast_shadow = 0
+gi_mode = 0
+gi_lightmap_texel_scale = 0.01
+mesh = SubResource("SphereMesh_g73tb")
+skin = SubResource("Skin_w7r13")
+surface_material_override/0 = SubResource("StandardMaterial3D_syogv")
+
+[node name="sand" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.90799e-15, 4.36496e-08, -0.998587, 0.998587, -4.36496e-08, 0, -4.36496e-08, -0.998587, -4.36496e-08, 0, 0, 0)
+material_override = SubResource("ShaderMaterial_bdmpc")
+cast_shadow = 0
+gi_lightmap_texel_scale = 0.01
+mesh = SubResource("SphereMesh_t54hq")
+skin = SubResource("Skin_w7r13")
+surface_material_override/0 = SubResource("ShaderMaterial_6eldl")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1.31651, 0)
+fov = 48.0
+near = 0.01
+far = 1000.0
+
+[node name="space background" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.53963, 0, 0, 0, 3, 0, 0, 0, 1.64654, 0, -0.996137, 0.00595951)
+mesh = SubResource("PlaneMesh_hjueh")
+surface_material_override/0 = SubResource("StandardMaterial3D_hjueh")
+
+[node name="outline" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.90799e-15, 4.36496e-08, -0.998587, 0.998587, -4.36496e-08, 0, -4.36496e-08, -0.998587, -4.36496e-08, 0, 0, 0)
+material_override = SubResource("ShaderMaterial_itlmx")
+gi_lightmap_texel_scale = 0.01
+mesh = SubResource("SphereMesh_apucp")
+skin = SubResource("Skin_kf5r1")
+surface_material_override/0 = SubResource("ShaderMaterial_a60gx")

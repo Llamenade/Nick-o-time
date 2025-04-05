@@ -5,6 +5,10 @@ extends Control
 @onready var cog_1: Node2D = $Center/Industrial_Age/Button8/cog1
 @onready var cog_2: Node2D = $Center/Industrial_Age/Button8/cog2
 @onready var ice_filter: Control = $icefilter/controlicefilter
+@onready var bronze_filter: Control = $bronzefilter/controlbronzefilter
+@onready var medieval_filter: Control = $medievalfilter/controlmedievalfilter
+@onready var apocalypse_filter: Control = $firefilter/controlfirefilter
+@onready var industrial_filter: Control = $industrialfilter/controlindustrialfilter
 @onready var sphere: MeshInstance3D = $Sphere
 
 @onready var buttons: Array = [
@@ -34,7 +38,13 @@ var button_names: Array = [
 @onready var subviewport = $"../SubViewportContainer/SubViewport"  # Adjust path if needed
 
 var hub_scene = preload("res://notfinalscenes/hub.tscn")  # Preload hub scene
-var icehub_scene = preload("res://notfinalscenes/icehub.tscn")  # Preload icehub scene
+var icehub_scene = preload("res://notfinalscenes/icehub.tscn")
+var dinosaurhub_scene = preload("res://notfinalscenes/dinosaurhub.tscn")
+var stonehub_scene = preload("res://notfinalscenes/stonehub.tscn")
+var bronzehub_scene = preload("res://notfinalscenes/bronzehub.tscn") 
+var medievalhub_scene = preload("res://notfinalscenes/medievalhub.tscn")
+var gunpowderhub_scene = preload("res://notfinalscenes/gunpowderhub.tscn")
+var apocalypsehub_scene = preload("res://notfinalscenes/apocalypsehub.tscn") # Preload icehub scene
 var current_instance: Node = null  # Track the current scene instance
 
 func _ready() -> void:
@@ -44,6 +54,10 @@ func _ready() -> void:
 
 	# Initialize ice filter transparency
 	ice_filter.modulate.a = 0.0  
+	bronze_filter.modulate.a = 0.0  
+	medieval_filter.modulate.a = 0.0  
+	apocalypse_filter.modulate.a = 0.0
+	industrial_filter.modulate.a = 0.0
 
 	# Set up button scaling and connections
 	for i in range(buttons.size()):
@@ -52,7 +66,7 @@ func _ready() -> void:
 		buttons[i].connect("pressed", Callable(self, "_on_button_pressed").bind(i))
 
 	# Instantiate the hub scene on start
-	switch_scene(hub_scene)
+	switch_scene(dinosaurhub_scene)
 
 func _process(delta: float) -> void:
 	btn_focused(buttons[current_index])
@@ -65,17 +79,74 @@ func _process(delta: float) -> void:
 func _on_button_pressed(index: int) -> void:
 	label.text = button_names[index]
 	
-	# Check if "Ice Age" is selected
-	var is_ice_age = (button_names[index] == "Ice Age")
-	fade_ice_filter(is_ice_age)  # Apply fade effect
-
-	# Load the correct scene
-	if is_ice_age:
-		switch_scene(icehub_scene)
-	else:
-		switch_scene(hub_scene)
+	# Determine which scene to load based on the button
+	match button_names[index]:
+		"Ice Age":
+			fade_ice_filter(true)
+			fade_apocalypse_filter(false)
+			fade_bronze_filter(false)
+			fade_medieval_filter(false) 
+			fade_industrial_filter(false)  # Apply fade effect for Ice Age
+			switch_scene(icehub_scene)
+		"Dinosaur Age":
+			fade_ice_filter(false)
+			fade_apocalypse_filter(false)
+			fade_bronze_filter(false) 
+			fade_industrial_filter(false) 
+			fade_medieval_filter(false) # No filter effect for Dinosaur Age
+			switch_scene(dinosaurhub_scene)
+		"Stone Age":
+			fade_ice_filter(false)
+			fade_apocalypse_filter(false)
+			fade_bronze_filter(false)
+			fade_medieval_filter(false)
+			fade_industrial_filter(false) 
+			switch_scene(stonehub_scene)
+		"Bronze Age":
+			fade_ice_filter(false)
+			fade_apocalypse_filter(false)
+			fade_bronze_filter(true)
+			fade_industrial_filter(false) 
+			fade_medieval_filter(false)
+			switch_scene(bronzehub_scene)
+		"Medieval Age":
+			fade_ice_filter(false)
+			fade_bronze_filter(false)
+			fade_apocalypse_filter(false)
+			fade_medieval_filter(true)
+			fade_industrial_filter(false) 
+			switch_scene(medievalhub_scene)
+		"Gunpowder Age":
+			fade_ice_filter(false)
+			fade_bronze_filter(false)
+			fade_apocalypse_filter(false)
+			fade_medieval_filter(false)
+			fade_industrial_filter(false) 
+			switch_scene(gunpowderhub_scene)
+		"Apocalypse Age":
+			fade_ice_filter(false)
+			fade_bronze_filter(false)
+			fade_medieval_filter(false)
+			fade_apocalypse_filter(true)
+			fade_industrial_filter(false) 
+			switch_scene(apocalypsehub_scene)
+		"Industrial Age":
+			fade_ice_filter(false)
+			fade_bronze_filter(false)
+			fade_medieval_filter(false)
+			fade_apocalypse_filter(false)
+			fade_industrial_filter(true)
+			switch_scene(hub_scene)
+		_:
+			fade_ice_filter(false)
+			fade_bronze_filter(false)
+			fade_medieval_filter(false)
+			fade_apocalypse_filter(false)
+			fade_industrial_filter(false)  # No filter effect for other ages
+			switch_scene(hub_scene)
 
 	resume()
+
 
 func switch_scene(new_scene: PackedScene) -> void:
 	# Remove the current scene if one exists
@@ -153,3 +224,15 @@ func start_tween(object: Object, property: String, final_val: Variant, duration:
 func fade_ice_filter(visible: bool):
 	var tween = create_tween()
 	tween.tween_property(ice_filter, "modulate:a", 1.0 if visible else 0.0, 0.2)
+func fade_bronze_filter(visible: bool):
+	var tween = create_tween()
+	tween.tween_property(bronze_filter, "modulate:a", 1.0 if visible else 0.0, 0.2)
+func fade_medieval_filter(visible: bool):
+	var tween = create_tween()
+	tween.tween_property(medieval_filter, "modulate:a", 1.0 if visible else 0.0, 0.2)	
+func fade_apocalypse_filter(visible: bool):
+	var tween = create_tween()
+	tween.tween_property(apocalypse_filter, "modulate:a", 1.0 if visible else 0.0, 0.2)	
+func fade_industrial_filter(visible: bool):
+	var tween = create_tween()
+	tween.tween_property(industrial_filter, "modulate:a", 1.0 if visible else 0.0, 0.2)	
