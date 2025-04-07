@@ -7,10 +7,14 @@ extends Control
 # Array of all buttons for focus management
 @onready var buttons = [new_game_button, quit_game_button]
 
-var using_controller = false
 @export var tween_duration: float = 0.05  # Duration for the scaling effect
 
 func _ready():
+	get_tree().paused = false
+	if Global.using_controller:
+		new_game_button.grab_focus()
+	else:
+		release_all_focus()
 	# Set up button signals
 	new_game_button.button_up.connect(on_new_game_pressed)
 	quit_game_button.button_up.connect(on_quit_game_pressed)
@@ -22,19 +26,18 @@ func _ready():
 		button.mouse_exited.connect(func(): on_button_unfocused(button))
 		button.focus_entered.connect(func(): on_button_focused(button))
 		button.focus_exited.connect(func(): on_button_unfocused(button))
-	release_all_focus()
 
 func _input(event):
 	# Detect controller input
 	if event is InputEventJoypadButton or event is InputEventJoypadMotion:
-		if not using_controller:
-			using_controller = true
+		if not Global.using_controller:
+			Global.using_controller = true
 			new_game_button.grab_focus() # First button gains focus for controller
 	
 	# Detect mouse/keyboard input
 	elif event is InputEventMouseMotion or event is InputEventMouseButton or event is InputEventKey:
-		if using_controller:
-			using_controller = false
+		if Global.using_controller:
+			Global.using_controller = false
 			release_all_focus()
 
 func release_all_focus():

@@ -1,6 +1,6 @@
 [gd_scene load_steps=19 format=3 uid="uid://ccfxj8qhuqhe0"]
 
-[ext_resource type="Script" uid="uid://1j4gddcl6dcy" path="res://hub.gd" id="1_6b2to"]
+[ext_resource type="Script" uid="uid://bxedt3r3q1rps" path="res://notfinalscenes/bronzehub.gd" id="1_6b2to"]
 [ext_resource type="Texture2D" uid="uid://b5mwvkmcny457" path="res://Nick O. Time Assets/hub/mercator.png" id="2_g1ogj"]
 [ext_resource type="Shader" uid="uid://heojd5prwl52" path="res://sandstorm.gdshader" id="3_73mwn"]
 [ext_resource type="Shader" uid="uid://dmsdlaivdn51h" path="res://outline.gdshader" id="4_6n43u"]

@@ -1,8 +1,18 @@
-[gd_scene load_steps=16 format=4 uid="uid://bjwstmtbwwump"]
+[gd_scene load_steps=36 format=4 uid="uid://dn3hp0k22clf0"]
 
-[ext_resource type="Script" uid="uid://bnnsmmh0mia25" path="res://title_screen.gd" id="1_cbind"]
-[ext_resource type="PackedScene" uid="uid://duxf4iwwplk02" path="res://notfinalscenes/title_screen.tscn" id="1_qyeod"]
-[ext_resource type="Theme" uid="uid://bfjxxqkg0w2ms" path="res://Nick O. Time Assets/nikotime/quit_theme.tres" id="4_eknjh"]
+[ext_resource type="Texture2D" uid="uid://cur2vyeemutyb" path="res://Nick O. Time Assets/hub/eraselect/dinosaur/trexhover.png" id="1_imte4"]
+[ext_resource type="Script" uid="uid://dqlmlih6h84or" path="res://notfinalscenes/decisionscreens/trexdecide.gd" id="1_x1jvn"]
+[ext_resource type="Texture2D" uid="uid://bmygdylulwa55" path="res://Nick O. Time Assets/hub/acceptmission/cancelbuttonhover.png" id="2_x1jvn"]
+[ext_resource type="Texture2D" uid="uid://buwwv1sdp5wsp" path="res://Nick O. Time Assets/hub/acceptmission/cancelbuttonnormal.png" id="3_sswk3"]
+[ext_resource type="Texture2D" uid="uid://pf0h62sqqnf8" path="res://Nick O. Time Assets/hub/acceptmission/cancelbuttonpressed.png" id="4_3h0st"]
+[ext_resource type="Texture2D" uid="uid://ct4wmu6wwh6be" path="res://Nick O. Time Assets/hub/acceptmission/fighthovered.png" id="5_3fdhh"]
+[ext_resource type="Texture2D" uid="uid://dtgnhh6rt4ob3" path="res://Nick O. Time Assets/hub/acceptmission/fightpressed.png" id="6_d3qty"]
+[ext_resource type="Texture2D" uid="uid://82tibxdks5eg" path="res://Nick O. Time Assets/hub/acceptmission/fightnormal.png" id="7_0bdx4"]
+[ext_resource type="Shader" uid="uid://burg1kocvxqml" path="res://pause.gdshader" id="8_350jh"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_r6rcw"]
+shader = ExtResource("8_350jh")
+shader_parameter/lod = 0.0
 
 [sub_resource type="Image" id="Image_ygcv6"]
 data = {
@@ -799,7 +809,7 @@ cache/0/64/0/underline_position = 6.40625
 cache/0/64/0/underline_thickness = 3.1875
 cache/0/64/0/scale = 1.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jbxbo"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1m81v"]
 content_margin_left = 4.0
 content_margin_top = 4.0
 content_margin_right = 4.0
@@ -811,35 +821,23 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 5
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cbind"]
-load_path = "res://.godot/imported/nikotime-newgame-hover.png-1361e400f35d343e6f02848c1e1de28b.ctex"
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a7344"]
-texture = SubResource("CompressedTexture2D_cbind")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_soqu3"]
+texture = ExtResource("2_x1jvn")
 region_rect = Rect2(0, 24, 64, 17)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_eknjh"]
-load_path = "res://.godot/imported/nikotime-newgame-hover.png-1361e400f35d343e6f02848c1e1de28b.ctex"
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q2dh0"]
-texture = SubResource("CompressedTexture2D_eknjh")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_towo3"]
+texture = ExtResource("2_x1jvn")
 region_rect = Rect2(0, 24, 64, 17)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gya51"]
-load_path = "res://.godot/imported/nikotime-newgame.png-182af94ab4382548fdb666c5c38403c4.ctex"
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7f02u"]
-texture = SubResource("CompressedTexture2D_gya51")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uu0fc"]
+texture = ExtResource("3_sswk3")
 region_rect = Rect2(0, 24, 64, 17)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kgxc5"]
-load_path = "res://.godot/imported/nikotime-newgame-pressed.png-27246afae62424bfea1d80ccd677aa35.ctex"
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gigp3"]
-texture = SubResource("CompressedTexture2D_kgxc5")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ncsh2"]
+texture = ExtResource("4_3h0st")
 region_rect = Rect2(0, 26, 64, 15)
 
-[sub_resource type="Theme" id="Theme_ylmu3"]
+[sub_resource type="Theme" id="Theme_15ul4"]
 Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
 Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
 Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
@@ -859,70 +857,227 @@ Button/constants/icon_max_width = 0
 Button/constants/outline_size = 0
 Button/font_sizes/font_size = 16
 Button/fonts/font = SubResource("FontFile_ut3yr")
-Button/styles/disabled = SubResource("StyleBoxFlat_jbxbo")
-Button/styles/focus = SubResource("StyleBoxTexture_a7344")
-Button/styles/hover = SubResource("StyleBoxTexture_q2dh0")
-Button/styles/normal = SubResource("StyleBoxTexture_7f02u")
-Button/styles/pressed = SubResource("StyleBoxTexture_gigp3")
+Button/styles/disabled = SubResource("StyleBoxFlat_1m81v")
+Button/styles/focus = SubResource("StyleBoxTexture_soqu3")
+Button/styles/hover = SubResource("StyleBoxTexture_towo3")
+Button/styles/normal = SubResource("StyleBoxTexture_uu0fc")
+Button/styles/pressed = SubResource("StyleBoxTexture_ncsh2")
 
-[node name="Title_Screen_Final" type="Control"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gwys2"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.3)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_tk5v2"]
+load_path = "res://.godot/imported/cancelbuttonhover.png-7144f393ca9749c807b9b583439680ac.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j3svy"]
+texture = SubResource("CompressedTexture2D_tk5v2")
+region_rect = Rect2(0, 24, 64, 17)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_r3ami"]
+load_path = "res://.godot/imported/cancelbuttonhover.png-7144f393ca9749c807b9b583439680ac.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v11nq"]
+texture = SubResource("CompressedTexture2D_r3ami")
+region_rect = Rect2(0, 24, 64, 17)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_65hun"]
+load_path = "res://.godot/imported/cancelbuttonnormal.png-2610fab434a9d48415571dc40f388527.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_di7te"]
+texture = SubResource("CompressedTexture2D_65hun")
+region_rect = Rect2(0, 24, 64, 17)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2c84w"]
+load_path = "res://.godot/imported/cancelbuttonpressed.png-35fcb357327ac0888827bfc1b0407c18.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6ahm5"]
+texture = SubResource("CompressedTexture2D_2c84w")
+region_rect = Rect2(0, 26, 64, 15)
+
+[sub_resource type="Theme" id="Theme_mb2fn"]
+Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/align_to_largest_stylebox = 0
+Button/constants/h_separation = 4
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 16
+Button/fonts/font = SubResource("FontFile_ut3yr")
+Button/styles/disabled = SubResource("StyleBoxFlat_gwys2")
+Button/styles/focus = SubResource("StyleBoxTexture_j3svy")
+Button/styles/hover = SubResource("StyleBoxTexture_v11nq")
+Button/styles/normal = SubResource("StyleBoxTexture_di7te")
+Button/styles/pressed = SubResource("StyleBoxTexture_6ahm5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3grma"]
+texture = ExtResource("5_3fdhh")
+region_rect = Rect2(0, 24, 64, 17)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cahul"]
+texture = ExtResource("5_3fdhh")
+region_rect = Rect2(0, 24, 64, 17)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3idm6"]
+texture = ExtResource("6_d3qty")
+region_rect = Rect2(0, 26, 64, 15)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y167j"]
+texture = ExtResource("7_0bdx4")
+region_rect = Rect2(0, 24, 64, 17)
+
+[sub_resource type="Animation" id="Animation_sswk3"]
+resource_name = "fade"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Control/TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+
+[sub_resource type="Animation" id="Animation_3h0st"]
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Control:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/ColorRect:material:shader_parameter/lod")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.88]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3fdhh"]
+_data = {
+&"RESET": SubResource("Animation_3h0st"),
+&"fade": SubResource("Animation_sswk3")
+}
+
+[node name="trexdecide" type="Control"]
+process_mode = 3
+z_index = 200
 layout_mode = 3
-anchors_preset = 0
-script = ExtResource("1_cbind")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_x1jvn")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+process_mode = 3
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="CanvasLayer"]
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+process_mode = 3
+z_index = 9
+texture_filter = 1
+material = SubResource("ShaderMaterial_r6rcw")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-stretch = true
-stretch_shrink = 3
+color = Color(0, 0, 0, 1)
 
-[node name="SubViewport" type="SubViewport" parent="CanvasLayer/SubViewportContainer"]
-handle_input_locally = false
-size = Vector2i(640, 360)
-render_target_update_mode = 4
+[node name="Control" type="Control" parent="CanvasLayer"]
+process_mode = 3
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="Title_Screen" parent="CanvasLayer/SubViewportContainer/SubViewport" instance=ExtResource("1_qyeod")]
-
-[node name="CanvasLayer2" type="CanvasLayer" parent="."]
-
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer2"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control"]
+z_index = 10
+custom_minimum_size = Vector2(675, 369)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 616.5
+offset_top = 336.5
+offset_right = 1291.5
+offset_bottom = 705.5
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(1.00002, 0.99844)
-size_flags_vertical = 4
-alignment = 1
+texture = ExtResource("1_imte4")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer2/HBoxContainer"]
-z_index = 14
-layout_mode = 2
-theme_override_constants/separation = 15
-alignment = 1
-
-[node name="Seperator2" type="Control" parent="CanvasLayer2/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="New_Game" type="Button" parent="CanvasLayer2/HBoxContainer/VBoxContainer"]
+[node name="cancel" type="Button" parent="CanvasLayer/Control"]
+process_mode = 3
 z_index = 12
 texture_filter = 1
 custom_minimum_size = Vector2(192, 51)
-layout_mode = 2
+offset_left = 707.0
+offset_top = 651.0
+offset_right = 899.0
+offset_bottom = 702.0
 mouse_default_cursor_shape = 2
-theme = SubResource("Theme_ylmu3")
+theme = SubResource("Theme_15ul4")
 action_mode = 0
 
-[node name="Seperator3" type="Control" parent="CanvasLayer2/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="Quit_Game" type="Button" parent="CanvasLayer2/HBoxContainer/VBoxContainer"]
+[node name="fight" type="Button" parent="CanvasLayer/Control"]
+process_mode = 3
+z_index = 12
 texture_filter = 1
-custom_minimum_size = Vector2(64, 51)
-layout_mode = 2
-theme = ExtResource("4_eknjh")
+custom_minimum_size = Vector2(192, 51)
+offset_left = 1015.0
+offset_top = 651.0
+offset_right = 1207.0
+offset_bottom = 702.0
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_mb2fn")
+theme_override_styles/focus = SubResource("StyleBoxTexture_3grma")
+theme_override_styles/hover = SubResource("StyleBoxTexture_cahul")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_3idm6")
+theme_override_styles/normal = SubResource("StyleBoxTexture_y167j")
+action_mode = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+process_mode = 3
+libraries = {
+&"": SubResource("AnimationLibrary_3fdhh")
+}
+
+[connection signal="pressed" from="CanvasLayer/Control/cancel" to="." method="_on_cancel_pressed"]

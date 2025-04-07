@@ -337,6 +337,7 @@ hue_variation_min = -2.23517e-08
 hue_variation_max = -2.23517e-08
 
 [node name="EraSelect" type="Control"]
+z_index = 200
 texture_filter = 1
 layout_mode = 3
 anchors_preset = 15
@@ -351,7 +352,7 @@ default_texture = ExtResource("3_cx2l6")
 [node name="Center" type="Node2D" parent="."]
 process_mode = 3
 modulate = Color(1, 1, 1, 0)
-z_index = 11
+z_index = 210
 position = Vector2(1090, 3510)
 scale = Vector2(3, 3)
 
@@ -619,7 +620,7 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_p6l82")
 text = "Modern Age"
 
 [node name="ColorRect" type="ColorRect" parent="."]
-z_index = 9
+z_index = 100
 texture_filter = 1
 material = SubResource("ShaderMaterial_e80fu")
 layout_mode = 1
@@ -638,7 +639,7 @@ libraries = {
 
 [node name="TextureRect" type="TextureRect" parent="."]
 modulate = Color(1, 1, 1, 0)
-z_index = 10
+z_index = 200
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 15
@@ -649,7 +650,7 @@ grow_vertical = 2
 texture = ExtResource("5_e80fu")
 
 [node name="Label" type="RichTextLabel" parent="."]
-z_index = 10
+z_index = 200
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0

@@ -67,7 +67,6 @@ mesh = SubResource("PlaneMesh_hjueh")
 surface_material_override/0 = SubResource("StandardMaterial3D_hjueh")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-process_mode = 3
 stream = ExtResource("4_dgng3")
 autoplay = true
 parameters/looping = true

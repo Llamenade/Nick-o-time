@@ -35,7 +35,8 @@ var button_names: Array = [
 @export var ice_texture: Texture
 @export var default_texture: Texture
 
-@onready var subviewport = $"../SubViewportContainer/SubViewport"  # Adjust path if needed
+@onready var subviewport = $"../SubViewportContainer/SubViewport"
+@onready var interaction_label = $"../InteractionLabel"  # Adjust path if needed
 
 var hub_scene = preload("res://notfinalscenes/hub.tscn")  # Preload hub scene
 var icehub_scene = preload("res://notfinalscenes/icehub.tscn")
@@ -44,13 +45,19 @@ var stonehub_scene = preload("res://notfinalscenes/stonehub.tscn")
 var bronzehub_scene = preload("res://notfinalscenes/bronzehub.tscn") 
 var medievalhub_scene = preload("res://notfinalscenes/medievalhub.tscn")
 var gunpowderhub_scene = preload("res://notfinalscenes/gunpowderhub.tscn")
-var apocalypsehub_scene = preload("res://notfinalscenes/apocalypsehub.tscn") # Preload icehub scene
+var apocalypsehub_scene = preload("res://notfinalscenes/apocalypsehub.tscn")
+
+var pause_screen = preload("res://notfinalscenes/pausescreen.tscn")
+var trexdecide = preload("res://notfinalscenes/decisionscreens/trexdecide.tscn")
+
+
 var current_instance: Node = null  # Track the current scene instance
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	buttons[current_index].grab_focus()
 	$AnimationPlayer.play("RESET")
+	interaction_label.visible = false
 
 	# Initialize ice filter transparency
 	ice_filter.modulate.a = 0.0  
@@ -69,7 +76,23 @@ func _ready() -> void:
 	switch_scene(dinosaurhub_scene)
 
 func _process(delta: float) -> void:
+	
+	if Global.is_trex_level == true:
+		interaction_label.visible = true
+		if Input.is_action_just_pressed("ui_accept") and !Global.is_icon_visible:
+			get_tree().current_scene.add_child(trexdecide.instantiate())
+	elif Global.is_pterodactyl_level == true:
+		interaction_label.visible = true
+		if Input.is_action_just_pressed("ui_accept") and !Global.is_icon_visible:
+			get_tree().current_scene.add_child(trexdecide.instantiate())
+	elif Global.is_mosasaurus_level == true:
+		interaction_label.visible = true
+	else:
+		interaction_label.visible = false
 	btn_focused(buttons[current_index])
+	
+	if Input.is_action_just_pressed("pause") and !Global.is_pause_menu_active and !get_tree().paused:
+		get_tree().current_scene.add_child(pause_screen.instantiate())
 
 	# Rotate cogs only when Button8 is focused
 	if rotating_cogs:
@@ -77,75 +100,77 @@ func _process(delta: float) -> void:
 		cog_2.rotation_degrees -= cog_rotation_speed * delta  # Counterclockwise
 
 func _on_button_pressed(index: int) -> void:
-	label.text = button_names[index]
+	if Global.is_wheel_visible:
+		label.text = button_names[index]
+		Global.is_wheel_visible = false
 	
 	# Determine which scene to load based on the button
-	match button_names[index]:
-		"Ice Age":
-			fade_ice_filter(true)
-			fade_apocalypse_filter(false)
-			fade_bronze_filter(false)
-			fade_medieval_filter(false) 
-			fade_industrial_filter(false)  # Apply fade effect for Ice Age
-			switch_scene(icehub_scene)
-		"Dinosaur Age":
-			fade_ice_filter(false)
-			fade_apocalypse_filter(false)
-			fade_bronze_filter(false) 
-			fade_industrial_filter(false) 
-			fade_medieval_filter(false) # No filter effect for Dinosaur Age
-			switch_scene(dinosaurhub_scene)
-		"Stone Age":
-			fade_ice_filter(false)
-			fade_apocalypse_filter(false)
-			fade_bronze_filter(false)
-			fade_medieval_filter(false)
-			fade_industrial_filter(false) 
-			switch_scene(stonehub_scene)
-		"Bronze Age":
-			fade_ice_filter(false)
-			fade_apocalypse_filter(false)
-			fade_bronze_filter(true)
-			fade_industrial_filter(false) 
-			fade_medieval_filter(false)
-			switch_scene(bronzehub_scene)
-		"Medieval Age":
-			fade_ice_filter(false)
-			fade_bronze_filter(false)
-			fade_apocalypse_filter(false)
-			fade_medieval_filter(true)
-			fade_industrial_filter(false) 
-			switch_scene(medievalhub_scene)
-		"Gunpowder Age":
-			fade_ice_filter(false)
-			fade_bronze_filter(false)
-			fade_apocalypse_filter(false)
-			fade_medieval_filter(false)
-			fade_industrial_filter(false) 
-			switch_scene(gunpowderhub_scene)
-		"Apocalypse Age":
-			fade_ice_filter(false)
-			fade_bronze_filter(false)
-			fade_medieval_filter(false)
-			fade_apocalypse_filter(true)
-			fade_industrial_filter(false) 
-			switch_scene(apocalypsehub_scene)
-		"Industrial Age":
-			fade_ice_filter(false)
-			fade_bronze_filter(false)
-			fade_medieval_filter(false)
-			fade_apocalypse_filter(false)
-			fade_industrial_filter(true)
-			switch_scene(hub_scene)
-		_:
-			fade_ice_filter(false)
-			fade_bronze_filter(false)
-			fade_medieval_filter(false)
-			fade_apocalypse_filter(false)
-			fade_industrial_filter(false)  # No filter effect for other ages
-			switch_scene(hub_scene)
+		match button_names[index]:
+			"Ice Age":
+				fade_ice_filter(true)
+				fade_apocalypse_filter(false)
+				fade_bronze_filter(false)
+				fade_medieval_filter(false) 
+				fade_industrial_filter(false)  # Apply fade effect for Ice Age
+				switch_scene(icehub_scene)
+			"Dinosaur Age":
+				fade_ice_filter(false)
+				fade_apocalypse_filter(false)
+				fade_bronze_filter(false) 
+				fade_industrial_filter(false) 
+				fade_medieval_filter(false) # No filter effect for Dinosaur Age
+				switch_scene(dinosaurhub_scene)
+			"Stone Age":
+				fade_ice_filter(false)
+				fade_apocalypse_filter(false)
+				fade_bronze_filter(false)
+				fade_medieval_filter(false)
+				fade_industrial_filter(false) 
+				switch_scene(stonehub_scene)
+			"Bronze Age":
+				fade_ice_filter(false)
+				fade_apocalypse_filter(false)
+				fade_bronze_filter(true)
+				fade_industrial_filter(false) 
+				fade_medieval_filter(false)
+				switch_scene(bronzehub_scene)
+			"Medieval Age":
+				fade_ice_filter(false)
+				fade_bronze_filter(false)
+				fade_apocalypse_filter(false)
+				fade_medieval_filter(true)
+				fade_industrial_filter(false) 
+				switch_scene(medievalhub_scene)
+			"Gunpowder Age":
+				fade_ice_filter(false)
+				fade_bronze_filter(false)
+				fade_apocalypse_filter(false)
+				fade_medieval_filter(false)
+				fade_industrial_filter(false) 
+				switch_scene(gunpowderhub_scene)
+			"Apocalypse Age":
+				fade_ice_filter(false)
+				fade_bronze_filter(false)
+				fade_medieval_filter(false)
+				fade_apocalypse_filter(true)
+				fade_industrial_filter(false) 
+				switch_scene(apocalypsehub_scene)
+			"Industrial Age":
+				fade_ice_filter(false)
+				fade_bronze_filter(false)
+				fade_medieval_filter(false)
+				fade_apocalypse_filter(false)
+				fade_industrial_filter(true)
+				switch_scene(hub_scene)
+			_:
+				fade_ice_filter(false)
+				fade_bronze_filter(false)
+				fade_medieval_filter(false)
+				fade_apocalypse_filter(false)
+				fade_industrial_filter(false)  # No filter effect for other ages
+				switch_scene(hub_scene)
 
-	resume()
+		resume()
 
 
 func switch_scene(new_scene: PackedScene) -> void:
@@ -181,13 +206,23 @@ func resume() -> void:
 	get_tree().paused = false
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("map") and !get_tree().paused:
+	if Global.is_pause_menu_active:
+		return  # Don't let the wheel menu open while pause is active
+
+	if event.is_action_pressed("map") and !get_tree().paused and !Global.is_wheel_visible:
 		toggle_menu()
-	elif event.is_action_pressed("map") and get_tree().paused:
+		Global.is_wheel_visible = true
+	elif event.is_action_pressed("map") and get_tree().paused and Global.is_wheel_visible:
 		resume()
+		Global.is_wheel_visible = false
+	elif event.is_action_pressed("pause") and get_tree().paused and Global.is_wheel_visible:
+		resume()
+		await get_tree().create_timer(0.1).timeout
+		Global.is_wheel_visible = false
+
 
 	# Only process rotation inputs when the game is paused and menu is active
-	if get_tree().paused and not is_rotating:
+	if get_tree().paused and !is_rotating and !Global.is_icon_visible:
 		if event.is_action_pressed("ui_right"):
 			rotate_center(-30, 1)
 			get_viewport().set_input_as_handled()

@@ -1,8 +1,46 @@
-[gd_scene load_steps=4 format=3 uid="uid://dxsysupcr7pmk"]
+[gd_scene load_steps=12 format=3 uid="uid://dxsysupcr7pmk"]
 
 [ext_resource type="PackedScene" uid="uid://djer4jfwcq4ll" path="res://notfinalscenes/eraselect.tscn" id="2_b38rb"]
 [ext_resource type="PackedScene" uid="uid://b38qjqo4lm58f" path="res://notfinalscenes/topdownplayer.tscn" id="2_xnsdn"]
 [ext_resource type="Texture2D" uid="uid://cviqsupjxkrht" path="res://Nick O. Time Assets/hub/space.png" id="3_xnsdn"]
+[ext_resource type="Texture2D" uid="uid://c5h2hlqkp1h1f" path="res://Nick O. Time Assets/hub/eraselect/presse/pressa1.png" id="4_36xph"]
+[ext_resource type="Texture2D" uid="uid://btwx1l54wv8eb" path="res://Nick O. Time Assets/hub/eraselect/presse/presse1.png" id="5_3pokl"]
+[ext_resource type="Texture2D" uid="uid://c8btxiqne5wro" path="res://Nick O. Time Assets/hub/eraselect/presse/pressa2.png" id="5_44gwl"]
+[ext_resource type="Texture2D" uid="uid://ctyu83upp8cu1" path="res://Nick O. Time Assets/hub/eraselect/presse/pressa3.png" id="6_dyeb5"]
+[ext_resource type="Texture2D" uid="uid://d0ncypexyu4ss" path="res://Nick O. Time Assets/hub/eraselect/presse/presse2.png" id="6_rlb3w"]
+[ext_resource type="Texture2D" uid="uid://bcbcph3hwwe5g" path="res://Nick O. Time Assets/hub/eraselect/presse/presse3.png" id="7_td03h"]
+[ext_resource type="Script" uid="uid://t5rsficuu6wk" path="res://interaction_label.gd" id="10_wc01q"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_36xph"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_36xph")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_44gwl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_dyeb5")
+}],
+"loop": true,
+"name": &"pressa",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_3pokl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_rlb3w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_td03h")
+}],
+"loop": true,
+"name": &"presse",
+"speed": 5.0
+}]
 
 [node name="Level_Select_Final" type="Node2D"]
 
@@ -14,17 +52,20 @@ z_index = -2
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 634.0
+offset_left = 623.0
 offset_top = 150.0
-offset_right = -611.0
+offset_right = -622.0
 offset_bottom = -255.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 4
 stretch = true
 stretch_shrink = 3
 
 [node name="SubViewport" type="SubViewport" parent="CanvasLayer/SubViewportContainer"]
 handle_input_locally = false
+audio_listener_enable_2d = true
+audio_listener_enable_3d = true
 size = Vector2i(225, 225)
 render_target_update_mode = 4
 
@@ -32,8 +73,6 @@ render_target_update_mode = 4
 z_index = 10
 position = Vector2(335, 335)
 scale = Vector2(3, 3)
-
-[node name="EraSelect" parent="CanvasLayer" instance=ExtResource("2_b38rb")]
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
 z_index = -10
@@ -43,3 +82,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_xnsdn")
+
+[node name="EraSelect" parent="CanvasLayer" instance=ExtResource("2_b38rb")]
+
+[node name="InteractionLabel" type="AnimatedSprite2D" parent="CanvasLayer"]
+texture_filter = 1
+position = Vector2(1004, 446)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_36xph")
+animation = &"pressa"
+autoplay = "presse"
+script = ExtResource("10_wc01q")

@@ -1,6 +1,6 @@
 extends Node3D
 
-@export var rotation_speed: float = 1  # Sensitivity of rotation (degrees per frame)
+@export var rotation_speed: float = 0.5  # Sensitivity of rotation (degrees per frame)
 @export var max_up: float = 180
 @export var max_down: float = 0      # Max tilt angle to avoid flipping (degrees)
 @onready var sphere = $Sphere
@@ -9,24 +9,11 @@ extends Node3D
 # Store the globe's rotation as Euler angles
 var rotation_x: float = 90
 var rotation_z: float = 0  # Tilt (up/down)
-var rotation_y: float = -45
+var rotation_y: float = 24
 
 # Function to apply texture directly to the sphere
 	
 func _process(delta):
-	if abs(rotation_x - 130) <= 15 and abs(rotation_z - 0) <= 15 and abs(rotation_y - 20) <= 15:
-		Global.is_trex_level = true
-	else:
-		Global.is_trex_level = false
-	if abs(rotation_x - 110) <= 15 and abs(rotation_z - 0) <= 15 and abs(rotation_y - -75) <= 15:
-		Global.is_pterodactyl_level = true
-	else:
-		Global.is_pterodactyl_level = false
-	if abs(rotation_x - 80) <= 15 and abs(rotation_z - 0) <= 15 and abs(rotation_y - -5) <= 15:
-		Global.is_mosasaurus_level = true
-	else:
-		Global.is_mosasaurus_level = false
-
 	# Get input for rotation
 	var input_x = 0.0
 	var input_y = 0.0
