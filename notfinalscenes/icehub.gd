@@ -11,6 +11,11 @@ var rotation_z: float = 0  # Tilt (up/down)
 var rotation_y: float = 24  # Spin (left/right)
 
 # Function to apply texture directly to the sphere
+func _ready():
+	
+	Global.is_mosasaurus_level = false
+	Global.is_trex_level = false
+	Global.is_pterodactyl_level = false
 	
 func _process(delta):
 	# Get input for rotation
