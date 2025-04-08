@@ -1,0 +1,92 @@
+[gd_scene load_steps=15 format=3 uid="uid://b1byemaow3tjy"]
+
+[ext_resource type="Script" uid="uid://cdgyg0jo18kd3" path="res://notfinalscenes/gunpowderhub.gd" id="1_o6ctn"]
+[ext_resource type="Texture2D" uid="uid://b0uh5m4h02fb6" path="res://Nick O. Time Assets/hub/eraselect/gunpowder/gunpowdermercator.png" id="2_o6ctn"]
+[ext_resource type="Shader" uid="uid://dmsdlaivdn51h" path="res://outline.gdshader" id="3_5or8b"]
+[ext_resource type="Texture2D" uid="uid://bkf47w3mpf1xq" path="res://Nick O. Time Assets/hub/eraselect/gunpowder/gunpowdermercatoroverlay.png" id="3_5qsbe"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_g73tb"]
+radial_segments = 128
+rings = 64
+
+[sub_resource type="Skin" id="Skin_w7r13"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5qsbe"]
+albedo_texture = ExtResource("2_o6ctn")
+emission_enabled = true
+emission_energy_multiplier = 0.8
+emission_texture = ExtResource("2_o6ctn")
+texture_filter = 0
+
+[sub_resource type="SphereMesh" id="SphereMesh_hh2mk"]
+radius = 0.51
+height = 1.02
+radial_segments = 128
+rings = 64
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h5pk8"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0.54902)
+albedo_texture = ExtResource("3_5qsbe")
+emission_enabled = true
+emission_energy_multiplier = 0.8
+emission_texture = ExtResource("3_5qsbe")
+texture_filter = 0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hh2mk"]
+render_priority = 0
+shader = ExtResource("3_5or8b")
+shader_parameter/outline_width = 0.004
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_h5pk8"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6eldl"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_hjueh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hjueh"]
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+
+[node name="gunpowderhub" type="Node3D"]
+script = ExtResource("1_o6ctn")
+
+[node name="Sphere" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.91069e-15, 4.37114e-08, -1, 1, -4.37114e-08, 0, -4.37114e-08, -1, -4.37114e-08, 0, 0, 0)
+sorting_use_aabb_center = false
+cast_shadow = 0
+gi_mode = 0
+gi_lightmap_texel_scale = 0.01
+mesh = SubResource("SphereMesh_g73tb")
+skin = SubResource("Skin_w7r13")
+surface_material_override/0 = SubResource("StandardMaterial3D_5qsbe")
+
+[node name="overlay" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.91069e-15, 4.37114e-08, -1, 1, -4.37114e-08, 0, -4.37114e-08, -1, -4.37114e-08, 0, 0, 0)
+sorting_use_aabb_center = false
+cast_shadow = 0
+gi_mode = 0
+gi_lightmap_texel_scale = 0.01
+mesh = SubResource("SphereMesh_hh2mk")
+skin = SubResource("Skin_w7r13")
+surface_material_override/0 = SubResource("StandardMaterial3D_h5pk8")
+
+[node name="outline" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.90799e-15, 4.36496e-08, -0.998587, 0.998587, -4.36496e-08, 0, -4.36496e-08, -0.998587, -4.36496e-08, 0, 0, 0)
+material_override = SubResource("ShaderMaterial_hh2mk")
+gi_lightmap_texel_scale = 0.01
+mesh = SubResource("SphereMesh_h5pk8")
+skin = SubResource("Skin_w7r13")
+surface_material_override/0 = SubResource("ShaderMaterial_6eldl")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1.31651, 0)
+fov = 48.0
+near = 0.01
+far = 1000.0
+
+[node name="space background" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.53963, 0, 0, 0, 3, 0, 0, 0, 1.64654, 0, -0.996137, 0.00595951)
+mesh = SubResource("PlaneMesh_hjueh")
+surface_material_override/0 = SubResource("StandardMaterial3D_hjueh")
