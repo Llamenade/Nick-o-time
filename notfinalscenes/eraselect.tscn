@@ -1,4 +1,4 @@
-[gd_scene load_steps=79 format=3 uid="uid://djer4jfwcq4ll"]
+[gd_scene load_steps=84 format=3 uid="uid://djer4jfwcq4ll"]
 
 [ext_resource type="Script" uid="uid://dsyy8hacib6mr" path="res://eraselect.gd" id="1_xdc4v"]
 [ext_resource type="Texture2D" uid="uid://brhb4x1jx5mru" path="res://Nick O. Time Assets/hub/eraselect/ice/mercatoriceage.png" id="2_12xvn"]
@@ -30,6 +30,8 @@
 [ext_resource type="Texture2D" uid="uid://d2wpkbf2806gd" path="res://Nick O. Time Assets/hub/eraselect/war/warhover.png" id="17_e6iiq"]
 [ext_resource type="Texture2D" uid="uid://oclwttfpvouk" path="res://Nick O. Time Assets/hub/eraselect/war/warnormal.png" id="18_yl5gj"]
 [ext_resource type="Texture2D" uid="uid://df54ise2p221p" path="res://Nick O. Time Assets/hub/eraselect/ice/snow.png" id="26_p6l82"]
+[ext_resource type="Texture2D" uid="uid://biu5oi5aetfnx" path="res://Nick O. Time Assets/hub/eraselect/Modern/modernselected.png" id="27_forcv"]
+[ext_resource type="Texture2D" uid="uid://p0qctbgrsl24" path="res://Nick O. Time Assets/hub/eraselect/Modern/modern.png" id="28_uogb1"]
 [ext_resource type="Texture2D" uid="uid://ccivldpldg0s" path="res://Nick O. Time Assets/hub/eraselect/bronze/sand.png" id="31_cx2l6"]
 [ext_resource type="Texture2D" uid="uid://d07e0p8snacmt" path="res://Nick O. Time Assets/hub/eraselect/apocalypse/fire.png" id="32_4ymcl"]
 [ext_resource type="Texture2D" uid="uid://c8t2ld3h28fdh" path="res://Nick O. Time Assets/hub/eraselect/industrial/smoke.png" id="33_lx1sv"]
@@ -127,7 +129,16 @@ texture = ExtResource("8_nboi5")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b0d7j"]
 texture = ExtResource("9_52ica")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p6l82"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8g05k"]
+texture = ExtResource("27_forcv")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nj1en"]
+texture = ExtResource("27_forcv")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_forcv"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_trsvp"]
+texture = ExtResource("28_uogb1")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_e80fu"]
 shader = ExtResource("4_ernjp")
@@ -610,14 +621,16 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -64.0
-offset_top = -17.0
-offset_right = 64.0
-offset_bottom = 21.0
+offset_left = -65.0
+offset_top = -18.0
+offset_right = 65.0
+offset_bottom = 27.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/pressed = SubResource("StyleBoxTexture_p6l82")
-text = "Modern Age"
+theme_override_styles/focus = SubResource("StyleBoxTexture_8g05k")
+theme_override_styles/hover = SubResource("StyleBoxTexture_nj1en")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_forcv")
+theme_override_styles/normal = SubResource("StyleBoxTexture_trsvp")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = 100
