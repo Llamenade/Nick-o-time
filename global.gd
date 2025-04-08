@@ -18,3 +18,7 @@ var is_icon_visible: bool = false
 var is_trex_level: bool = false
 var is_pterodactyl_level: bool = false
 var is_mosasaurus_level: bool = false
+#Ice map
+var is_abominablesnowman_level: bool = false
+var is_smilodon_level: bool = false
+var is_woolymammoth_level: bool = false

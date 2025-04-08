@@ -6,9 +6,9 @@ extends Node3D
 @onready var sphere = $Sphere  # Reference to your sphere node
 
 # Store the globe's rotation as Euler angles
-var rotation_x: float = 90
+var rotation_x: float = 120
 var rotation_z: float = 0  # Tilt (up/down)
-var rotation_y: float = 24  # Spin (left/right)
+var rotation_y: float = 85  # Spin (left/right)
 
 # Function to apply texture directly to the sphere
 func _ready():
@@ -18,6 +18,18 @@ func _ready():
 	Global.is_pterodactyl_level = false
 	
 func _process(delta):
+	if abs(rotation_x - 60) <= 15 and abs(rotation_z - 0) <= 15 and abs(rotation_y - -92) <= 15:
+		Global.is_smilodon_level = true
+	else:
+		Global.is_smilodon_level = false
+	if abs(rotation_x - 147) <= 15 and abs(rotation_z - 0) <= 15 and abs(rotation_y - -115) <= 15:
+		Global.is_woolymammoth_level = true
+	else:
+		Global.is_woolymammoth_level = false
+	if abs(rotation_x - 120) <= 15 and abs(rotation_z - 0) <= 15 and abs(rotation_y - 85) <= 15:
+		Global.is_abominablesnowman_level = true
+	else:
+		Global.is_abominablesnowman_level = false
 	# Get input for rotation
 	var input_x = 0.0
 	var input_y = 0.0

@@ -13,6 +13,8 @@ func _ready():
 		$CanvasLayer/Control/TextureRect.texture = preload("res://Nick O. Time Assets/hub/eraselect/dinosaur/pterodactylhover.png")
 	elif Global.is_mosasaurus_level:
 		$CanvasLayer/Control/TextureRect.texture = preload("res://Nick O. Time Assets/hub/eraselect/dinosaur/mosasaurhover.png")
+	elif Global.is_smilodon_level:
+		$CanvasLayer/Control/TextureRect.texture = preload("res://Nick O. Time Assets/hub/eraselect/ice/sabretoothhover.png")
 	release_all_focus()
 	Global.is_icon_visible = true
 	$AnimationPlayer.play("RESET")
