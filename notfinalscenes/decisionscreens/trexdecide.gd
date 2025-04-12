@@ -23,6 +23,8 @@ func _ready():
 		$CanvasLayer/Control/TextureRect.texture = preload("res://Nick O. Time Assets/hub/eraselect/stone/cavemanhover.png")
 	elif Global.is_ent_level:
 		$CanvasLayer/Control/TextureRect.texture = preload("res://Nick O. Time Assets/hub/eraselect/stone/enthover.png")
+	elif Global.is_direwolf_level:
+		$CanvasLayer/Control/TextureRect.texture = preload("res://Nick O. Time Assets/hub/eraselect/ice/direwolfhover.png")
 	release_all_focus()
 	Global.is_icon_visible = true
 	$AnimationPlayer.play("RESET")
