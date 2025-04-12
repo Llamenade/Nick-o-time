@@ -22,3 +22,7 @@ var is_mosasaurus_level: bool = false
 var is_abominablesnowman_level: bool = false
 var is_smilodon_level: bool = false
 var is_woolymammoth_level: bool = false
+#Stone Map
+var is_caveman_level: bool = false
+var is_direwolf_level: bool = false
+var is_ent_level: bool = false

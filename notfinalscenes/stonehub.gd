@@ -11,8 +11,28 @@ var rotation_z: float = 0  # Tilt (up/down)
 var rotation_y: float = 32  # Spin (left/right)
 
 # Function to apply texture directly to the sphere
+func _ready():
+	
+	Global.is_mosasaurus_level = false
+	Global.is_trex_level = false
+	Global.is_pterodactyl_level = false
+	Global.is_woolymammoth_level = false
+	Global.is_smilodon_level = false
+	Global.is_abominablesnowman_level = false
 	
 func _process(delta):
+	if abs(rotation_x - 97) <= 15 and abs(rotation_z - 0) <= 15 and abs(rotation_y - 46) <= 15:
+		Global.is_caveman_level = true
+	else:
+		Global.is_caveman_level = false
+	if abs(rotation_x - 135) <= 15 and abs(rotation_z - 0) <= 15 and abs(rotation_y - -130) <= 15:
+		Global.is_direwolf_level = true
+	else:
+		Global.is_direwolf_level = false
+	if abs(rotation_x - 55) <= 15 and abs(rotation_z - 0) <= 15 and abs(rotation_y - 167) <= 15:
+		Global.is_ent_level = true
+	else:
+		Global.is_ent_level = false
 	# Get input for rotation
 	var input_x = 0.0
 	var input_y = 0.0
