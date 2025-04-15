@@ -16,6 +16,12 @@ func _ready():
 	Global.is_mosasaurus_level = false
 	Global.is_trex_level = false
 	Global.is_pterodactyl_level = false
+	Global.is_caveman_level = false
+	Global.is_direwolf_level = false
+	Global.is_ent_level = false
+	Global.is_kingtut_level = false
+	Global.is_mayanking_level = false
+	Global.is_minotaur_level = false
 	
 func _process(delta):
 	if abs(rotation_x - 60) <= 15 and abs(rotation_z - 0) <= 15 and abs(rotation_y - -92) <= 15:

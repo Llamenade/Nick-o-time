@@ -24,7 +24,13 @@ func _ready():
 	elif Global.is_ent_level:
 		$CanvasLayer/Control/TextureRect.texture = preload("res://Nick O. Time Assets/hub/eraselect/stone/enthover.png")
 	elif Global.is_direwolf_level:
-		$CanvasLayer/Control/TextureRect.texture = preload("res://Nick O. Time Assets/hub/eraselect/ice/direwolfhover.png")
+		$CanvasLayer/Control/TextureRect.texture = preload("res://Nick O. Time Assets/hub/eraselect/stone/direwolfhover.png")
+	elif Global.is_kingtut_level:
+		$CanvasLayer/Control/TextureRect.texture = preload("res://Nick O. Time Assets/hub/eraselect/bronze/kingtuthover.png")
+	elif Global.is_minotaur_level:
+		$CanvasLayer/Control/TextureRect.texture = preload("res://Nick O. Time Assets/hub/eraselect/bronze/minotaurhover.png")
+	elif Global.is_mayanking_level:
+		$CanvasLayer/Control/TextureRect.texture = preload("res://Nick O. Time Assets/hub/eraselect/bronze/mayankinghover.png")
 	release_all_focus()
 	Global.is_icon_visible = true
 	$AnimationPlayer.play("RESET")

@@ -1,7 +1,7 @@
 [gd_scene load_steps=19 format=3 uid="uid://ccfxj8qhuqhe0"]
 
 [ext_resource type="Script" uid="uid://bxedt3r3q1rps" path="res://notfinalscenes/bronzehub.gd" id="1_6b2to"]
-[ext_resource type="Texture2D" uid="uid://b5mwvkmcny457" path="res://Nick O. Time Assets/hub/mercator.png" id="2_g1ogj"]
+[ext_resource type="Texture2D" uid="uid://kphpwsaxsahw" path="res://Nick O. Time Assets/hub/eraselect/bronze/bronzemercator.png" id="2_6b2to"]
 [ext_resource type="Shader" uid="uid://heojd5prwl52" path="res://sandstorm.gdshader" id="3_73mwn"]
 [ext_resource type="Shader" uid="uid://dmsdlaivdn51h" path="res://outline.gdshader" id="4_6n43u"]
 
@@ -12,10 +12,10 @@ rings = 64
 [sub_resource type="Skin" id="Skin_w7r13"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_syogv"]
-albedo_texture = ExtResource("2_g1ogj")
+albedo_texture = ExtResource("2_6b2to")
 emission_enabled = true
 emission_energy_multiplier = 0.8
-emission_texture = ExtResource("2_g1ogj")
+emission_texture = ExtResource("2_6b2to")
 texture_filter = 0
 
 [sub_resource type="Gradient" id="Gradient_6i7xy"]
@@ -49,8 +49,6 @@ albedo_color = Color(0, 0, 0, 1)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_itlmx"]
 render_priority = 0
 shader = ExtResource("4_6n43u")
-shader_parameter/outline_width = 0.004
-shader_parameter/outline_color = Color(1, 1, 1, 1)
 
 [sub_resource type="SphereMesh" id="SphereMesh_apucp"]
 

@@ -77,7 +77,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	
-	if Global.is_trex_level or Global.is_mosasaurus_level or Global.is_pterodactyl_level or Global.is_smilodon_level or Global.is_woolymammoth_level or Global.is_abominablesnowman_level or Global.is_caveman_level or Global.is_direwolf_level or Global.is_ent_level:
+	if Global.is_trex_level or Global.is_mosasaurus_level or Global.is_pterodactyl_level or Global.is_smilodon_level or Global.is_woolymammoth_level or Global.is_abominablesnowman_level or Global.is_caveman_level or Global.is_direwolf_level or Global.is_ent_level or Global.is_kingtut_level or Global.is_minotaur_level or Global.is_mayanking_level:
 		interaction_label.visible = true
 		if Input.is_action_just_pressed("ui_accept") and !Global.is_icon_visible and !Global.is_wheel_visible:
 			get_tree().current_scene.add_child(trexdecide.instantiate())

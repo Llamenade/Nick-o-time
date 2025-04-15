@@ -26,3 +26,7 @@ var is_woolymammoth_level: bool = false
 var is_caveman_level: bool = false
 var is_direwolf_level: bool = false
 var is_ent_level: bool = false
+#Bronze Map
+var is_kingtut_level: bool = false
+var is_minotaur_level: bool = false
+var is_mayanking_level: bool = false

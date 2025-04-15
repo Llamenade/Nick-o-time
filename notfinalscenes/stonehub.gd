@@ -19,6 +19,9 @@ func _ready():
 	Global.is_woolymammoth_level = false
 	Global.is_smilodon_level = false
 	Global.is_abominablesnowman_level = false
+	Global.is_kingtut_level = false
+	Global.is_mayanking_level = false
+	Global.is_minotaur_level = false
 	
 func _process(delta):
 	if abs(rotation_x - 97) <= 15 and abs(rotation_z - 0) <= 15 and abs(rotation_y - 46) <= 15:

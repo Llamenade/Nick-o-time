@@ -11,6 +11,17 @@ var rotation_x: float = 90
 var rotation_z: float = 0  # Tilt (up/down)
 var rotation_y: float = -45
 
+func _ready():
+	Global.is_woolymammoth_level = false
+	Global.is_smilodon_level = false
+	Global.is_abominablesnowman_level = false
+	Global.is_caveman_level = false
+	Global.is_direwolf_level = false
+	Global.is_ent_level = false
+	Global.is_kingtut_level = false
+	Global.is_mayanking_level = false
+	Global.is_minotaur_level = false
+
 # Function to apply texture directly to the sphere
 	
 func _process(delta):
