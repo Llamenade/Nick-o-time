@@ -679,6 +679,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="icefilter" type="CanvasLayer" parent="."]
+layer = 5
 follow_viewport_enabled = true
 
 [node name="controlicefilter" type="Control" parent="icefilter"]
@@ -720,6 +721,7 @@ grow_vertical = 2
 color = Color(0, 0, 1, 1)
 
 [node name="bronzefilter" type="CanvasLayer" parent="."]
+layer = 5
 
 [node name="controlbronzefilter" type="Control" parent="bronzefilter"]
 layout_mode = 3
@@ -750,6 +752,7 @@ visibility_rect = Rect2(0, 0, 1920, 1080)
 process_material = SubResource("ParticleProcessMaterial_4ymcl")
 
 [node name="medievalfilter" type="CanvasLayer" parent="."]
+layer = 5
 
 [node name="controlmedievalfilter" type="Control" parent="medievalfilter"]
 layout_mode = 3
@@ -769,6 +772,7 @@ grow_vertical = 2
 color = Color(0, 0, 0, 0.423529)
 
 [node name="firefilter" type="CanvasLayer" parent="."]
+layer = 5
 
 [node name="controlfirefilter" type="Control" parent="firefilter"]
 layout_mode = 3
@@ -797,6 +801,7 @@ visibility_rect = Rect2(0, 0, 1920, 1080)
 process_material = SubResource("ParticleProcessMaterial_lx1sv")
 
 [node name="industrialfilter" type="CanvasLayer" parent="."]
+layer = 5
 
 [node name="controlindustrialfilter" type="Control" parent="industrialfilter"]
 layout_mode = 3

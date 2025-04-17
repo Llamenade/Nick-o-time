@@ -1,0 +1,64 @@
+[gd_scene load_steps=12 format=3 uid="uid://bhilsknq0u36c"]
+
+[ext_resource type="Script" uid="uid://2wcwfdvrpew3" path="res://notfinalscenes/ironhub.gd" id="1_87lo0"]
+[ext_resource type="Texture2D" uid="uid://c28cd0gcood35" path="res://Nick O. Time Assets/hub/eraselect/iron/ironmercator.png" id="2_87lo0"]
+[ext_resource type="Shader" uid="uid://dmsdlaivdn51h" path="res://outline.gdshader" id="3_1u8wg"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_g73tb"]
+radial_segments = 128
+rings = 64
+
+[sub_resource type="Skin" id="Skin_w7r13"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1m4ie"]
+albedo_texture = ExtResource("2_87lo0")
+emission_enabled = true
+emission_energy_multiplier = 0.8
+emission_texture = ExtResource("2_87lo0")
+texture_filter = 0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g73tb"]
+render_priority = 0
+shader = ExtResource("3_1u8wg")
+
+[sub_resource type="SphereMesh" id="SphereMesh_syogv"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6eldl"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_hjueh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hjueh"]
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+
+[node name="ironhub" type="Node3D"]
+script = ExtResource("1_87lo0")
+
+[node name="Sphere" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.91069e-15, 4.37114e-08, -1, 1, -4.37114e-08, 0, -4.37114e-08, -1, -4.37114e-08, 0, 0, 0)
+sorting_use_aabb_center = false
+cast_shadow = 0
+gi_mode = 0
+gi_lightmap_texel_scale = 0.01
+mesh = SubResource("SphereMesh_g73tb")
+skin = SubResource("Skin_w7r13")
+surface_material_override/0 = SubResource("StandardMaterial3D_1m4ie")
+
+[node name="outline" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.90799e-15, 4.36496e-08, -0.998587, 0.998587, -4.36496e-08, 0, -4.36496e-08, -0.998587, -4.36496e-08, 0, 0, 0)
+material_override = SubResource("ShaderMaterial_g73tb")
+gi_lightmap_texel_scale = 0.01
+mesh = SubResource("SphereMesh_syogv")
+skin = SubResource("Skin_w7r13")
+surface_material_override/0 = SubResource("ShaderMaterial_6eldl")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1.31651, 0)
+fov = 48.0
+near = 0.01
+far = 1000.0
+
+[node name="space background" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.53963, 0, 0, 0, 3, 0, 0, 0, 1.64654, 0, -0.996137, 0.00595951)
+mesh = SubResource("PlaneMesh_hjueh")
+surface_material_override/0 = SubResource("StandardMaterial3D_hjueh")

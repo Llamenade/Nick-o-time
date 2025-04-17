@@ -1006,6 +1006,9 @@ script = ExtResource("1_x1jvn")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+layer = 5
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
 process_mode = 3

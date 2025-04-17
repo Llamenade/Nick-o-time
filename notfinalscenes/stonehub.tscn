@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://d0rkw2ebxnalb"]
+[gd_scene load_steps=13 format=3 uid="uid://d0rkw2ebxnalb"]
 
 [ext_resource type="Script" uid="uid://bbbclkaajqq1j" path="res://notfinalscenes/stonehub.gd" id="1_0dkco"]
 [ext_resource type="Texture2D" uid="uid://cxe0kwlnfwcae" path="res://Nick O. Time Assets/hub/eraselect/stone/stonemercator.png" id="2_d8dak"]
 [ext_resource type="Shader" uid="uid://dmsdlaivdn51h" path="res://outline.gdshader" id="3_ntuad"]
+[ext_resource type="AudioStream" uid="uid://bfb7dbunvjq25" path="res://sounds/stoneage (1).mp3" id="4_d8dak"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_ybt8w"]
 radial_segments = 128
@@ -62,3 +63,9 @@ far = 1000.0
 transform = Transform3D(2.53963, 0, 0, 0, 3, 0, 0, 0, 1.64654, 0, -0.996137, 0.00595951)
 mesh = SubResource("PlaneMesh_hjueh")
 surface_material_override/0 = SubResource("StandardMaterial3D_hjueh")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
+stream = ExtResource("4_d8dak")
+autoplay = true
+parameters/looping = true

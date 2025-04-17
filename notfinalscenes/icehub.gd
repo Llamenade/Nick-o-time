@@ -22,6 +22,9 @@ func _ready():
 	Global.is_kingtut_level = false
 	Global.is_mayanking_level = false
 	Global.is_minotaur_level = false
+	Global.is_charbydis_level = false
+	Global.is_achilles_level = false
+	Global.is_manticore_level = false
 	
 func _process(delta):
 	if abs(rotation_x - 60) <= 15 and abs(rotation_z - 0) <= 15 and abs(rotation_y - -92) <= 15:

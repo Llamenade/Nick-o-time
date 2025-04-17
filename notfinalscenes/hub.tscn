@@ -20,8 +20,6 @@ texture_filter = 0
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_g73tb"]
 render_priority = 0
 shader = ExtResource("3_w7r13")
-shader_parameter/outline_width = 0.004
-shader_parameter/outline_color = Color(1, 1, 1, 1)
 
 [sub_resource type="SphereMesh" id="SphereMesh_syogv"]
 

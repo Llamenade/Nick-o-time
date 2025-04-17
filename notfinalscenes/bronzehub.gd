@@ -21,6 +21,9 @@ func _ready():
 	Global.is_caveman_level = false
 	Global.is_direwolf_level = false
 	Global.is_ent_level = false
+	Global.is_charbydis_level = false
+	Global.is_achilles_level = false
+	Global.is_manticore_level = false
 
 # Function to apply texture directly to the sphere
 	

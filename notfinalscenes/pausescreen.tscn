@@ -978,6 +978,7 @@ grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
+layer = 10
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer2"]
 modulate = Color(1, 1, 1, 0)

@@ -1,0 +1,842 @@
+[gd_scene load_steps=83 format=3 uid="uid://cspbaox8x6fd3"]
+
+[ext_resource type="Texture2D" uid="uid://bl8tvvaqka2ap" path="res://Nick O. Time Assets/nikotime/HEAD/idle/nikotimeheadidle1.png" id="1_sb5uh"]
+[ext_resource type="Script" uid="uid://b3mpjp0oclbj" path="res://notfinalscenes/loadoutselect.gd" id="1_tn4xg"]
+[ext_resource type="Shader" uid="uid://burg1kocvxqml" path="res://pause.gdshader" id="1_uycqc"]
+[ext_resource type="Texture2D" uid="uid://hfo5j2bpvll3" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/outlines/default/head.png" id="2_0pp3a"]
+[ext_resource type="Texture2D" uid="uid://baq1c0nwqf1t1" path="res://Nick O. Time Assets/nikotime/TORSO/idle/nikotimetorsoidle1.png" id="2_2veow"]
+[ext_resource type="Script" uid="uid://d2dyixxtes5fx" path="res://notfinalscenes/headselect.gd" id="2_tn4xg"]
+[ext_resource type="Texture2D" uid="uid://buytt5bfxumc5" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/customizerbox.png" id="2_xq3rp"]
+[ext_resource type="Texture2D" uid="uid://cwa3bcfkhkwat" path="res://Nick O. Time Assets/nikotime/ARMS/idle/nikotimearmsidle1.png" id="3_631i3"]
+[ext_resource type="Texture2D" uid="uid://qmqp48w4dea" path="res://Nick O. Time Assets/nikotime/GUN/empty.png" id="3_tn4xg"]
+[ext_resource type="Texture2D" uid="uid://dxx1mv82er5il" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/head/nikotime.png" id="4_41p7n"]
+[ext_resource type="Script" uid="uid://c4jn8wrsu5uq3" path="res://notfinalscenes/options.gd" id="4_p0n81"]
+[ext_resource type="Texture2D" uid="uid://drlnbjgny6d2d" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/head/justintime.png" id="5_lhy4i"]
+[ext_resource type="Script" uid="uid://cj1othg7442t0" path="res://notfinalscenes/nikotime.gd" id="5_nwun0"]
+[ext_resource type="Texture2D" uid="uid://npgnybi5jsdb" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/outlines/default/torso.png" id="5_u7oxg"]
+[ext_resource type="Texture2D" uid="uid://bm7fv5tqtl8ub" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/selecthighlight/selecthighlight1.png" id="6_7goou"]
+[ext_resource type="Script" uid="uid://ksllycr5kksr" path="res://notfinalscenes/torsoselect.gd" id="6_8li3q"]
+[ext_resource type="Texture2D" uid="uid://cxuvm0k5sm7iq" path="res://Nick O. Time Assets/nikotime/GUN/gun.png" id="6_poe3m"]
+[ext_resource type="Texture2D" uid="uid://nqg0h4ms0cis" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/outlines/default/arms.png" id="7_8li3q"]
+[ext_resource type="Texture2D" uid="uid://sojeg43gq00t" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/selecthighlight/selecthighlight2.png" id="7_bgd1g"]
+[ext_resource type="Script" uid="uid://b56201gbhiedo" path="res://notfinalscenes/justintime.gd" id="7_nwun0"]
+[ext_resource type="Texture2D" uid="uid://cld5okbhtosps" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/selecthighlight/selecthighlight3.png" id="8_16p4o"]
+[ext_resource type="Texture2D" uid="uid://ca21swkxpm8mw" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/head/archytime.png" id="8_q7e5d"]
+[ext_resource type="Script" uid="uid://di5trche1vgex" path="res://notfinalscenes/archytime.gd" id="9_byspc"]
+[ext_resource type="Texture2D" uid="uid://dpwsyk16q3jqn" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/outlines/default/legs.png" id="9_oivvn"]
+[ext_resource type="Script" uid="uid://b43d0mop5e0aa" path="res://notfinalscenes/armselect.gd" id="9_yqtmv"]
+[ext_resource type="Texture2D" uid="uid://gyl8fc645jpm" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/head/chilltime.png" id="10_8gd2p"]
+[ext_resource type="Script" uid="uid://cnrahs2gcq645" path="res://notfinalscenes/chilltime.gd" id="11_r6yu1"]
+[ext_resource type="Texture2D" uid="uid://k3vw2a75iw27" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/outlines/default/charm.png" id="11_yqtmv"]
+[ext_resource type="Texture2D" uid="uid://cjodv61f87u5j" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/head/oogatime.png" id="12_ohqcc"]
+[ext_resource type="Script" uid="uid://doyemw1p4t8u4" path="res://notfinalscenes/legselect.gd" id="12_yqtmv"]
+[ext_resource type="Texture2D" uid="uid://co1f8x81qm3j8" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/outlines/default/gun.png" id="13_4nmdu"]
+[ext_resource type="Texture2D" uid="uid://fh2qqno7pqlx" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/legsfix.png" id="13_5osbr"]
+[ext_resource type="Script" uid="uid://dylwmb0ho5jcj" path="res://notfinalscenes/oogatime.gd" id="13_es346"]
+[ext_resource type="Script" uid="uid://dfvws8ko0vb4w" path="res://notfinalscenes/charmselect.gd" id="15_4nmdu"]
+[ext_resource type="Texture2D" uid="uid://bdyrtvirnxchv" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/outlines/archytime/headarchytime.png" id="16_byspc"]
+[ext_resource type="Texture2D" uid="uid://bl61sed83pyh5" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/head/minotime.png" id="17_16p4o"]
+[ext_resource type="Script" uid="uid://c4kct30d6vm1y" path="res://notfinalscenes/gunselect.gd" id="18_4nmdu"]
+[ext_resource type="Script" uid="uid://bat2g1c4618yy" path="res://notfinalscenes/minotime.gd" id="18_8q3fq"]
+[ext_resource type="Texture2D" uid="uid://cwxr8o6u3dbdr" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/outlines/chilltime/headchilltime.png" id="19_rybv7"]
+[ext_resource type="Texture2D" uid="uid://2g75uobd1yt0" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/head/caesartime.png" id="20_pkd0d"]
+[ext_resource type="Script" uid="uid://cfqocvxuu05ns" path="res://notfinalscenes/caesartime.gd" id="21_vkqwk"]
+[ext_resource type="Texture2D" uid="uid://bto86i7vhcuka" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/head/sirtime.png" id="22_gcsra"]
+[ext_resource type="Script" uid="uid://v8dx4ui6cke1" path="res://notfinalscenes/sirtime.gd" id="23_ioa7k"]
+[ext_resource type="Texture2D" uid="uid://cbl2fifctfio4" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/outlines/oogatime/oogatimehead.png" id="23_sjdyc"]
+[ext_resource type="Script" uid="uid://bbxvcok8y760x" path="res://notfinalscenes/echotime.gd" id="24_m4bje"]
+[ext_resource type="Texture2D" uid="uid://044sydavf3dk" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/head/echotime.png" id="24_ugnxx"]
+[ext_resource type="Texture2D" uid="uid://clsqv3m8chirv" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/charm/clock/clockcharm1.png" id="26_1nebg"]
+[ext_resource type="Script" uid="uid://pqa74ixbesx" path="res://notfinalscenes/clockcharm.gd" id="27_1nebg"]
+[ext_resource type="Texture2D" uid="uid://dblmh4nglm7j2" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/charm/clock/clockcharm2.png" id="27_nmmnb"]
+[ext_resource type="Texture2D" uid="uid://be2i2p2luve2v" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/charm/clock/clockcharm3.png" id="28_1h778"]
+[ext_resource type="Texture2D" uid="uid://16y81ce8pdxo" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/outlines/minotime/headminotime.png" id="28_8q3fq"]
+[ext_resource type="Texture2D" uid="uid://bx42nvyjonbd4" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/charm/clock/clockcharm4.png" id="29_6fvji"]
+[ext_resource type="Texture2D" uid="uid://1sk6jrpqy1ki" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/outlines/caesartime/caesartimehead.png" id="29_gcsra"]
+[ext_resource type="FontFile" uid="uid://cy3h2y25yb67v" path="res://dialogue/StWinterPixel24BoldDemoBold-BWRz5.otf" id="30_la3hg"]
+[ext_resource type="Texture2D" uid="uid://dnksg40m8x4bh" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/charm/clock/clockcharm5.png" id="30_ye2dh"]
+[ext_resource type="Texture2D" uid="uid://bmw0n0x27g0b5" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/charm/clock/clockcharm6.png" id="31_jvurq"]
+[ext_resource type="Script" uid="uid://cxrjqtqmkdg2y" path="res://notfinalscenes/whatcharacter.gd" id="31_m3dty"]
+[ext_resource type="Texture2D" uid="uid://cgkkkaqejnodh" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/charm/clock/clockcharm7.png" id="32_p7k52"]
+[ext_resource type="Texture2D" uid="uid://oa815c8ie6ny" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/charm/clock/clockcharm8.png" id="33_tnb6h"]
+[ext_resource type="Texture2D" uid="uid://cse282tvo1pj5" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/outlines/sirtime/sirtimehead.png" id="36_ioa7k"]
+[ext_resource type="Texture2D" uid="uid://b4mxt7lw80hua" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/charm/jump/jumpcharm1.png" id="36_jvurq"]
+[ext_resource type="Texture2D" uid="uid://b55h8ycgwba10" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/outlines/echotime/echotimehead.png" id="36_p1acq"]
+[ext_resource type="Script" uid="uid://dvk1776cnp1v" path="res://notfinalscenes/jumpcharm.gd" id="37_p7k52"]
+[ext_resource type="Texture2D" uid="uid://d3hrwoftkun7t" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/charm/jump/jumpcharm2.png" id="38_tnb6h"]
+[ext_resource type="Texture2D" uid="uid://8oqqqhf2a1xw" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/charm/jump/jumpcharm3.png" id="39_nwu74"]
+[ext_resource type="Texture2D" uid="uid://dva2xyyg2yf2u" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/charm/jump/jumpcharm4.png" id="40_pf8eo"]
+[ext_resource type="Texture2D" uid="uid://cucj48ivcin6n" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/outlines/default/normalcharm.png" id="62_p7k52"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5osbr"]
+shader = ExtResource("1_uycqc")
+shader_parameter/lod = 0.0
+
+[sub_resource type="Animation" id="Animation_5osbr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect:material:shader_parameter/lod")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/Node2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/Options:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 320)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/Label:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_uycqc"]
+resource_name = "fade"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect:material:shader_parameter/lod")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.704]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/Node2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/Options:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 400), Vector2(0, -20)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/Label:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xq3rp"]
+_data = {
+&"RESET": SubResource("Animation_5osbr"),
+&"fade": SubResource("Animation_uycqc")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8q3fq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_7goou")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_bgd1g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_16p4o")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1nebg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_1nebg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_nmmnb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_1h778")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_6fvji")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_ye2dh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_jvurq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_p7k52")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_tnb6h")
+}],
+"loop": true,
+"name": &"clock",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_tn4xg")
+}],
+"loop": true,
+"name": &"reset",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rrggw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_7goou")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_bgd1g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_16p4o")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k6wlk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("36_jvurq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_tnb6h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_nwu74")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_pf8eo")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_tn4xg")
+}],
+"loop": true,
+"name": &"reset",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5osbr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_u7oxg")
+}],
+"loop": true,
+"name": &"defaultselect",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_tn4xg")
+}],
+"loop": true,
+"name": &"invis",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uycqc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_byspc")
+}],
+"loop": true,
+"name": &"archytimeselect",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_gcsra")
+}],
+"loop": true,
+"name": &"caesartimeselect",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_rybv7")
+}],
+"loop": true,
+"name": &"chilltimeselect",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_0pp3a")
+}],
+"loop": true,
+"name": &"defaultselect",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("36_p1acq")
+}],
+"loop": true,
+"name": &"echotimeselect",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_tn4xg")
+}],
+"loop": true,
+"name": &"invis",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("28_8q3fq")
+}],
+"loop": true,
+"name": &"minotimeselect",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_sjdyc")
+}],
+"loop": true,
+"name": &"oogatimeselect",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("36_ioa7k")
+}],
+"loop": true,
+"name": &"sirtimeselect",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xq3rp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_8li3q")
+}],
+"loop": true,
+"name": &"defaultselect",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_tn4xg")
+}],
+"loop": true,
+"name": &"invis",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fs68q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_oivvn")
+}],
+"loop": true,
+"name": &"defaultselect",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_tn4xg")
+}],
+"loop": true,
+"name": &"invis",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_41p7n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_yqtmv")
+}],
+"loop": true,
+"name": &"clockselect",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("62_p7k52")
+}],
+"loop": true,
+"name": &"defaultselect",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_tn4xg")
+}],
+"loop": true,
+"name": &"invis",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nmmnb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_1nebg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_nmmnb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_1h778")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_6fvji")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_ye2dh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_jvurq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_p7k52")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_tnb6h")
+}],
+"loop": true,
+"name": &"clockcharm",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("36_jvurq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_tnb6h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_nwu74")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_pf8eo")
+}],
+"loop": true,
+"name": &"jumpcharm",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_tn4xg")
+}],
+"loop": true,
+"name": &"reset",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lhy4i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_4nmdu")
+}],
+"loop": true,
+"name": &"defaultselect",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_tn4xg")
+}],
+"loop": true,
+"name": &"invis",
+"speed": 5.0
+}]
+
+[node name="loadoutselect" type="Control"]
+process_mode = 3
+z_index = 4096
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tn4xg")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+physics_interpolation_mode = 2
+layer = 6
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+z_index = 100
+texture_filter = 1
+material = SubResource("ShaderMaterial_5osbr")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_xq3rp")
+}
+
+[node name="Options" type="TextureRect" parent="CanvasLayer"]
+z_index = 2000
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 320.0
+offset_bottom = 320.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_xq3rp")
+script = ExtResource("4_p0n81")
+
+[node name="HeadOptions" type="Node2D" parent="CanvasLayer/Options"]
+visible = false
+
+[node name="nikotime" type="Sprite2D" parent="CanvasLayer/Options/HeadOptions"]
+position = Vector2(480, 855)
+scale = Vector2(3, 3)
+texture = ExtResource("4_41p7n")
+script = ExtResource("5_nwun0")
+
+[node name="highlight" type="AnimatedSprite2D" parent="CanvasLayer/Options/HeadOptions/nikotime"]
+position = Vector2(0, -11)
+sprite_frames = SubResource("SpriteFrames_8q3fq")
+autoplay = "default"
+frame = 1
+frame_progress = 0.0435299
+
+[node name="justintime" type="Sprite2D" parent="CanvasLayer/Options/HeadOptions"]
+position = Vector2(648, 855)
+scale = Vector2(3, 3)
+texture = ExtResource("5_lhy4i")
+script = ExtResource("7_nwun0")
+
+[node name="highlight" type="AnimatedSprite2D" parent="CanvasLayer/Options/HeadOptions/justintime"]
+position = Vector2(-1.52588e-05, -11)
+sprite_frames = SubResource("SpriteFrames_8q3fq")
+autoplay = "default"
+frame = 1
+frame_progress = 0.0435299
+
+[node name="archytime" type="Sprite2D" parent="CanvasLayer/Options/HeadOptions"]
+position = Vector2(816, 855)
+scale = Vector2(3, 3)
+texture = ExtResource("8_q7e5d")
+script = ExtResource("9_byspc")
+
+[node name="highlight" type="AnimatedSprite2D" parent="CanvasLayer/Options/HeadOptions/archytime"]
+position = Vector2(0, -11)
+sprite_frames = SubResource("SpriteFrames_8q3fq")
+autoplay = "default"
+frame = 1
+frame_progress = 0.0435299
+
+[node name="chilltime" type="Sprite2D" parent="CanvasLayer/Options/HeadOptions"]
+position = Vector2(984, 855)
+scale = Vector2(3, 3)
+texture = ExtResource("10_8gd2p")
+script = ExtResource("11_r6yu1")
+
+[node name="highlight" type="AnimatedSprite2D" parent="CanvasLayer/Options/HeadOptions/chilltime"]
+position = Vector2(0, -11)
+sprite_frames = SubResource("SpriteFrames_8q3fq")
+autoplay = "default"
+frame = 1
+frame_progress = 0.0435299
+
+[node name="oogatime" type="Sprite2D" parent="CanvasLayer/Options/HeadOptions"]
+position = Vector2(1152, 855)
+scale = Vector2(3, 3)
+texture = ExtResource("12_ohqcc")
+script = ExtResource("13_es346")
+
+[node name="highlight" type="AnimatedSprite2D" parent="CanvasLayer/Options/HeadOptions/oogatime"]
+position = Vector2(0, -11)
+sprite_frames = SubResource("SpriteFrames_8q3fq")
+autoplay = "default"
+frame = 1
+frame_progress = 0.0435299
+
+[node name="minotime" type="Sprite2D" parent="CanvasLayer/Options/HeadOptions"]
+position = Vector2(1320, 855)
+scale = Vector2(3, 3)
+texture = ExtResource("17_16p4o")
+script = ExtResource("18_8q3fq")
+
+[node name="highlight" type="AnimatedSprite2D" parent="CanvasLayer/Options/HeadOptions/minotime"]
+position = Vector2(0, -11)
+sprite_frames = SubResource("SpriteFrames_8q3fq")
+autoplay = "default"
+frame = 1
+frame_progress = 0.0435299
+
+[node name="caesartime" type="Sprite2D" parent="CanvasLayer/Options/HeadOptions"]
+position = Vector2(1488, 855)
+scale = Vector2(3, 3)
+texture = ExtResource("20_pkd0d")
+script = ExtResource("21_vkqwk")
+
+[node name="highlight" type="AnimatedSprite2D" parent="CanvasLayer/Options/HeadOptions/caesartime"]
+position = Vector2(0, -11)
+sprite_frames = SubResource("SpriteFrames_8q3fq")
+autoplay = "default"
+frame = 1
+frame_progress = 0.0435299
+
+[node name="sirtime" type="Sprite2D" parent="CanvasLayer/Options/HeadOptions"]
+position = Vector2(480, 984)
+scale = Vector2(3, 3)
+texture = ExtResource("22_gcsra")
+script = ExtResource("23_ioa7k")
+
+[node name="highlight" type="AnimatedSprite2D" parent="CanvasLayer/Options/HeadOptions/sirtime"]
+position = Vector2(0, -11)
+sprite_frames = SubResource("SpriteFrames_8q3fq")
+autoplay = "default"
+frame = 1
+frame_progress = 0.0435299
+
+[node name="echotime" type="Sprite2D" parent="CanvasLayer/Options/HeadOptions"]
+position = Vector2(648, 984)
+scale = Vector2(3, 3)
+texture = ExtResource("24_ugnxx")
+script = ExtResource("24_m4bje")
+
+[node name="highlight" type="AnimatedSprite2D" parent="CanvasLayer/Options/HeadOptions/echotime"]
+position = Vector2(0, -11)
+sprite_frames = SubResource("SpriteFrames_8q3fq")
+autoplay = "default"
+frame = 1
+frame_progress = 0.0435299
+
+[node name="CharmOptions" type="Node2D" parent="CanvasLayer/Options"]
+
+[node name="Clock" type="Sprite2D" parent="CanvasLayer/Options/CharmOptions"]
+position = Vector2(444, 750)
+scale = Vector2(6, 6)
+texture = ExtResource("26_1nebg")
+script = ExtResource("27_1nebg")
+
+[node name="Control" type="Control" parent="CanvasLayer/Options/CharmOptions/Clock"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="animatedclock" type="AnimatedSprite2D" parent="CanvasLayer/Options/CharmOptions/Clock/Control"]
+sprite_frames = SubResource("SpriteFrames_1nebg")
+animation = &"clock"
+
+[node name="highlight" type="AnimatedSprite2D" parent="CanvasLayer/Options/CharmOptions/Clock"]
+position = Vector2(6.16666, 12.1667)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_rrggw")
+autoplay = "default"
+
+[node name="Jump" type="Sprite2D" parent="CanvasLayer/Options/CharmOptions"]
+position = Vector2(612, 750)
+scale = Vector2(6, 6)
+texture = ExtResource("36_jvurq")
+script = ExtResource("37_p7k52")
+
+[node name="Control" type="Control" parent="CanvasLayer/Options/CharmOptions/Jump"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="animatedjump" type="AnimatedSprite2D" parent="CanvasLayer/Options/CharmOptions/Jump/Control"]
+sprite_frames = SubResource("SpriteFrames_k6wlk")
+animation = &"jump"
+frame = 2
+frame_progress = 0.0524269
+
+[node name="highlight" type="AnimatedSprite2D" parent="CanvasLayer/Options/CharmOptions/Jump"]
+position = Vector2(6.16666, 12.1667)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_rrggw")
+autoplay = "default"
+
+[node name="Node2D" type="Node2D" parent="CanvasLayer"]
+modulate = Color(1, 1, 1, 0)
+z_index = 2000
+position = Vector2(0, -72)
+
+[node name="Torso" type="Sprite2D" parent="CanvasLayer/Node2D"]
+position = Vector2(960, 540)
+scale = Vector2(9, 9)
+texture = ExtResource("2_2veow")
+script = ExtResource("6_8li3q")
+
+[node name="torsoselect" type="AnimatedSprite2D" parent="CanvasLayer/Node2D/Torso"]
+z_index = 10
+sprite_frames = SubResource("SpriteFrames_5osbr")
+animation = &"invis"
+autoplay = "invis"
+
+[node name="Head" type="Sprite2D" parent="CanvasLayer/Node2D"]
+z_index = 11
+position = Vector2(960, 540)
+scale = Vector2(9, 9)
+texture = ExtResource("1_sb5uh")
+script = ExtResource("2_tn4xg")
+
+[node name="headselect" type="AnimatedSprite2D" parent="CanvasLayer/Node2D/Head"]
+z_index = 10
+sprite_frames = SubResource("SpriteFrames_uycqc")
+animation = &"echotimeselect"
+autoplay = "invis"
+
+[node name="Arms" type="Sprite2D" parent="CanvasLayer/Node2D"]
+z_index = 12
+position = Vector2(960, 540)
+scale = Vector2(9, 9)
+texture = ExtResource("3_631i3")
+script = ExtResource("9_yqtmv")
+
+[node name="armselect" type="AnimatedSprite2D" parent="CanvasLayer/Node2D/Arms"]
+z_index = 10
+sprite_frames = SubResource("SpriteFrames_xq3rp")
+animation = &"invis"
+autoplay = "invis"
+
+[node name="Legs" type="Sprite2D" parent="CanvasLayer/Node2D"]
+position = Vector2(960, 540)
+scale = Vector2(9, 9)
+texture = ExtResource("13_5osbr")
+script = ExtResource("12_yqtmv")
+
+[node name="legselect" type="AnimatedSprite2D" parent="CanvasLayer/Node2D/Legs"]
+position = Vector2(0.111122, 1)
+sprite_frames = SubResource("SpriteFrames_fs68q")
+animation = &"invis"
+autoplay = "invis"
+
+[node name="Charm" type="Sprite2D" parent="CanvasLayer/Node2D"]
+process_priority = 3
+process_physics_priority = 3
+position = Vector2(960, 540)
+scale = Vector2(9, 9)
+texture = ExtResource("36_jvurq")
+script = ExtResource("15_4nmdu")
+
+[node name="charmselect" type="AnimatedSprite2D" parent="CanvasLayer/Node2D/Charm"]
+sprite_frames = SubResource("SpriteFrames_41p7n")
+animation = &"defaultselect"
+autoplay = "invis"
+
+[node name="Control" type="Control" parent="CanvasLayer/Node2D/Charm"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="animatedcharm" type="AnimatedSprite2D" parent="CanvasLayer/Node2D/Charm/Control"]
+sprite_frames = SubResource("SpriteFrames_nmmnb")
+animation = &"jumpcharm"
+
+[node name="Gun" type="Sprite2D" parent="CanvasLayer/Node2D"]
+position = Vector2(942, 278)
+scale = Vector2(9, 9)
+texture = ExtResource("6_poe3m")
+script = ExtResource("18_4nmdu")
+
+[node name="gunselect" type="AnimatedSprite2D" parent="CanvasLayer/Node2D/Gun"]
+sprite_frames = SubResource("SpriteFrames_lhy4i")
+animation = &"invis"
+autoplay = "invis"
+
+[node name="Label" type="RichTextLabel" parent="CanvasLayer"]
+modulate = Color(1, 1, 1, 0)
+z_index = 200
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1311.0
+offset_top = 43.0
+offset_right = -592.0
+offset_bottom = 132.0
+grow_horizontal = 0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("30_la3hg")
+theme_override_font_sizes/normal_font_size = 90
+text = "NICK O. Time"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("31_m3dty")

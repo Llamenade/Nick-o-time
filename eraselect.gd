@@ -9,7 +9,6 @@ extends Control
 @onready var medieval_filter: Control = $medievalfilter/controlmedievalfilter
 @onready var apocalypse_filter: Control = $firefilter/controlfirefilter
 @onready var industrial_filter: Control = $industrialfilter/controlindustrialfilter
-@onready var sphere: MeshInstance3D = $Sphere
 
 @onready var buttons: Array = [
 	$Center/Dinosaur_Age/Button1, $Center/Ice_Age/Button2, $Center/Stone_Age/Button3,
@@ -46,9 +45,11 @@ var bronzehub_scene = preload("res://notfinalscenes/bronzehub.tscn")
 var medievalhub_scene = preload("res://notfinalscenes/medievalhub.tscn")
 var gunpowderhub_scene = preload("res://notfinalscenes/gunpowderhub.tscn")
 var apocalypsehub_scene = preload("res://notfinalscenes/apocalypsehub.tscn")
+var ironhub_scene = preload("res://notfinalscenes/ironhub.tscn")
 
 var pause_screen = preload("res://notfinalscenes/pausescreen.tscn")
 var trexdecide = preload("res://notfinalscenes/decisionscreens/trexdecide.tscn")
+var loadoutbutton = preload("res://notfinalscenes/loadoutbutton.tscn")
 
 
 var current_instance: Node = null  # Track the current scene instance
@@ -77,7 +78,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	
-	if Global.is_trex_level or Global.is_mosasaurus_level or Global.is_pterodactyl_level or Global.is_smilodon_level or Global.is_woolymammoth_level or Global.is_abominablesnowman_level or Global.is_caveman_level or Global.is_direwolf_level or Global.is_ent_level or Global.is_kingtut_level or Global.is_minotaur_level or Global.is_mayanking_level:
+	if Global.is_trex_level or Global.is_mosasaurus_level or Global.is_pterodactyl_level or Global.is_smilodon_level or Global.is_woolymammoth_level or Global.is_abominablesnowman_level or Global.is_caveman_level or Global.is_direwolf_level or Global.is_ent_level or Global.is_kingtut_level or Global.is_minotaur_level or Global.is_mayanking_level or Global.is_charbydis_level or Global.is_achilles_level or Global.is_manticore_level:
 		interaction_label.visible = true
 		if Input.is_action_just_pressed("ui_accept") and !Global.is_icon_visible and !Global.is_wheel_visible:
 			get_tree().current_scene.add_child(trexdecide.instantiate())
@@ -85,13 +86,14 @@ func _process(delta: float) -> void:
 		interaction_label.visible = false
 	btn_focused(buttons[current_index])
 	
-	if Input.is_action_just_pressed("pause") and !Global.is_pause_menu_active and !get_tree().paused:
+	if Input.is_action_just_pressed("pause") and !Global.is_pause_menu_active and !get_tree().paused and !Global.is_loadout_screen_visible and !Global.is_wheel_visible:
 		get_tree().current_scene.add_child(pause_screen.instantiate())
 
 	# Rotate cogs only when Button8 is focused
 	if rotating_cogs:
 		cog_1.rotation_degrees += cog_rotation_speed * delta  # Clockwise
-		cog_2.rotation_degrees -= cog_rotation_speed * delta  # Counterclockwise
+		cog_2.rotation_degrees -= cog_rotation_speed * delta
+		
 
 func _on_button_pressed(index: int) -> void:
 	if Global.is_wheel_visible:
@@ -128,6 +130,13 @@ func _on_button_pressed(index: int) -> void:
 				fade_industrial_filter(false) 
 				fade_medieval_filter(false)
 				switch_scene(bronzehub_scene)
+			"Iron Age":
+				fade_ice_filter(false)
+				fade_apocalypse_filter(false)
+				fade_bronze_filter(false)
+				fade_industrial_filter(false) 
+				fade_medieval_filter(false)
+				switch_scene(ironhub_scene)
 			"Medieval Age":
 				fade_ice_filter(false)
 				fade_bronze_filter(false)
@@ -203,10 +212,11 @@ func _input(event: InputEvent) -> void:
 	if Global.is_pause_menu_active:
 		return  # Don't let the wheel menu open while pause is active
 
-	if event.is_action_pressed("map") and !get_tree().paused and !Global.is_wheel_visible:
+	if event.is_action_pressed("map") and !get_tree().paused and !Global.is_wheel_visible and !Global.is_loadout_screen_visible:
 		toggle_menu()
 		Global.is_wheel_visible = true
-	elif event.is_action_pressed("map") and get_tree().paused and Global.is_wheel_visible:
+		get_tree().current_scene.add_child(loadoutbutton.instantiate())
+	elif event.is_action_pressed("map") and get_tree().paused and Global.is_wheel_visible and !Global.is_loadout_screen_visible:
 		resume()
 		Global.is_wheel_visible = false
 	elif event.is_action_pressed("pause") and get_tree().paused and Global.is_wheel_visible:

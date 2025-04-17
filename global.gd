@@ -2,6 +2,30 @@ extends Node
 
 var using_controller: bool = false
 
+#loadout
+var is_head_selected: bool = true
+var is_torso_selected: bool = false
+var is_arms_selected: bool = false
+var is_legs_selected: bool = false
+var is_charm_selected: bool = false
+var is_gun_selected: bool = false
+var is_loadout_screen_visible: bool = false
+
+#headoptions
+var nikotime: bool = true
+var justintime: bool = false
+var archytime: bool = false
+var chilltime: bool = false
+var oogatime: bool = false
+var minotime: bool = false
+var caesartime: bool = false
+var sirtime: bool = false
+var echotime: bool = false
+
+#charmoptions
+var clockcharm: bool = true
+var jumpcharm: bool = false
+
 func _input(event):
 	if event is InputEventJoypadButton or event is InputEventJoypadMotion:
 		if not Global.using_controller:
@@ -30,3 +54,7 @@ var is_ent_level: bool = false
 var is_kingtut_level: bool = false
 var is_minotaur_level: bool = false
 var is_mayanking_level: bool = false
+#Iron Map
+var is_charbydis_level: bool = false
+var is_achilles_level: bool = false
+var is_manticore_level: bool = false

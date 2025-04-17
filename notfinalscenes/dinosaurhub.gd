@@ -21,6 +21,9 @@ func _ready():
 	Global.is_kingtut_level = false
 	Global.is_mayanking_level = false
 	Global.is_minotaur_level = false
+	Global.is_charbydis_level = false
+	Global.is_achilles_level = false
+	Global.is_manticore_level = false
 
 # Function to apply texture directly to the sphere
 	

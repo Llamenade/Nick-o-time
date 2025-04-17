@@ -1,0 +1,49 @@
+[gd_scene load_steps=9 format=3 uid="uid://dxsmxclepqnn7"]
+
+[ext_resource type="Script" uid="uid://dw8bv78xvhovp" path="res://notfinalscenes/loadoutbutton.gd" id="1_71rb8"]
+[ext_resource type="Texture2D" uid="uid://dxy7ksumbu87g" path="res://Nick O. Time Assets/hub/loadout/loadoutbutton/loudoutbutton-hover.png" id="1_ejyed"]
+[ext_resource type="Texture2D" uid="uid://cf153pe4pw8uk" path="res://Nick O. Time Assets/hub/loadout/loadoutbutton/loudoutbutton-pressed.png" id="2_71rb8"]
+[ext_resource type="Texture2D" uid="uid://c8tefjkw8fwhp" path="res://Nick O. Time Assets/hub/loadout/loadoutbutton/loudoutbutton.png" id="3_y11re"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ftg32"]
+texture = ExtResource("1_ejyed")
+region_rect = Rect2(0, 24, 64, 17)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_re86i"]
+texture = ExtResource("1_ejyed")
+region_rect = Rect2(0, 24, 64, 17)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_126xw"]
+texture = ExtResource("2_71rb8")
+region_rect = Rect2(0, 26, 64, 15)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kfy5y"]
+texture = ExtResource("3_y11re")
+region_rect = Rect2(0, 24, 64, 17)
+
+[node name="Loadoutbutton" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_71rb8")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 6
+
+[node name="LoadoutButton" type="Button" parent="CanvasLayer"]
+process_mode = 3
+z_index = 1000
+offset_left = 19.0
+offset_top = 18.0
+offset_right = 211.0
+offset_bottom = 69.0
+theme_override_styles/focus = SubResource("StyleBoxTexture_ftg32")
+theme_override_styles/hover = SubResource("StyleBoxTexture_re86i")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_126xw")
+theme_override_styles/normal = SubResource("StyleBoxTexture_kfy5y")
+
+[connection signal="pressed" from="CanvasLayer/LoadoutButton" to="." method="_on_loadout_button_pressed"]
