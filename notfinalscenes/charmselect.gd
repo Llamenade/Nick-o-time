@@ -8,11 +8,15 @@ func _process(delta: float):
 		charm.play("clockcharm")
 	elif Global.jumpcharm:
 		charm.play("jumpcharm")
+	elif Global.shadowcharm:
+		charm.play("shadowcharm")
+	elif Global.bouldercharm:
+		charm.play("bouldercharm")
 	
 	if Global.is_charm_selected:
 		if Global.clockcharm:
 			charmselect.play("clockselect")
-		if Global.jumpcharm:
+		if Global.jumpcharm or Global.shadowcharm or Global.bouldercharm:
 			charmselect.play("defaultselect")
 	else:
 		charmselect.play("invis")

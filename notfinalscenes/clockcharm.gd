@@ -6,6 +6,8 @@ func _input(event):
 			if is_pixel_opaque(get_local_mouse_position()):
 				Global.clockcharm = true
 				Global.jumpcharm = false
+				Global.shadowcharm = false
+				Global.bouldercharm = false
 				
 				
 @onready var highlight = $highlight

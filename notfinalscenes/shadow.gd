@@ -5,22 +5,21 @@ func _input(event):
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and Global.is_charm_selected:
 			if is_pixel_opaque(get_local_mouse_position()):
 				Global.clockcharm = false
-				Global.jumpcharm = true
-				Global.shadowcharm = false
+				Global.jumpcharm = false
+				Global.shadowcharm = true
 				Global.bouldercharm = false
 				
-				
 @onready var highlight = $highlight
-@onready var animatedjump = $"../../CharmOptions/Jump/Control/animatedjump"
+@onready var animatedshadow = $"../../CharmOptions/Shadow/Control/animatedshadow"
 
 func _ready() -> void:
 	highlight.hide()
 				
 func _process(delta: float) -> void:
-	if Global.jumpcharm:
+	if Global.shadowcharm:
 		highlight.show()
-		animatedjump.play("jump")
+		animatedshadow.play("shadow")
 	else:
 		highlight.hide()	
-		animatedjump.play("reset")
+		animatedshadow.play("reset")
 	

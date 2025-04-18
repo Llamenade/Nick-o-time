@@ -21,10 +21,17 @@ var minotime: bool = false
 var caesartime: bool = false
 var sirtime: bool = false
 var echotime: bool = false
+var acetime: bool = false
+var privatetime: bool = false
+var tinatime: bool = false
+var martiantime: bool = false
+var demontime: bool = false
 
 #charmoptions
 var clockcharm: bool = true
 var jumpcharm: bool = false
+var shadowcharm: bool = false
+var bouldercharm: bool = false
 
 func _input(event):
 	if event is InputEventJoypadButton or event is InputEventJoypadMotion:

@@ -21,6 +21,16 @@ func _process(delta: float):
 		$".".texture = preload("res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/head/sirtime.png")
 	elif Global.echotime:
 		$".".texture = preload("res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/head/echotime.png")
+	elif Global.acetime:
+		$".".texture = preload("res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/head/acetime.png")
+	elif Global.privatetime:
+		$".".texture = preload("res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/head/privatetime.png")
+	elif Global.tinatime:
+		$".".texture = preload("res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/head/tinatime.png")
+	elif Global.martiantime:
+		$".".texture = preload("res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/head/martiantime.png")
+	elif Global.demontime:
+		$".".texture = preload("res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/head/demontime.png")
 		
 	if Global.is_head_selected:
 		if Global.archytime:
@@ -37,6 +47,16 @@ func _process(delta: float):
 			headselect.play("sirtimeselect")
 		elif Global.echotime:
 			headselect.play("echotimeselect")
+		elif Global.acetime:
+			headselect.play("acetimeselect")
+		elif Global.privatetime:
+			headselect.play("privatetimeselect")
+		elif Global.tinatime:
+			headselect.play("tinatimeselect")
+		elif Global.martiantime:
+			headselect.play("martiantimeselect")
+		elif Global.demontime:
+			headselect.play("demontimeselect")
 		else:
 			headselect.play("defaultselect")
 	else:

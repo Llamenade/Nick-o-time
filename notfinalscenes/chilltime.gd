@@ -13,6 +13,11 @@ func _input(event):
 				Global.caesartime = false
 				Global.sirtime = false
 				Global.echotime = false
+				Global.acetime = false
+				Global.privatetime = false
+				Global.tinatime = false
+				Global.martiantime = false
+				Global.demontime = false
 				
 @onready var highlight = $highlight
 

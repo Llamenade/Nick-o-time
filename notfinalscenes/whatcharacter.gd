@@ -19,3 +19,13 @@ func _process(delta: float) -> void:
 		self.text = "Sir Time"
 	elif Global.echotime:
 		self.text = "Echo Time"
+	elif Global.acetime:
+		self.text = "Ace Time"
+	elif Global.privatetime:
+		self.text = "Private Time"
+	elif Global.tinatime:
+		self.text = "Tina Time"
+	elif Global.martiantime:
+		self.text = "Martian Time"
+	elif Global.demontime:
+		self.text = "Demon Time"
