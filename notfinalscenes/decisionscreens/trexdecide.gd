@@ -81,3 +81,10 @@ func on_button_focused(button: Button):
 func on_button_unfocused(button: Button):
 	button.pivot_offset = button.size / 2
 	start_tween(button, "scale", Vector2(1.0, 1.0), tween_duration)
+	
+@onready var trex_level = preload("res://notfinalscenes/trex_level_final.tscn") as PackedScene
+
+func _on_fight_pressed() -> void:
+	get_tree().paused = false
+	if Global.is_trex_level:
+		get_tree().change_scene_to_packed(trex_level)

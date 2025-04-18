@@ -1086,3 +1086,4 @@ libraries = {
 }
 
 [connection signal="pressed" from="CanvasLayer/Control/cancel" to="." method="_on_cancel_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/fight" to="." method="_on_fight_pressed"]

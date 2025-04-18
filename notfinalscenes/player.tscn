@@ -2701,7 +2701,7 @@ sprite_frames = SubResource("SpriteFrames_4f606")
 animation = &"shootrun"
 
 [node name="Marker2D" type="Marker2D" parent="PlayerBody/gun"]
-position = Vector2(-397, -111)
+position = Vector2(0, -6)
 
 [node name="masteranimator" type="AnimatedSprite2D" parent="PlayerBody"]
 sprite_frames = SubResource("SpriteFrames_ijbmm")
@@ -2721,5 +2721,3 @@ target_position = Vector2(0, -19)
 
 [node name="ShootTimer" type="Timer" parent="."]
 wait_time = 0.2
-
-[node name="Camera2D" type="Camera2D" parent="."]

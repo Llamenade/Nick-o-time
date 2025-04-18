@@ -204,6 +204,8 @@ position = Vector2(-423, -20)
 collision_layer = 4
 collision_mask = 4
 
+[node name="Camera2D" type="Camera2D" parent="Player"]
+
 [node name="TileMap" type="TileMap" parent="."]
 modulate = Color(1, 1, 1, 0.901961)
 texture_filter = 1

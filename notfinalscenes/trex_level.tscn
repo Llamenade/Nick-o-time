@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3 uid="uid://dyhnw0et2rrl"]
+
+[ext_resource type="Texture2D" uid="uid://brvl30eoxvmj8" path="res://Nick O. Time Assets/trexlevel/trex-background.png" id="1_4sm50"]
+[ext_resource type="Texture2D" uid="uid://hjcwb16qtwye" path="res://Nick O. Time Assets/trexlevel/dinosaur bush 1.png" id="2_jdndv"]
+[ext_resource type="PackedScene" uid="uid://cstf2ss4i7s0m" path="res://notfinalscenes/player.tscn" id="3_cke1k"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_es31f"]
+texture = ExtResource("2_jdndv")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -6.05398, -16, 16, 16, 16, 16, -16, -16, -16)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, -16)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, -16)
+5:0/0 = 0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, -16)
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_bkrlg"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 5
+physics_layer_0/collision_mask = 5
+sources/0 = SubResource("TileSetAtlasSource_es31f")
+
+[node name="TrexLevel" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 640.0
+offset_bottom = 240.0
+texture = ExtResource("1_4sm50")
+stretch_mode = 4
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(0, 6)
+rotation = -0.00314592
+tile_set = SubResource("TileSet_bkrlg")
+rendering_quadrant_size = 32
+collision_animatable = true
+format = 2
+layer_0/tile_data = PackedInt32Array(589824, 589824, 0, 655360, 589824, 0, 655361, 589824, 0, 589825, 589824, 0, 655362, 589824, 0, 589826, 589824, 0, 589827, 589824, 0, 655363, 589824, 0, 655364, 589824, 0, 589828, 589824, 0, 655365, 589824, 0, 589829, 589824, 0, 589830, 589824, 0, 655366, 589824, 0, 655367, 589824, 0, 589831, 589824, 0, 589832, 589824, 0, 655368, 589824, 0, 655369, 589824, 0, 589833, 589824, 0, 524297, 196608, 0, 589834, 589824, 0, 655370, 589824, 0, 524298, 262144, 0, 524299, 327680, 0, 589835, 589824, 0, 655371, 589824, 0, 655372, 589824, 0, 589836, 589824, 0, 524300, 327680, 0, 589837, 589824, 0, 655373, 589824, 0, 524301, 196608, 0, 524302, 262144, 0, 589838, 589824, 0, 655374, 589824, 0, 655375, 589824, 0, 589839, 589824, 0, 524303, 131072, 0, 524304, 131072, 0, 589840, 589824, 0, 655376, 589824, 0, 655377, 589824, 0, 589841, 589824, 0, 524305, 196608, 0, 524306, 262144, 0, 589842, 589824, 0, 655378, 589824, 0, 655379, 589824, 0, 589843, 589824, 0, 524307, 327680, 0, 720896, 589824, 0, 720897, 589824, 0, 720898, 589824, 0, 720899, 589824, 0, 720900, 589824, 0, 720901, 589824, 0, 720902, 589824, 0, 720903, 589824, 0, 720904, 589824, 0, 720905, 589824, 0, 720906, 589824, 0, 720907, 589824, 0, 720908, 589824, 0, 720909, 589824, 0, 720910, 589824, 0, 720911, 589824, 0, 720912, 589824, 0, 720913, 589824, 0, 720914, 589824, 0, 720915, 589824, 0, 524288, 196608, 0, 524289, 262144, 0, 524290, 327680, 0, 524292, 131072, 0, 524293, 196608, 0, 524294, 262144, 0, 524295, 327680, 0, 524296, 131072, 0, 458754, 0, 0, 458763, 0, 0, 458767, 458752, 0, 524291, 196608, 0, 589823, 131072, 0, 524287, 327680, 0, 458751, 327680, 0, 393215, 327680, 0, 327679, 327680, 0, 262143, 327680, 0, 196607, 327680, 0, 131071, 327680, 0, 65535, 327680, 0, 20, 327680, 0, 65556, 327680, 0, 131092, 327680, 0, 196628, 327680, 0, 262164, 327680, 0, 327700, 327680, 0, 393236, 327680, 0, 458772, 327680, 0, 524308, 327680, 0, 589844, 327680, 0, 655380, 327680, 0, 720916, 327680, 0, 655359, 327680, 0, 720895, 327680, 0, 786431, 327680, 0)
+
+[node name="Player" parent="TileMap" instance=ExtResource("3_cke1k")]
+position = Vector2(33.025, -7.89615)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(320, 180)

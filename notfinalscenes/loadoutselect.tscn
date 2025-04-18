@@ -563,7 +563,6 @@ texture = ExtResource("2_xq3rp")
 script = ExtResource("4_p0n81")
 
 [node name="HeadOptions" type="Node2D" parent="CanvasLayer/Options"]
-visible = false
 
 [node name="nikotime" type="Sprite2D" parent="CanvasLayer/Options/HeadOptions"]
 position = Vector2(480, 855)

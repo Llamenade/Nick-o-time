@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccwqw4c1h11i2"]
+
+[ext_resource type="PackedScene" uid="uid://dyhnw0et2rrl" path="res://notfinalscenes/trex_level.tscn" id="1_7k75u"]
+[ext_resource type="AudioStream" uid="uid://copt72qx7f3f4" path="res://sounds/trexfight.mp3" id="2_m2qsb"]
+
+[node name="trex_level_final" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+stretch_shrink = 3
+
+[node name="SubViewport" type="SubViewport" parent="CanvasLayer/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(640, 360)
+render_target_update_mode = 4
+
+[node name="TrexLevel" parent="CanvasLayer/SubViewportContainer/SubViewport" instance=ExtResource("1_7k75u")]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_m2qsb")
+autoplay = true
+parameters/looping = true
