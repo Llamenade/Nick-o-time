@@ -11,6 +11,7 @@ extends CharacterBody2D
 @export var CROUCH_SPEED_BOOST : float = 0.3
 
 @export var bullet_scene = preload("res://notfinalscenes/bullet.tscn") as PackedScene
+@onready var shoot_sound = $shootsound
 @onready var shoot_timer = $ShootTimer
 
 @onready var collision_shape = $CollisionPolygon2D
@@ -31,6 +32,8 @@ var is_shooting = false
 var last_direction = 1
 
 func _ready(): 
+	
+	
 	collision_shape.disabled = false
 	ceiling_check.enabled = true
 	if not bullet_scene:
@@ -64,13 +67,15 @@ func _physics_process(delta):
 		last_direction = direction
 	else:
 		velocity.x = move_toward(velocity.x, 0, FRICTION * SPEED)
-
-	velocity.y = min(velocity.y + GRAVITY * delta, MAX_FALL_SPEED)
+		
+	if Global.is_grappling == false:
+		velocity.y = min(velocity.y + GRAVITY * delta, MAX_FALL_SPEED)
 
 	if Input.is_action_pressed("punch"):
 		is_shooting = true
 		if shoot_timer.is_stopped():
 			shoot_bullet()
+			shoot_sound.play()
 			shoot_timer.start()
 	else:
 		is_shooting = false
@@ -106,28 +111,28 @@ func _physics_process(delta):
 			torso.play("shootwalkcrouch")
 			arms.play("shootwalkcrouch")
 			legs.play("shootwalkcrouch")
-			charm.play("shootwalkcrouch")
+			charm.play(Global.current_charm + "shootwalkcrouch")
 			gun.play("shootwalkcrouch")
 		elif is_crouching and direction:
 			head.play("walkcrouch")
 			torso.play("walkcrouch")
 			arms.play("walkcrouch")
 			legs.play("walkcrouch")
-			charm.play("walkcrouch")
+			charm.play(Global.current_charm + "walkcrouch")
 			gun.play("default")
 		elif is_crouching and is_shooting:
 			head.play("shootcrouch")
 			torso.play("shootcrouch")
 			arms.play("shootcrouch")
 			legs.play("shootcrouch")
-			charm.play("shootcrouch")
+			charm.play(Global.current_charm + "shootcrouch")
 			gun.play("shootcrouch")
 		elif is_crouching:
 			head.play("crouch")
 			torso.play("crouch")
 			arms.play("crouch")
 			legs.play("crouch")
-			charm.play("crouch")
+			charm.play(Global.current_charm + "crouch")
 			gun.play("default")
 		elif is_shooting and direction:
 			head.play("shootrun")
@@ -135,27 +140,27 @@ func _physics_process(delta):
 			arms.play("shootrun")
 			gun.play("shootrun")
 			legs.play("run")
-			charm.play("run")
+			charm.play(Global.current_charm + "shootrun")
 		elif is_shooting:
 			head.play("shootidle")
 			torso.play("shootidle")
 			arms.play("shootidle")
 			legs.play("shootidle")
-			charm.play("shootidle")
+			charm.play(Global.current_charm + "shootidle")
 			gun.play("shootidle")
 		elif direction:
 			head.play("run")
 			torso.play("run")
 			arms.play("run")
 			legs.play("run")
-			charm.play("run")
+			charm.play(Global.current_charm + "run")
 			gun.play("default")
 		else:
 			head.play("idle")
 			torso.play("idle")
 			arms.play("idle")
 			legs.play("idle")
-			charm.play("idle")
+			charm.play(Global.current_charm + "idle")
 			gun.play("default")
 	else:
 		if velocity.y < 0 and is_shooting:
@@ -163,28 +168,28 @@ func _physics_process(delta):
 			torso.play("jump")
 			arms.play("shootjump")
 			legs.play("jump")
-			charm.play("jump")
+			charm.play(Global.current_charm + "jump")
 			gun.play("shootjump")
 		elif velocity.y < 0:
 			head.play("jump")
 			torso.play("jump")
 			arms.play("jump")
 			legs.play("jump")
-			charm.play("jump")
+			charm.play(Global.current_charm + "jump")
 			gun.play("default")
 		elif velocity.y >= 0 and is_shooting:
 			head.play("fall")
 			torso.play("fall")
 			arms.play("shootfall")
 			legs.play("fall")
-			charm.play("fall")
+			charm.play(Global.current_charm + "fall")
 			gun.play("shootfall")
 		elif velocity.y >= 0:
 			head.play("fall")
 			torso.play("fall")
 			arms.play("fall")
 			legs.play("fall")
-			charm.play("fall")
+			charm.play(Global.current_charm + "fall")
 			gun.play("default")
 	head.flip_h = (last_direction == 1)
 	torso.flip_h = (last_direction == 1)
@@ -208,7 +213,7 @@ func shoot_bullet():
 		bullet.direction = Vector2(last_direction, 0)
 		get_parent().add_child(bullet)
 	if is_crouching:
-		var spawn_offset = shooting_spot.position + Vector2(32 * last_direction, 12)
+		var spawn_offset = shooting_spot.position + Vector2(32 * last_direction, 15)
 		var spawn_position = global_position + spawn_offset
 		var bullet = bullet_scene.instantiate()
 		bullet.position = spawn_position
@@ -217,6 +222,7 @@ func shoot_bullet():
 
 func _on_shoot_timer_timeout():
 	shoot_bullet()
+	shoot_sound.play()
 	
 func _on_hit():
 	pass

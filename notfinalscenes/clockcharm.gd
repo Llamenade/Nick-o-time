@@ -2,12 +2,9 @@ extends Sprite2D
 
 func _input(event):
 	if event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and Global.is_charm_selected:
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and Global.part_selected == 'Charm':
 			if is_pixel_opaque(get_local_mouse_position()):
-				Global.clockcharm = true
-				Global.jumpcharm = false
-				Global.shadowcharm = false
-				Global.bouldercharm = false
+				Global.current_charm = 'clock'
 				
 				
 @onready var highlight = $highlight
@@ -17,7 +14,7 @@ func _ready() -> void:
 	highlight.hide()
 				
 func _process(delta: float) -> void:
-	if Global.clockcharm:
+	if Global.current_charm == 'clock':
 		highlight.show()
 		animatedclock.play("clock")
 	else:

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bfb7dbunvjq25"
+path="res://.godot/imported/stoneage (1).mp3-0e262a16e79b3e3bb45c69b7d1939927.mp3str"
+
+[deps]
+
+source_file="res://sounds/music/stoneage (1).mp3"
+dest_files=["res://.godot/imported/stoneage (1).mp3-0e262a16e79b3e3bb45c69b7d1939927.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

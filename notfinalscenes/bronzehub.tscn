@@ -4,8 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://kphpwsaxsahw" path="res://Nick O. Time Assets/hub/eraselect/bronze/bronzemercator.png" id="2_6b2to"]
 [ext_resource type="Shader" uid="uid://heojd5prwl52" path="res://sandstorm.gdshader" id="3_73mwn"]
 [ext_resource type="Shader" uid="uid://dmsdlaivdn51h" path="res://outline.gdshader" id="4_6n43u"]
-[ext_resource type="AudioStream" uid="uid://b5eekq1wo4r2x" path="res://sounds/bronzeage.mp3" id="5_g1ogj"]
-[ext_resource type="AudioStream" uid="uid://dc7uf1s7vg1px" path="res://sounds/sandstorm.mp3" id="6_73mwn"]
+[ext_resource type="AudioStream" uid="uid://b5eekq1wo4r2x" path="res://sounds/music/bronzeage.mp3" id="5_g1ogj"]
+[ext_resource type="AudioStream" uid="uid://dc7uf1s7vg1px" path="res://sounds/sfx/sandstorm.mp3" id="6_73mwn"]
+
 
 [sub_resource type="SphereMesh" id="SphereMesh_g73tb"]
 radial_segments = 128

@@ -1,4 +1,4 @@
-[gd_scene load_steps=432 format=3 uid="uid://cstf2ss4i7s0m"]
+[gd_scene load_steps=518 format=3 uid="uid://cstf2ss4i7s0m"]
 
 [ext_resource type="Script" uid="uid://uq5fwmhfoo1r" path="res://notfinalscenes/newplayer.gd" id="1_ycdkt"]
 [ext_resource type="Texture2D" uid="uid://baq1c0nwqf1t1" path="res://Nick O. Time Assets/nikotime/TORSO/idle/nikotimetorsoidle1.png" id="2_alq1c"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bsg4dodpyvg0n" path="res://Nick O. Time Assets/nikotime/TORSO/crouch/nikotimetorsocrouch2.png" id="3_mcgpp"]
 [ext_resource type="Texture2D" uid="uid://kouig6h3dk42" path="res://Nick O. Time Assets/nikotime/TORSO/crouch/nikotimetorsocrouch3.png" id="4_cl3wb"]
 [ext_resource type="Texture2D" uid="uid://cs1f0o4wltomw" path="res://Nick O. Time Assets/nikotime/TORSO/idle/nikotimetorsoidle3.png" id="4_hv8wt"]
+[ext_resource type="AudioStream" uid="uid://tqqj8marp1hr" path="res://sounds/sfx/grapple/retract.wav" id="4_ybjn6"]
 [ext_resource type="Texture2D" uid="uid://cbdhve84kiyxg" path="res://Nick O. Time Assets/nikotime/TORSO/idle/nikotimetorsoidle4.png" id="5_craga"]
 [ext_resource type="Texture2D" uid="uid://dmedq3g7mekmn" path="res://Nick O. Time Assets/nikotime/TORSO/crouch/nikotimetorsocrouch4.png" id="5_h3spw"]
 [ext_resource type="Texture2D" uid="uid://gporixu6vmek" path="res://Nick O. Time Assets/nikotime/TORSO/idle/nikotimetorsoidle5.png" id="6_u7mnu"]
@@ -169,37 +170,21 @@
 [ext_resource type="Texture2D" uid="uid://cw2x47y2s4v2k" path="res://Nick O. Time Assets/nikotime/LEGS/idle/nikotimelegsidle14.png" id="95_ddwp0"]
 [ext_resource type="Texture2D" uid="uid://co7rueyqukg8p" path="res://Nick O. Time Assets/nikotime/LEGS/idle/nikotimelegsidle15.png" id="96_v6pmp"]
 [ext_resource type="Texture2D" uid="uid://bedqji85l72g" path="res://Nick O. Time Assets/nikotime/LEGS/idle/nikotimelegsidle16.png" id="97_aho15"]
-[ext_resource type="Texture2D" uid="uid://blvevir3vx6fs" path="res://Nick O. Time Assets/nikotime/CHARM/idle/nikotimeclockidle1.png" id="98_f765s"]
 [ext_resource type="Texture2D" uid="uid://ctayq2gt0jvf2" path="res://Nick O. Time Assets/nikotime/ARMS/run/nikotimerunarms1.png" id="98_j8f46"]
 [ext_resource type="Texture2D" uid="uid://btvj1lnvyfpx2" path="res://Nick O. Time Assets/nikotime/ARMS/run/nikotimerunarms2.png" id="99_eivpu"]
-[ext_resource type="Texture2D" uid="uid://j4hjsitdy0xi" path="res://Nick O. Time Assets/nikotime/CHARM/idle/nikotimeclockidle2.png" id="99_vxhpw"]
-[ext_resource type="Texture2D" uid="uid://clk7pnt8pfytx" path="res://Nick O. Time Assets/nikotime/CHARM/idle/nikotimeclockidle3.png" id="100_1qouw"]
 [ext_resource type="Texture2D" uid="uid://dprlj07p64y0y" path="res://Nick O. Time Assets/nikotime/ARMS/run/nikotimerunarms3.png" id="100_77lv0"]
-[ext_resource type="Texture2D" uid="uid://ct4le3q8iytdn" path="res://Nick O. Time Assets/nikotime/CHARM/idle/nikotimeclockidle4.png" id="101_8mink"]
 [ext_resource type="Texture2D" uid="uid://b1jw2tqlal6le" path="res://Nick O. Time Assets/nikotime/ARMS/run/nikotimerunarms4.png" id="101_ygts3"]
-[ext_resource type="Texture2D" uid="uid://bt40cmve5xm5p" path="res://Nick O. Time Assets/nikotime/CHARM/idle/nikotimeclockidle5.png" id="102_e8331"]
 [ext_resource type="Texture2D" uid="uid://bqb7kfaqpkfsm" path="res://Nick O. Time Assets/nikotime/ARMS/run/nikotimerunarms5.png" id="102_vrfr1"]
-[ext_resource type="Texture2D" uid="uid://bf7cs84gjwllm" path="res://Nick O. Time Assets/nikotime/CHARM/idle/nikotimeclockidle6.png" id="103_qs4qs"]
 [ext_resource type="Texture2D" uid="uid://bjgqda5fgmuat" path="res://Nick O. Time Assets/nikotime/ARMS/run/nikotimerunarms6.png" id="103_typej"]
 [ext_resource type="Texture2D" uid="uid://blkypiqau5uyc" path="res://Nick O. Time Assets/nikotime/ARMS/run/nikotimerunarms7.png" id="104_a1fat"]
-[ext_resource type="Texture2D" uid="uid://ddlea7a0ieu4w" path="res://Nick O. Time Assets/nikotime/CHARM/idle/nikotimeclockidle7.png" id="104_w8x0c"]
 [ext_resource type="Texture2D" uid="uid://ct2sks7pigx3t" path="res://Nick O. Time Assets/nikotime/ARMS/run/nikotimerunarms8.png" id="105_geny2"]
-[ext_resource type="Texture2D" uid="uid://bgr6b7d65kxvw" path="res://Nick O. Time Assets/nikotime/CHARM/idle/nikotimeclockidle8.png" id="105_m2so3"]
-[ext_resource type="Texture2D" uid="uid://r1mnxb3b2fbe" path="res://Nick O. Time Assets/nikotime/CHARM/idle/nikotimeclockidle9.png" id="106_5y6gd"]
-[ext_resource type="Texture2D" uid="uid://bxo57fmk1p34q" path="res://Nick O. Time Assets/nikotime/CHARM/idle/nikotimeclockidle10.png" id="107_bixoo"]
-[ext_resource type="Texture2D" uid="uid://bu54e20e8hvb6" path="res://Nick O. Time Assets/nikotime/CHARM/idle/nikotimeclockidle11.png" id="108_b8335"]
-[ext_resource type="Texture2D" uid="uid://d2yu6fqxx5356" path="res://Nick O. Time Assets/nikotime/CHARM/idle/nikotimeclockidle12.png" id="109_xn4l2"]
-[ext_resource type="Texture2D" uid="uid://u5mhshbd1poc" path="res://Nick O. Time Assets/nikotime/CHARM/idle/nikotimeclockidle13.png" id="110_bfnya"]
 [ext_resource type="Texture2D" uid="uid://cwip7cvumewb3" path="res://Nick O. Time Assets/nikotime/ARMS/jump/nikotimearmsjump1.png" id="110_sbqy7"]
 [ext_resource type="Texture2D" uid="uid://crxam6xv0154q" path="res://Nick O. Time Assets/nikotime/ARMS/jump/nikotimearmsjump2.png" id="111_6t0cr"]
 [ext_resource type="Texture2D" uid="uid://ympvqo7e8j3t" path="res://Nick O. Time Assets/nikotime/ARMS/crouch/nikotimearmscrouch1.png" id="111_8peu5"]
-[ext_resource type="Texture2D" uid="uid://dai4n5jrwl3ky" path="res://Nick O. Time Assets/nikotime/CHARM/idle/nikotimeclockidle14.png" id="111_a6kcl"]
 [ext_resource type="Texture2D" uid="uid://dt0j2pl22dt4p" path="res://Nick O. Time Assets/nikotime/ARMS/crouch/nikotimearmscrouch2.png" id="112_glsi8"]
-[ext_resource type="Texture2D" uid="uid://bgx3y4lt2pqxt" path="res://Nick O. Time Assets/nikotime/CHARM/idle/nikotimeclockidle15.png" id="112_hdval"]
 [ext_resource type="Texture2D" uid="uid://cgpl5abyrmodl" path="res://Nick O. Time Assets/nikotime/ARMS/jump/nikotimearmsjump3.png" id="112_wpc7d"]
 [ext_resource type="Texture2D" uid="uid://b8umh58n4xgsh" path="res://Nick O. Time Assets/nikotime/ARMS/crouch/nikotimearmscrouch3.png" id="113_jg1hl"]
 [ext_resource type="Texture2D" uid="uid://dslty5587g6n2" path="res://Nick O. Time Assets/nikotime/ARMS/jump/nikotimearmsjump4.png" id="113_q6eev"]
-[ext_resource type="Texture2D" uid="uid://cvh4tvreom20d" path="res://Nick O. Time Assets/nikotime/CHARM/idle/nikotimeclockidle16.png" id="113_uruuo"]
 [ext_resource type="Texture2D" uid="uid://d034n34jg51y2" path="res://Nick O. Time Assets/nikotime/ARMS/crouch/nikotimearmscrouch4.png" id="114_gijkw"]
 [ext_resource type="Texture2D" uid="uid://d3k14r5m2fl8r" path="res://Nick O. Time Assets/nikotime/ARMS/jump/nikotimearmsjump5.png" id="114_pj16q"]
 [ext_resource type="Texture2D" uid="uid://camolllj4dwed" path="res://Nick O. Time Assets/nikotime/ARMS/crouch/nikotimearmscrouch5.png" id="115_0x53g"]
@@ -238,56 +223,24 @@
 [ext_resource type="Texture2D" uid="uid://cloktjg42t1b8" path="res://Nick O. Time Assets/nikotime/HEAD/shootidle/nikotimeheadshootidle6.png" id="144_kybja"]
 [ext_resource type="Texture2D" uid="uid://b416xr0x4yeiq" path="res://Nick O. Time Assets/nikotime/LEGS/jump/nikotimelegsjump5.png" id="144_ucta7"]
 [ext_resource type="Texture2D" uid="uid://c86a4ovdqr0ps" path="res://Nick O. Time Assets/nikotime/HEAD/shootidle/nikotimeheadshootidle7.png" id="145_jnn4g"]
-[ext_resource type="Texture2D" uid="uid://b734r4dntbs3" path="res://Nick O. Time Assets/nikotime/CHARM/run/nikotimeclockrun1.png" id="146_xucp3"]
 [ext_resource type="Texture2D" uid="uid://lmx8mql1x88q" path="res://Nick O. Time Assets/nikotime/HEAD/shootidle/nikotimeheadshootidle8.png" id="146_yctdl"]
 [ext_resource type="Texture2D" uid="uid://ndgijpocwx0h" path="res://Nick O. Time Assets/nikotime/HEAD/shootidle/nikotimeheadshootidle9.png" id="147_6v1d2"]
-[ext_resource type="Texture2D" uid="uid://cs6t06yek7yme" path="res://Nick O. Time Assets/nikotime/CHARM/run/nikotimeclockrun2.png" id="147_s7xe5"]
-[ext_resource type="Texture2D" uid="uid://xakync6co3et" path="res://Nick O. Time Assets/nikotime/CHARM/run/nikotimeclockrun3.png" id="148_xpaq7"]
 [ext_resource type="Texture2D" uid="uid://f00of3q3ugiw" path="res://Nick O. Time Assets/nikotime/HEAD/shootidle/nikotimeheadshootidle10.png" id="148_xpmix"]
-[ext_resource type="Texture2D" uid="uid://cus15mybhuf8x" path="res://Nick O. Time Assets/nikotime/CHARM/run/nikotimeclockrun4.png" id="149_4gid7"]
 [ext_resource type="Texture2D" uid="uid://c3fyfj2o4ydpj" path="res://Nick O. Time Assets/nikotime/HEAD/shootidle/nikotimeheadshootidle11.png" id="149_f8s1j"]
 [ext_resource type="Texture2D" uid="uid://d37ocesjcanjb" path="res://Nick O. Time Assets/nikotime/HEAD/shootidle/nikotimeheadshootidle12.png" id="150_gyhun"]
 [ext_resource type="Texture2D" uid="uid://3x4427bg6d5k" path="res://Nick O. Time Assets/nikotime/LEGS/crouch/nikotimelegscrouch1.png" id="150_jsfru"]
-[ext_resource type="Texture2D" uid="uid://ch33wviq61qyx" path="res://Nick O. Time Assets/nikotime/CHARM/run/nikotimeclockrun5.png" id="150_l3m48"]
-[ext_resource type="Texture2D" uid="uid://dmitp6xcnsnkk" path="res://Nick O. Time Assets/nikotime/CHARM/run/nikotimeclockrun6.png" id="151_4pjo6"]
 [ext_resource type="Texture2D" uid="uid://b1k3rh888ruv8" path="res://Nick O. Time Assets/nikotime/LEGS/crouch/nikotimelegscrouch2.png" id="151_5tcoc"]
 [ext_resource type="Texture2D" uid="uid://lnuwufkos7f6" path="res://Nick O. Time Assets/nikotime/HEAD/shootidle/nikotimeheadshootidle13.png" id="151_obdbx"]
-[ext_resource type="Texture2D" uid="uid://duuj2drcrchwc" path="res://Nick O. Time Assets/nikotime/CHARM/run/nikotimeclockrun7.png" id="152_crxeb"]
 [ext_resource type="Texture2D" uid="uid://d13524ferhaqu" path="res://Nick O. Time Assets/nikotime/HEAD/shootidle/nikotimeheadshootidle14.png" id="152_r8ah4"]
 [ext_resource type="Texture2D" uid="uid://bnuxiqqbtyw8p" path="res://Nick O. Time Assets/nikotime/LEGS/crouch/nikotimelegscrouch3.png" id="152_t2he0"]
 [ext_resource type="Texture2D" uid="uid://j58wlarkl7je" path="res://Nick O. Time Assets/nikotime/LEGS/crouch/nikotimelegscrouch4.png" id="153_5ad6e"]
 [ext_resource type="Texture2D" uid="uid://ba5ufft4l36x7" path="res://Nick O. Time Assets/nikotime/HEAD/shootidle/nikotimeheadshootidle15.png" id="153_gcli5"]
-[ext_resource type="Texture2D" uid="uid://c0s65t3l6oheb" path="res://Nick O. Time Assets/nikotime/CHARM/run/nikotimeclockrun8.png" id="153_jmisc"]
-[ext_resource type="Texture2D" uid="uid://cawbv71t3g4wq" path="res://Nick O. Time Assets/nikotime/CHARM/fall/nikotimecharmfall1.png" id="153_l7x25"]
-[ext_resource type="Texture2D" uid="uid://dn5q6772euimu" path="res://Nick O. Time Assets/nikotime/CHARM/run/nikotimeclockrun9.png" id="154_eflk2"]
-[ext_resource type="Texture2D" uid="uid://qtokeyhpw5ns" path="res://Nick O. Time Assets/nikotime/CHARM/fall/nikotimecharmfall2.png" id="154_lksi4"]
 [ext_resource type="Texture2D" uid="uid://ba7hm10i7imp8" path="res://Nick O. Time Assets/nikotime/LEGS/crouch/nikotimelegscrouch5.png" id="154_ofrpd"]
 [ext_resource type="Texture2D" uid="uid://d17v7xfvoav11" path="res://Nick O. Time Assets/nikotime/HEAD/shootidle/nikotimeheadshootidle16.png" id="154_tgm7y"]
 [ext_resource type="Texture2D" uid="uid://coi2t2y6yx8h1" path="res://Nick O. Time Assets/nikotime/LEGS/crouch/nikotimelegscrouch6.png" id="155_1bxpr"]
-[ext_resource type="Texture2D" uid="uid://bc0hal48awc" path="res://Nick O. Time Assets/nikotime/CHARM/fall/nikotimecharmfall3.png" id="155_1566a"]
-[ext_resource type="Texture2D" uid="uid://bhy0810phbgas" path="res://Nick O. Time Assets/nikotime/CHARM/run/nikotimeclockrun10.png" id="155_i2b1k"]
-[ext_resource type="Texture2D" uid="uid://dnejhjmkwjrhu" path="res://Nick O. Time Assets/nikotime/CHARM/fall/nikotimecharmfall4.png" id="156_cs70h"]
-[ext_resource type="Texture2D" uid="uid://bto0qfkic0mq7" path="res://Nick O. Time Assets/nikotime/CHARM/run/nikotimeclockrun11.png" id="156_lcg7x"]
 [ext_resource type="Texture2D" uid="uid://dduaj8li4g4tb" path="res://Nick O. Time Assets/nikotime/LEGS/crouch/nikotimelegscrouch7.png" id="156_qrr4y"]
-[ext_resource type="Texture2D" uid="uid://b02lpjgug1qm3" path="res://Nick O. Time Assets/nikotime/CHARM/fall/nikotimecharmfall5.png" id="157_2jwe8"]
 [ext_resource type="Texture2D" uid="uid://dffuo18ma3lab" path="res://Nick O. Time Assets/nikotime/LEGS/crouch/nikotimelegscrouch8.png" id="157_a34nx"]
-[ext_resource type="Texture2D" uid="uid://cvycpejoqrjmn" path="res://Nick O. Time Assets/nikotime/CHARM/run/nikotimeclockrun12.png" id="157_wixfg"]
-[ext_resource type="Texture2D" uid="uid://c881en1j76fnv" path="res://Nick O. Time Assets/nikotime/CHARM/run/nikotimeclockrun13.png" id="158_2qd0h"]
-[ext_resource type="Texture2D" uid="uid://lfvw34i0vpy7" path="res://Nick O. Time Assets/nikotime/CHARM/fall/nikotimecharmfall6.png" id="158_7005l"]
 [ext_resource type="Texture2D" uid="uid://66iscs3ynbre" path="res://Nick O. Time Assets/nikotime/LEGS/crouch/nikotimelegscrouch9.png" id="158_epqch"]
-[ext_resource type="Texture2D" uid="uid://q7dv4rjh42m1" path="res://Nick O. Time Assets/nikotime/CHARM/fall/nikotimecharmfall7.png" id="159_t1bh6"]
-[ext_resource type="Texture2D" uid="uid://cigsgx37y816w" path="res://Nick O. Time Assets/nikotime/CHARM/run/nikotimeclockrun14.png" id="159_vtl51"]
-[ext_resource type="Texture2D" uid="uid://5a3ul8qlmc2l" path="res://Nick O. Time Assets/nikotime/CHARM/run/nikotimeclockrun15.png" id="160_ddwp0"]
-[ext_resource type="Texture2D" uid="uid://cvba2cjjs2edp" path="res://Nick O. Time Assets/nikotime/CHARM/fall/nikotimecharmfall8.png" id="160_eoquf"]
-[ext_resource type="Texture2D" uid="uid://2w6irt5uxnyg" path="res://Nick O. Time Assets/nikotime/CHARM/fall/nikotimecharmfall9.png" id="161_37ryb"]
-[ext_resource type="Texture2D" uid="uid://8wso5cqjxm7d" path="res://Nick O. Time Assets/nikotime/CHARM/run/nikotimeclockrun16.png" id="161_v6pmp"]
-[ext_resource type="Texture2D" uid="uid://c7dljhmgensee" path="res://Nick O. Time Assets/nikotime/CHARM/fall/nikotimecharmfall10.png" id="162_p43bj"]
-[ext_resource type="Texture2D" uid="uid://f3548apfdkvj" path="res://Nick O. Time Assets/nikotime/CHARM/fall/nikotimecharmfall11.png" id="163_gfjh0"]
-[ext_resource type="Texture2D" uid="uid://bpr4px2ugrj60" path="res://Nick O. Time Assets/nikotime/CHARM/fall/nikotimecharmfall12.png" id="164_3h6a5"]
-[ext_resource type="Texture2D" uid="uid://by7o1s1dnskx7" path="res://Nick O. Time Assets/nikotime/CHARM/fall/nikotimecharmfall13.png" id="165_3lneu"]
-[ext_resource type="Texture2D" uid="uid://db1i4k5idgpjr" path="res://Nick O. Time Assets/nikotime/CHARM/fall/nikotimecharmfall14.png" id="166_g2tiu"]
-[ext_resource type="Texture2D" uid="uid://gvlyi65o7q0d" path="res://Nick O. Time Assets/nikotime/CHARM/fall/nikotimecharmfall15.png" id="167_ym32j"]
-[ext_resource type="Texture2D" uid="uid://4ge1x45ijwhc" path="res://Nick O. Time Assets/nikotime/CHARM/fall/nikotimecharmfall16.png" id="168_hx4fm"]
 [ext_resource type="Texture2D" uid="uid://dwsaijvu725nx" path="res://Nick O. Time Assets/nikotime/ARMS/walkcrouch/nikotimearmswalkcrouch1.png" id="170_akk2x"]
 [ext_resource type="Texture2D" uid="uid://c1uw6oaabyxff" path="res://Nick O. Time Assets/nikotime/ARMS/walkcrouch/nikotimearmswalkcrouch2.png" id="171_0h0t2"]
 [ext_resource type="Texture2D" uid="uid://bfwuyx1457o8g" path="res://Nick O. Time Assets/nikotime/ARMS/walkcrouch/nikotimearmswalkcrouch3.png" id="172_jxqd0"]
@@ -298,30 +251,6 @@
 [ext_resource type="Texture2D" uid="uid://c1u3kg216t1i8" path="res://Nick O. Time Assets/nikotime/ARMS/walkcrouch/nikotimearmswalkcrouch8.png" id="177_xahwp"]
 [ext_resource type="Texture2D" uid="uid://dk4tsr7tt5opl" path="res://Nick O. Time Assets/nikotime/ARMS/walkcrouch/nikotimearmswalkcrouch9.png" id="178_0dcyy"]
 [ext_resource type="Texture2D" uid="uid://tttvli6xijwb" path="res://Nick O. Time Assets/nikotime/ARMS/walkcrouch/nikotimearmswalkcrouch10.png" id="179_m1fyi"]
-[ext_resource type="Texture2D" uid="uid://bigjp8cxcqu41" path="res://Nick O. Time Assets/nikotime/CHARM/jump/nikotimecharmjump1.png" id="185_1p6ol"]
-[ext_resource type="Texture2D" uid="uid://cq7rjskkm1uto" path="res://Nick O. Time Assets/nikotime/CHARM/jump/nikotimecharmjump2.png" id="186_du83i"]
-[ext_resource type="Texture2D" uid="uid://sbed7byc8b4d" path="res://Nick O. Time Assets/nikotime/CHARM/jump/nikotimecharmjump3.png" id="187_2e8f2"]
-[ext_resource type="Texture2D" uid="uid://t1vdnirafsjs" path="res://Nick O. Time Assets/nikotime/CHARM/jump/nikotimecharmjump4.png" id="188_baben"]
-[ext_resource type="Texture2D" uid="uid://b0sillivvp8i7" path="res://Nick O. Time Assets/nikotime/CHARM/crouch/nikotimecharmcrouch1.png" id="189_8wy4t"]
-[ext_resource type="Texture2D" uid="uid://cf6782wml7i54" path="res://Nick O. Time Assets/nikotime/CHARM/jump/nikotimecharmjump5.png" id="189_my7jr"]
-[ext_resource type="Texture2D" uid="uid://nxsxtq5071d4" path="res://Nick O. Time Assets/nikotime/CHARM/jump/nikotimecharmjump6.png" id="190_4t3hs"]
-[ext_resource type="Texture2D" uid="uid://dma2clsq6jkc0" path="res://Nick O. Time Assets/nikotime/CHARM/crouch/nikotimecharmcrouch2.png" id="190_f7ghy"]
-[ext_resource type="Texture2D" uid="uid://b5x4bunbtd381" path="res://Nick O. Time Assets/nikotime/CHARM/crouch/nikotimecharmcrouch3.png" id="191_55mp4"]
-[ext_resource type="Texture2D" uid="uid://cyymraktbsvr4" path="res://Nick O. Time Assets/nikotime/CHARM/jump/nikotimecharmjump7.png" id="191_oi5ih"]
-[ext_resource type="Texture2D" uid="uid://cf1ot1atlhhmq" path="res://Nick O. Time Assets/nikotime/CHARM/crouch/nikotimecharmcrouch4.png" id="192_cvnf1"]
-[ext_resource type="Texture2D" uid="uid://bo52qh5iiwf66" path="res://Nick O. Time Assets/nikotime/CHARM/jump/nikotimecharmjump8.png" id="192_mcgpp"]
-[ext_resource type="Texture2D" uid="uid://betvno13pg71o" path="res://Nick O. Time Assets/nikotime/CHARM/jump/nikotimecharmjump9.png" id="193_cl3wb"]
-[ext_resource type="Texture2D" uid="uid://bib2eons27pbf" path="res://Nick O. Time Assets/nikotime/CHARM/crouch/nikotimecharmcrouch5.png" id="193_wtekw"]
-[ext_resource type="Texture2D" uid="uid://t5iwphmtxuyg" path="res://Nick O. Time Assets/nikotime/CHARM/jump/nikotimecharmjump10.png" id="194_h3spw"]
-[ext_resource type="Texture2D" uid="uid://cyrdyh7coeut4" path="res://Nick O. Time Assets/nikotime/CHARM/crouch/nikotimecharmcrouch6.png" id="194_o7xx7"]
-[ext_resource type="Texture2D" uid="uid://bvae64t42clil" path="res://Nick O. Time Assets/nikotime/CHARM/crouch/nikotimecharmcrouch7.png" id="195_h026h"]
-[ext_resource type="Texture2D" uid="uid://dclfv6qjrowbs" path="res://Nick O. Time Assets/nikotime/CHARM/jump/nikotimecharmjump11.png" id="195_wb0fa"]
-[ext_resource type="Texture2D" uid="uid://cqv36l6nfwupf" path="res://Nick O. Time Assets/nikotime/CHARM/crouch/nikotimecharmcrouch8.png" id="196_17nnp"]
-[ext_resource type="Texture2D" uid="uid://cnbn7fm1tchbf" path="res://Nick O. Time Assets/nikotime/CHARM/jump/nikotimecharmjump12.png" id="196_ab8ie"]
-[ext_resource type="Texture2D" uid="uid://bsrsid813yv5s" path="res://Nick O. Time Assets/nikotime/CHARM/crouch/nikotimecharmcrouch9.png" id="197_fhoqw"]
-[ext_resource type="Texture2D" uid="uid://dko0aa3twf43h" path="res://Nick O. Time Assets/nikotime/CHARM/jump/nikotimecharmjump13.png" id="197_u2bkj"]
-[ext_resource type="Texture2D" uid="uid://h6t4oh6oic60" path="res://Nick O. Time Assets/nikotime/CHARM/jump/nikotimecharmjump14.png" id="198_biojw"]
-[ext_resource type="Texture2D" uid="uid://5hpivw7ghuhk" path="res://Nick O. Time Assets/nikotime/CHARM/jump/nikotimecharmjump15.png" id="199_jo550"]
 [ext_resource type="Texture2D" uid="uid://c2setddd2s57j" path="res://Nick O. Time Assets/nikotime/LEGS/walkcrouch/nikotimelegswalkcrouch1.png" id="219_rnseg"]
 [ext_resource type="Texture2D" uid="uid://cp0u8yfx4g67a" path="res://Nick O. Time Assets/nikotime/LEGS/walkcrouch/nikotimelegswalkcrouch2.png" id="220_ft81l"]
 [ext_resource type="Texture2D" uid="uid://ddcvd3lalx7im" path="res://Nick O. Time Assets/nikotime/LEGS/walkcrouch/nikotimelegswalkcrouch3.png" id="221_36x2n"]
@@ -332,16 +261,6 @@
 [ext_resource type="Texture2D" uid="uid://bgeweoohovfcp" path="res://Nick O. Time Assets/nikotime/LEGS/walkcrouch/nikotimelegswalkcrouch8.png" id="226_8jxhn"]
 [ext_resource type="Texture2D" uid="uid://du55vh8rrmwit" path="res://Nick O. Time Assets/nikotime/LEGS/walkcrouch/nikotimelegswalkcrouch9.png" id="227_mbyxt"]
 [ext_resource type="Texture2D" uid="uid://euofu44v260n" path="res://Nick O. Time Assets/nikotime/LEGS/walkcrouch/nikotimelegswalkcrouch10.png" id="228_dl2t3"]
-[ext_resource type="Texture2D" uid="uid://b3nljpycq6lky" path="res://Nick O. Time Assets/nikotime/CHARM/walkcrouch/nikotimecharmwalkcrouch1.png" id="301_o5sgk"]
-[ext_resource type="Texture2D" uid="uid://b5m868wgp3n72" path="res://Nick O. Time Assets/nikotime/CHARM/walkcrouch/nikotimecharmwalkcrouch2.png" id="302_wpfkw"]
-[ext_resource type="Texture2D" uid="uid://ckhrk6adxyrfu" path="res://Nick O. Time Assets/nikotime/CHARM/walkcrouch/nikotimecharmwalkcrouch3.png" id="303_8ogn1"]
-[ext_resource type="Texture2D" uid="uid://6cruy12xv4vh" path="res://Nick O. Time Assets/nikotime/CHARM/walkcrouch/nikotimecharmwalkcrouch4.png" id="304_hy7ay"]
-[ext_resource type="Texture2D" uid="uid://bvxgcdnluubj4" path="res://Nick O. Time Assets/nikotime/CHARM/walkcrouch/nikotimecharmwalkcrouch5.png" id="305_7mxhx"]
-[ext_resource type="Texture2D" uid="uid://vfv7868kf314" path="res://Nick O. Time Assets/nikotime/CHARM/walkcrouch/nikotimecharmwalkcrouch6.png" id="306_7ctm0"]
-[ext_resource type="Texture2D" uid="uid://b28qe86mcfyci" path="res://Nick O. Time Assets/nikotime/CHARM/walkcrouch/nikotimecharmwalkcrouch7.png" id="307_o1eil"]
-[ext_resource type="Texture2D" uid="uid://bn4unmohovfgv" path="res://Nick O. Time Assets/nikotime/CHARM/walkcrouch/nikotimecharmwalkcrouch8.png" id="308_vwkib"]
-[ext_resource type="Texture2D" uid="uid://hmvtrjtom8n7" path="res://Nick O. Time Assets/nikotime/CHARM/walkcrouch/nikotimecharmwalkcrouch9.png" id="309_8l2rt"]
-[ext_resource type="Texture2D" uid="uid://bb3u5gwc41rw1" path="res://Nick O. Time Assets/nikotime/CHARM/walkcrouch/nikotimecharmwalkcrouch10.png" id="310_mskmx"]
 [ext_resource type="Texture2D" uid="uid://c18epff7pipbl" path="res://Nick O. Time Assets/nikotime/ARMS/shootjump/nikotimefallshoot.png" id="333_tgm7y"]
 [ext_resource type="Texture2D" uid="uid://dplifsbp13ya2" path="res://Nick O. Time Assets/nikotime/ARMS/crouchshoot/nikotimearmscrouchshoot1.png" id="333_u4ex7"]
 [ext_resource type="Texture2D" uid="uid://d11i3yntphdkn" path="res://Nick O. Time Assets/nikotime/ARMS/crouchshoot/nikotimearmscrouchshoot2.png" id="334_hjary"]
@@ -361,69 +280,236 @@
 [ext_resource type="Texture2D" uid="uid://f7r3nykcgpjv" path="res://Nick O. Time Assets/nikotime/ARMS/shootidle/nikotimearmsshootidle7.png" id="343_u4ex7"]
 [ext_resource type="Texture2D" uid="uid://cm10tavkjrp33" path="res://Nick O. Time Assets/nikotime/ARMS/shootidle/nikotimearmsshootidle8.png" id="344_hjary"]
 [ext_resource type="Texture2D" uid="uid://ohtoom53bcdw" path="res://Nick O. Time Assets/nikotime/ARMS/shootidle/nikotimearmsshootidle9.png" id="345_4l2j7"]
+[ext_resource type="Texture2D" uid="uid://0rii6c5mhxxs" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockidle/nikotimeclockidle1.png" id="345_4mbpa"]
+[ext_resource type="Texture2D" uid="uid://dse8m3u4e6xeh" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockcrouch/nikotimeclockcrouch1.png" id="345_h7cgi"]
 [ext_resource type="Texture2D" uid="uid://dxo4ykwyxmxt2" path="res://Nick O. Time Assets/nikotime/ARMS/shootidle/nikotimearmsshootidle10.png" id="346_3hq8v"]
+[ext_resource type="Texture2D" uid="uid://b4134snjo1atx" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockidle/nikotimeclockidle2.png" id="346_6j4gm"]
+[ext_resource type="Texture2D" uid="uid://ql0s2gl4k4yx" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockcrouch/nikotimeclockcrouch2.png" id="346_ybjn6"]
 [ext_resource type="Texture2D" uid="uid://cvd4ixou8tfq5" path="res://Nick O. Time Assets/nikotime/ARMS/shootidle/nikotimearmsshootidle11.png" id="347_ot6xa"]
+[ext_resource type="Texture2D" uid="uid://d0dg7pj756y4v" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockcrouch/nikotimeclockcrouch3.png" id="347_otaxo"]
+[ext_resource type="Texture2D" uid="uid://btll75tm1do7o" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockidle/nikotimeclockidle3.png" id="347_tpqqj"]
 [ext_resource type="Texture2D" uid="uid://dqhnwydc28kae" path="res://Nick O. Time Assets/nikotime/ARMS/shootidle/nikotimearmsshootidle12.png" id="348_0cunu"]
+[ext_resource type="Texture2D" uid="uid://xevaeraghyqa" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockidle/nikotimeclockidle4.png" id="348_4yfll"]
+[ext_resource type="Texture2D" uid="uid://bsoxviwwc6jai" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockcrouch/nikotimeclockcrouch4.png" id="348_84q80"]
+[ext_resource type="Texture2D" uid="uid://2i8xpu5hgtnd" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockcrouch/nikotimeclockcrouch5.png" id="349_bt3vn"]
+[ext_resource type="Texture2D" uid="uid://c2blk1coyd7oi" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockidle/nikotimeclockidle5.png" id="349_gqnft"]
 [ext_resource type="Texture2D" uid="uid://boy2davmc3lfw" path="res://Nick O. Time Assets/nikotime/ARMS/shootidle/nikotimearmsshootidle13.png" id="349_i67vw"]
+[ext_resource type="Texture2D" uid="uid://bb3ksxgq27kxq" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockcrouch/nikotimeclockcrouch6.png" id="350_6qx6c"]
 [ext_resource type="Texture2D" uid="uid://8k253vlr524b" path="res://Nick O. Time Assets/nikotime/ARMS/shootjump/nikotimearmsshootjump1.png" id="350_g41fm"]
 [ext_resource type="Texture2D" uid="uid://bchkqdowep5no" path="res://Nick O. Time Assets/nikotime/ARMS/shootidle/nikotimearmsshootidle14.png" id="350_i121w"]
+[ext_resource type="Texture2D" uid="uid://4yj0x5jdjtoi" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockidle/nikotimeclockidle6.png" id="350_ug6dd"]
 [ext_resource type="Texture2D" uid="uid://b2rfrxy7tyh1d" path="res://Nick O. Time Assets/nikotime/ARMS/shootidle/nikotimearmsshootidle15.png" id="351_n3cf3"]
+[ext_resource type="Texture2D" uid="uid://740rbm3opctq" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockcrouch/nikotimeclockcrouch7.png" id="351_q1rhn"]
 [ext_resource type="Texture2D" uid="uid://dgnapx3t5i0bg" path="res://Nick O. Time Assets/nikotime/ARMS/shootjump/nikotimearmsshootjump2.png" id="351_s35br"]
+[ext_resource type="Texture2D" uid="uid://c1gpv7bu1xpx7" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockidle/nikotimeclockidle7.png" id="351_tqghj"]
 [ext_resource type="Texture2D" uid="uid://inwk1eft2p7h" path="res://Nick O. Time Assets/nikotime/ARMS/shootidle/nikotimearmsshootidle16.png" id="352_54cv0"]
+[ext_resource type="Texture2D" uid="uid://s4eh88cftwcs" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockcrouch/nikotimeclockcrouch8.png" id="352_ct34p"]
+[ext_resource type="Texture2D" uid="uid://dkrt5j82xrrrb" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockidle/nikotimeclockidle8.png" id="352_iaglp"]
 [ext_resource type="Texture2D" uid="uid://b7w67sq3uxple" path="res://Nick O. Time Assets/nikotime/ARMS/shootjump/nikotimearmsshootjump3.png" id="352_j0ij0"]
+[ext_resource type="Texture2D" uid="uid://dte8jgbm7vmca" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockidle/nikotimeclockidle9.png" id="353_1q2yh"]
 [ext_resource type="Texture2D" uid="uid://bbhmmblubu31h" path="res://Nick O. Time Assets/nikotime/ARMS/shootjump/nikotimearmsshootjump4.png" id="353_2c050"]
+[ext_resource type="Texture2D" uid="uid://c6ffycjxfyq83" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockcrouch/nikotimeclockcrouch9.png" id="353_on2hi"]
+[ext_resource type="Texture2D" uid="uid://fjgiih70a0kt" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockfall/nikotimeclockfall1.png" id="354_gr58d"]
+[ext_resource type="Texture2D" uid="uid://tbas5s445oqu" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockidle/nikotimeclockidle10.png" id="354_m1hnp"]
 [ext_resource type="Texture2D" uid="uid://du4nyg7y13jrr" path="res://Nick O. Time Assets/nikotime/ARMS/walkcrouchshoot/nikotimearmswalkcrouchshoot1.png" id="354_sd6tx"]
+[ext_resource type="Texture2D" uid="uid://bcpb0puvcdqm3" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockidle/nikotimeclockidle11.png" id="355_1ka2w"]
 [ext_resource type="Texture2D" uid="uid://dshrkuuo50exk" path="res://Nick O. Time Assets/nikotime/ARMS/walkcrouchshoot/nikotimearmswalkcrouchshoot2.png" id="355_jfysn"]
+[ext_resource type="Texture2D" uid="uid://7o1dmgrnaato" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockfall/nikotimeclockfall2.png" id="355_put6t"]
+[ext_resource type="Texture2D" uid="uid://bfl6jodhbgp5o" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockidle/nikotimeclockidle12.png" id="356_7gi4e"]
+[ext_resource type="Texture2D" uid="uid://b70k6qdn5a502" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockfall/nikotimeclockfall3.png" id="356_o5kqc"]
 [ext_resource type="Texture2D" uid="uid://bqfsm4fblywn" path="res://Nick O. Time Assets/nikotime/ARMS/walkcrouchshoot/nikotimearmswalkcrouchshoot3.png" id="356_ye5ij"]
+[ext_resource type="Texture2D" uid="uid://cclrk0ymqlx22" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockfall/nikotimeclockfall4.png" id="357_egnkt"]
 [ext_resource type="Texture2D" uid="uid://sqv1g582nw2r" path="res://Nick O. Time Assets/nikotime/ARMS/walkcrouchshoot/nikotimearmswalkcrouchshoot4.png" id="357_gue2p"]
+[ext_resource type="Texture2D" uid="uid://coqqkqiyp3hrd" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockidle/nikotimeclockidle13.png" id="357_h1ifi"]
+[ext_resource type="Texture2D" uid="uid://28tjcpet5m63" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockidle/nikotimeclockidle14.png" id="358_r0vy0"]
 [ext_resource type="Texture2D" uid="uid://b74yv4e56uwm6" path="res://Nick O. Time Assets/nikotime/ARMS/walkcrouchshoot/nikotimearmswalkcrouchshoot5.png" id="358_u4ex7"]
+[ext_resource type="Texture2D" uid="uid://3ftuf1ahuxx3" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockfall/nikotimeclockfall5.png" id="358_uukrf"]
+[ext_resource type="Texture2D" uid="uid://dfcpsurdnaaj8" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockfall/nikotimeclockfall6.png" id="359_eg1pc"]
 [ext_resource type="Texture2D" uid="uid://d4holm11mrevj" path="res://Nick O. Time Assets/nikotime/ARMS/walkcrouchshoot/nikotimearmswalkcrouchshoot6.png" id="359_hjary"]
+[ext_resource type="Texture2D" uid="uid://d12ip1vqchw1y" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockidle/nikotimeclockidle15.png" id="359_nsus7"]
 [ext_resource type="Texture2D" uid="uid://cf530qo4wkl4p" path="res://Nick O. Time Assets/nikotime/GUN/crouch/nikotimeguncrouchshoot1.png" id="359_y4dgc"]
 [ext_resource type="Texture2D" uid="uid://b5sl4e0ipsn76" path="res://Nick O. Time Assets/nikotime/ARMS/walkcrouchshoot/nikotimearmswalkcrouchshoot7.png" id="360_4l2j7"]
+[ext_resource type="Texture2D" uid="uid://cvd1dfm1m36qw" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockidle/nikotimeclockidle16.png" id="360_5mloi"]
 [ext_resource type="Texture2D" uid="uid://h8hvxkfgu3u4" path="res://Nick O. Time Assets/nikotime/GUN/crouch/nikotimeguncrouchshoot2.png" id="360_gn4on"]
+[ext_resource type="Texture2D" uid="uid://4ogutpwwjl2o" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockfall/nikotimeclockfall7.png" id="360_x6fj3"]
 [ext_resource type="Texture2D" uid="uid://dgl5l7a7bxhy4" path="res://Nick O. Time Assets/nikotime/ARMS/walkcrouchshoot/nikotimearmswalkcrouchshoot8.png" id="361_3hq8v"]
+[ext_resource type="Texture2D" uid="uid://ctpnp20ehcuvd" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapeidle/nikotimecharmidle1.png" id="361_15c7q"]
+[ext_resource type="Texture2D" uid="uid://c32qq0ire8k8w" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockfall/nikotimeclockfall8.png" id="361_c283o"]
 [ext_resource type="Texture2D" uid="uid://81v5b7dckjar" path="res://Nick O. Time Assets/nikotime/GUN/crouch/nikotimeguncrouchshoot3.png" id="361_g4gyd"]
+[ext_resource type="Texture2D" uid="uid://ctsu7kxl0yv2y" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapeidle/nikotimecharmidle2.png" id="362_5fk3q"]
 [ext_resource type="Texture2D" uid="uid://fliaapd3adrr" path="res://Nick O. Time Assets/nikotime/GUN/crouch/nikotimeguncrouchshoot4.png" id="362_7cubo"]
 [ext_resource type="Texture2D" uid="uid://btg3bkgpffwjd" path="res://Nick O. Time Assets/nikotime/ARMS/walkcrouchshoot/nikotimearmswalkcrouchshoot9.png" id="362_ot6xa"]
+[ext_resource type="Texture2D" uid="uid://bdvn1i7cqtjrm" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockfall/nikotimeclockfall9.png" id="362_ywj6b"]
 [ext_resource type="Texture2D" uid="uid://bamhpbfhgxgjd" path="res://Nick O. Time Assets/nikotime/ARMS/walkcrouchshoot/nikotimearmswalkcrouchshoot10.png" id="363_0cunu"]
 [ext_resource type="Texture2D" uid="uid://cp75smk3n2nqp" path="res://Nick O. Time Assets/nikotime/GUN/crouch/nikotimeguncrouchshoot5.png" id="363_3cogy"]
+[ext_resource type="Texture2D" uid="uid://0anljy6e80wi" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapeidle/nikotimecharmidle3.png" id="363_7vd7w"]
+[ext_resource type="Texture2D" uid="uid://bake7k8vc08pq" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockfall/nikotimeclockfall10.png" id="363_bwtqi"]
+[ext_resource type="Texture2D" uid="uid://ru4it2e3xxta" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapeidle/nikotimecharmidle4.png" id="364_12wns"]
+[ext_resource type="Texture2D" uid="uid://dkyafyjs6usty" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockfall/nikotimeclockfall11.png" id="364_awnnx"]
 [ext_resource type="Texture2D" uid="uid://cl4uglob46fow" path="res://Nick O. Time Assets/nikotime/GUN/crouch/nikotimeguncrouchshoot6.png" id="364_kybja"]
+[ext_resource type="Texture2D" uid="uid://dmgpsoltdb251" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapeidle/nikotimecharmidle5.png" id="365_akg0c"]
 [ext_resource type="Texture2D" uid="uid://d4d6ro4s2lry6" path="res://Nick O. Time Assets/nikotime/GUN/crouch/nikotimeguncrouchshoot7.png" id="365_jnn4g"]
 [ext_resource type="Texture2D" uid="uid://b65qwkx6stspm" path="res://Nick O. Time Assets/nikotime/GUN/idle/nikotimegunshootidle1.png" id="365_mtn3x"]
 [ext_resource type="Texture2D" uid="uid://qmqp48w4dea" path="res://Nick O. Time Assets/nikotime/GUN/empty.png" id="365_tqghj"]
+[ext_resource type="Texture2D" uid="uid://7udnbcft1aqj" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockfall/nikotimeclockfall12.png" id="365_vggy6"]
+[ext_resource type="Texture2D" uid="uid://c8ylptp8mgo3t" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapeidle/nikotimecharmidle6.png" id="366_38ipi"]
+[ext_resource type="Texture2D" uid="uid://x7hbul3vlw4b" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockfall/nikotimeclockfall13.png" id="366_n0uxk"]
 [ext_resource type="Texture2D" uid="uid://bw4dr0gim1phj" path="res://Nick O. Time Assets/nikotime/GUN/idle/nikotimegunshootidle2.png" id="366_u1tum"]
 [ext_resource type="Texture2D" uid="uid://duxuushgs3j6v" path="res://Nick O. Time Assets/nikotime/GUN/crouch/nikotimeguncrouchshoot8.png" id="366_yctdl"]
 [ext_resource type="Texture2D" uid="uid://csw3ba2lob18q" path="res://Nick O. Time Assets/nikotime/GUN/crouch/nikotimeguncrouchshoot9.png" id="367_6v1d2"]
+[ext_resource type="Texture2D" uid="uid://c40v3yxu2rqjf" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapeidle/nikotimecharmidle7.png" id="367_acmsi"]
+[ext_resource type="Texture2D" uid="uid://tnliqfgq87kg" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockfall/nikotimeclockfall14.png" id="367_hkjod"]
 [ext_resource type="Texture2D" uid="uid://fw7xfw6kp66o" path="res://Nick O. Time Assets/nikotime/GUN/idle/nikotimegunshootidle3.png" id="367_mr6pc"]
 [ext_resource type="Texture2D" uid="uid://sydbreyop2i0" path="res://Nick O. Time Assets/nikotime/GUN/idle/nikotimegunshootidle4.png" id="368_a0iay"]
+[ext_resource type="Texture2D" uid="uid://d2vljwykjycbt" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockfall/nikotimeclockfall15.png" id="368_woo8t"]
 [ext_resource type="Texture2D" uid="uid://dwigslblugsrs" path="res://Nick O. Time Assets/nikotime/GUN/crouch/nikotimeguncrouchshoot10.png" id="368_xpmix"]
+[ext_resource type="Texture2D" uid="uid://dwo6qrbi3bd6m" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapeidle/nikotimecharmidle8.png" id="368_y4dgc"]
 [ext_resource type="Texture2D" uid="uid://dgkd007ugn3i1" path="res://Nick O. Time Assets/nikotime/GUN/idle/nikotimegunshootidle5.png" id="369_2v2s5"]
+[ext_resource type="Texture2D" uid="uid://m2hjs7kgvhg4" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapeidle/nikotimecharmidle9.png" id="369_gn4on"]
+[ext_resource type="Texture2D" uid="uid://dv3p4qf7b1u5v" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockfall/nikotimeclockfall16.png" id="369_q6he1"]
 [ext_resource type="Texture2D" uid="uid://7oi1s8q8mvdi" path="res://Nick O. Time Assets/nikotime/GUN/jump/nikotimegunjumpshoot5.png" id="370_f8s1j"]
+[ext_resource type="Texture2D" uid="uid://bkfva4is3y33x" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapeidle/nikotimecharmidle10.png" id="370_g4gyd"]
 [ext_resource type="Texture2D" uid="uid://drqikpxwy5gbp" path="res://Nick O. Time Assets/nikotime/GUN/idle/nikotimegunshootidle6.png" id="370_so6il"]
+[ext_resource type="Texture2D" uid="uid://dxj1agqhp800r" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapeidle/nikotimecharmidle11.png" id="371_7cubo"]
 [ext_resource type="Texture2D" uid="uid://b2a5xknqk3v6v" path="res://Nick O. Time Assets/nikotime/GUN/idle/nikotimegunshootidle7.png" id="371_s4l0i"]
+[ext_resource type="Texture2D" uid="uid://lm3go5v6k1lb" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapeidle/nikotimecharmidle12.png" id="372_3cogy"]
 [ext_resource type="Texture2D" uid="uid://dcf2d514hmce2" path="res://Nick O. Time Assets/nikotime/GUN/idle/nikotimegunshootidle8.png" id="372_qsjpr"]
 [ext_resource type="Texture2D" uid="uid://bn4bqwqtak8cq" path="res://Nick O. Time Assets/nikotime/GUN/idle/nikotimegunshootidle9.png" id="373_esn0b"]
+[ext_resource type="Texture2D" uid="uid://br04m0davlosc" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapeidle/nikotimecharmidle13.png" id="373_kybja"]
 [ext_resource type="Texture2D" uid="uid://bbe2am8s4w4v2" path="res://Nick O. Time Assets/nikotime/GUN/idle/nikotimegunshootidle10.png" id="374_1h2j6"]
+[ext_resource type="Texture2D" uid="uid://c5rpfxy0uvfrq" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapeidle/nikotimecharmidle14.png" id="374_jnn4g"]
 [ext_resource type="Texture2D" uid="uid://b1wc6x5txk1xs" path="res://Nick O. Time Assets/nikotime/GUN/idle/nikotimegunshootidle11.png" id="375_jfid6"]
+[ext_resource type="Texture2D" uid="uid://sckg1j0b63ne" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapeidle/nikotimecharmidle15.png" id="375_yctdl"]
+[ext_resource type="Texture2D" uid="uid://ceitgrx5b7qhp" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapeidle/nikotimecharmidle16.png" id="376_6v1d2"]
 [ext_resource type="Texture2D" uid="uid://banyc03gdyrru" path="res://Nick O. Time Assets/nikotime/GUN/idle/nikotimegunshootidle12.png" id="376_21jog"]
 [ext_resource type="Texture2D" uid="uid://cu47fms0ximah" path="res://Nick O. Time Assets/nikotime/GUN/idle/nikotimegunshootidle13.png" id="377_1aj8d"]
 [ext_resource type="Texture2D" uid="uid://o7ety25sv3nk" path="res://Nick O. Time Assets/nikotime/GUN/idle/nikotimegunshootidle14.png" id="378_3fk67"]
 [ext_resource type="Texture2D" uid="uid://cpbekvfi8ak4b" path="res://Nick O. Time Assets/nikotime/GUN/idle/nikotimegunshootidle15.png" id="379_3wdsy"]
 [ext_resource type="Texture2D" uid="uid://dwy15eleav5ge" path="res://Nick O. Time Assets/nikotime/GUN/idle/nikotimegunshootidle16.png" id="380_myj5b"]
+[ext_resource type="Texture2D" uid="uid://bk0gmnh7s6mwd" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockjump/nikotimeclockjump1.png" id="386_kcriv"]
 [ext_resource type="Texture2D" uid="uid://dsp5lh5dfaej4" path="res://Nick O. Time Assets/nikotime/GUN/jump/nikotimegunjumpshoot1.png" id="387_gyhun"]
+[ext_resource type="Texture2D" uid="uid://dugp17qtstfs4" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockjump/nikotimeclockjump2.png" id="387_u00kh"]
+[ext_resource type="Texture2D" uid="uid://b0yfl0co4547p" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockjump/nikotimeclockjump3.png" id="388_jvkuj"]
 [ext_resource type="Texture2D" uid="uid://l8c5dajuwo1a" path="res://Nick O. Time Assets/nikotime/GUN/jump/nikotimegunjumpshoot2.png" id="388_obdbx"]
+[ext_resource type="Texture2D" uid="uid://b683lx40wodpb" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockjump/nikotimeclockjump4.png" id="389_oqm06"]
 [ext_resource type="Texture2D" uid="uid://djfgl5melnf1m" path="res://Nick O. Time Assets/nikotime/GUN/jump/nikotimegunjumpshoot3.png" id="389_r8ah4"]
 [ext_resource type="Texture2D" uid="uid://c0kd75riv48w3" path="res://Nick O. Time Assets/nikotime/GUN/jump/nikotimegunjumpshoot4.png" id="390_gcli5"]
+[ext_resource type="Texture2D" uid="uid://cqp4t44ahdqby" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockjump/nikotimeclockjump5.png" id="390_qtcum"]
+[ext_resource type="Texture2D" uid="uid://dsqor1c7531i3" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockjump/nikotimeclockjump6.png" id="391_m3jbs"]
 [ext_resource type="Texture2D" uid="uid://ky8bsht8bx6y" path="res://Nick O. Time Assets/nikotime/GUN/walkcrouch/walkcrouchshoot1.png" id="391_tgm7y"]
 [ext_resource type="Texture2D" uid="uid://dqpdhfofultsy" path="res://Nick O. Time Assets/nikotime/GUN/walkcrouch/walkcrouchshoot2.png" id="392_g41fm"]
+[ext_resource type="Texture2D" uid="uid://pel0ymk6vfku" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockjump/nikotimeclockjump7.png" id="392_ms4o6"]
 [ext_resource type="Texture2D" uid="uid://b8guckm2vs66k" path="res://Nick O. Time Assets/nikotime/GUN/walkcrouch/walkcrouchshoot3.png" id="393_s35br"]
+[ext_resource type="Texture2D" uid="uid://cufeqtuqubu85" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockjump/nikotimeclockjump8.png" id="393_sjq0o"]
+[ext_resource type="Texture2D" uid="uid://blp8gpe2kmo3i" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockjump/nikotimeclockjump9.png" id="394_bjgli"]
 [ext_resource type="Texture2D" uid="uid://bigam8qisrsel" path="res://Nick O. Time Assets/nikotime/GUN/walkcrouch/walkcrouchshoot4.png" id="394_j0ij0"]
 [ext_resource type="Texture2D" uid="uid://dyhkrk1ldvns3" path="res://Nick O. Time Assets/nikotime/GUN/walkcrouch/walkcrouchshoot5.png" id="395_2c050"]
+[ext_resource type="Texture2D" uid="uid://di3p1a8cjf236" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockjump/nikotimeclockjump10.png" id="395_h341b"]
+[ext_resource type="Texture2D" uid="uid://7m06xp6l8fef" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockjump/nikotimeclockjump11.png" id="396_fmole"]
 [ext_resource type="Texture2D" uid="uid://cl8mg6kab76sp" path="res://Nick O. Time Assets/nikotime/GUN/walkcrouch/walkcrouchshoot6.png" id="396_sd6tx"]
+[ext_resource type="Texture2D" uid="uid://b26d2bmm2yqvu" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockjump/nikotimeclockjump12.png" id="397_h6o3v"]
 [ext_resource type="Texture2D" uid="uid://bhi3hxh1urruy" path="res://Nick O. Time Assets/nikotime/GUN/walkcrouch/walkcrouchshoot7.png" id="397_jfysn"]
+[ext_resource type="Texture2D" uid="uid://c5fblmcnv3gu5" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockjump/nikotimeclockjump13.png" id="398_4j2tq"]
 [ext_resource type="Texture2D" uid="uid://eaw3w4ltcyjg" path="res://Nick O. Time Assets/nikotime/GUN/walkcrouch/walkcrouchshoot8.png" id="398_ye5ij"]
 [ext_resource type="Texture2D" uid="uid://co72wjdqwbh47" path="res://Nick O. Time Assets/nikotime/GUN/walkcrouch/walkcrouchshoot9.png" id="399_gue2p"]
+[ext_resource type="Texture2D" uid="uid://b1njety6um334" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockjump/nikotimeclockjump14.png" id="399_qxyr7"]
+[ext_resource type="Texture2D" uid="uid://dhsps1p2u23jx" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockjump/nikotimeclockjump15.png" id="400_lop81"]
 [ext_resource type="Texture2D" uid="uid://bkto3grpfclvx" path="res://Nick O. Time Assets/nikotime/GUN/walkcrouch/walkcrouchshoot10.png" id="400_u4ex7"]
+[ext_resource type="Texture2D" uid="uid://dkgoiqalr0mnm" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockrun/nikotimeclockrun1.png" id="401_rchjf"]
+[ext_resource type="Texture2D" uid="uid://dgy4toh81q4sk" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockrun/nikotimeclockrun2.png" id="402_kqqbb"]
+[ext_resource type="Texture2D" uid="uid://8p24ln8hy62w" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockrun/nikotimeclockrun3.png" id="403_i3b5t"]
+[ext_resource type="Texture2D" uid="uid://u05215wwk7ay" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockrun/nikotimeclockrun4.png" id="404_4e8t6"]
+[ext_resource type="Texture2D" uid="uid://7jdw0r0m322" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockrun/nikotimeclockrun5.png" id="405_6heif"]
+[ext_resource type="Texture2D" uid="uid://dv0kyvj0qn1qh" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockrun/nikotimeclockrun6.png" id="406_r2k88"]
+[ext_resource type="Texture2D" uid="uid://bq1wciowittyf" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockrun/nikotimeclockrun7.png" id="407_ne50b"]
+[ext_resource type="Texture2D" uid="uid://ctq7ks7cgpum1" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockrun/nikotimeclockrun8.png" id="408_3kvqc"]
+[ext_resource type="Texture2D" uid="uid://ceemimeb3p655" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockrun/nikotimeclockrun9.png" id="409_kgosx"]
+[ext_resource type="Texture2D" uid="uid://57s8jp1qa6f" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockrun/nikotimeclockrun10.png" id="410_qna23"]
+[ext_resource type="Texture2D" uid="uid://bcfnuofarvta8" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockrun/nikotimeclockrun11.png" id="411_visxn"]
+[ext_resource type="Texture2D" uid="uid://bfpwk7pln87vq" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockrun/nikotimeclockrun12.png" id="412_n807m"]
+[ext_resource type="Texture2D" uid="uid://cifqeslwrr714" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockrun/nikotimeclockrun13.png" id="413_gwyyb"]
+[ext_resource type="Texture2D" uid="uid://bj8tlf4vbhptu" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockrun/nikotimeclockrun14.png" id="414_84rs1"]
+[ext_resource type="Texture2D" uid="uid://cm8g55fct7cjr" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockrun/nikotimeclockrun15.png" id="415_wiowe"]
+[ext_resource type="Texture2D" uid="uid://bsci8bi1ot8vh" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockrun/nikotimeclockrun16.png" id="416_n1nyx"]
+[ext_resource type="Texture2D" uid="uid://c7mcl5w3t2u0l" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockwalkcrouch/nikotimeclockwalkcrouch1.png" id="417_q8rs7"]
+[ext_resource type="Texture2D" uid="uid://lt2jbu15gx1h" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockwalkcrouch/nikotimeclockwalkcrouch2.png" id="418_5bl33"]
+[ext_resource type="Texture2D" uid="uid://c8yexgikjr0c0" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockwalkcrouch/nikotimeclockwalkcrouch3.png" id="419_5d8a6"]
+[ext_resource type="Texture2D" uid="uid://bg6b4gsmlpsh8" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockwalkcrouch/nikotimeclockwalkcrouch4.png" id="420_meqcr"]
+[ext_resource type="Texture2D" uid="uid://fb6vk03t6pko" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockwalkcrouch/nikotimeclockwalkcrouch5.png" id="421_yajls"]
+[ext_resource type="Texture2D" uid="uid://bl24nkh5kv5lw" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockwalkcrouch/nikotimeclockwalkcrouch6.png" id="422_gv16x"]
+[ext_resource type="Texture2D" uid="uid://dg7x6a1lgfudb" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockwalkcrouch/nikotimeclockwalkcrouch7.png" id="423_aedrh"]
+[ext_resource type="Texture2D" uid="uid://b6vw2bfbcqpih" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockwalkcrouch/nikotimeclockwalkcrouch8.png" id="424_xg50r"]
+[ext_resource type="AudioStream" uid="uid://bns38oyariiwd" path="res://sounds/sfx/laserShoot.wav" id="425_hjary"]
+[ext_resource type="Texture2D" uid="uid://d3qd526cxd70w" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockwalkcrouch/nikotimeclockwalkcrouch9.png" id="425_qc38c"]
+[ext_resource type="Script" uid="uid://c77nf3ftlmpyu" path="res://notfinalscenes/grapple.gd" id="426_4l2j7"]
+[ext_resource type="Texture2D" uid="uid://bufn4cjy4m28v" path="res://Nick O. Time Assets/nikotime/CHARM/Clock/clockwalkcrouch/nikotimeclockwalkcrouch10.png" id="426_cw7ca"]
+[ext_resource type="Texture2D" uid="uid://dej68almdjjmr" path="res://Nick O. Time Assets/nikotime/Grapple/tape.png" id="427_3hq8v"]
+[ext_resource type="Texture2D" uid="uid://dpgcscdvi55mn" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapecrouch/nikotimecharmcrouch1.png" id="427_50cqf"]
+[ext_resource type="Texture2D" uid="uid://bmbl6w6p58wub" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapecrouch/nikotimecharmcrouch2.png" id="428_55piu"]
+[ext_resource type="Texture2D" uid="uid://cbutsqj6h5ipu" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapecrouch/nikotimecharmcrouch3.png" id="429_p1cq6"]
+[ext_resource type="Texture2D" uid="uid://c0xu161vm5kd0" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapecrouch/nikotimecharmcrouch4.png" id="430_fmw06"]
+[ext_resource type="Texture2D" uid="uid://c5qnr3uanxc13" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapecrouch/nikotimecharmcrouch5.png" id="431_4bg71"]
+[ext_resource type="Texture2D" uid="uid://r2ql1moudrmh" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapecrouch/nikotimecharmcrouch6.png" id="432_2rhoq"]
+[ext_resource type="Texture2D" uid="uid://dx5umd3h6465h" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapecrouch/nikotimecharmcrouch7.png" id="433_a0a80"]
+[ext_resource type="Texture2D" uid="uid://cgtn8dea5lfte" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapecrouch/nikotimecharmcrouch8.png" id="434_v881j"]
+[ext_resource type="Texture2D" uid="uid://dri3apble5jey" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapecrouch/nikotimecharmcrouch9.png" id="435_me2b2"]
+[ext_resource type="Texture2D" uid="uid://c7oddm87jtttq" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapefall/nikotimecharmfall1.png" id="436_altjc"]
+[ext_resource type="Texture2D" uid="uid://jygswukub502" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapefall/nikotimecharmfall2.png" id="437_ev5g3"]
+[ext_resource type="Texture2D" uid="uid://6n7bmn465w6x" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapefall/nikotimecharmfall3.png" id="438_1ptd4"]
+[ext_resource type="Texture2D" uid="uid://cs2a4g3aqwdo0" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapefall/nikotimecharmfall4.png" id="439_dgr34"]
+[ext_resource type="Texture2D" uid="uid://cwdu5gb1husdb" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapefall/nikotimecharmfall5.png" id="440_ue3qs"]
+[ext_resource type="Texture2D" uid="uid://np4htlo30obn" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapefall/nikotimecharmfall6.png" id="441_0ie8k"]
+[ext_resource type="Texture2D" uid="uid://ctg0hls7rwlui" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapefall/nikotimecharmfall7.png" id="442_r4xxu"]
+[ext_resource type="Texture2D" uid="uid://674t71vpldvg" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapefall/nikotimecharmfall8.png" id="443_srxmf"]
+[ext_resource type="Texture2D" uid="uid://bijhvohw6kkr6" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapefall/nikotimecharmfall9.png" id="444_3vptn"]
+[ext_resource type="Texture2D" uid="uid://bqmrh8nmcu7iu" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapefall/nikotimecharmfall10.png" id="445_4a7yn"]
+[ext_resource type="Texture2D" uid="uid://w3li35tnvxhs" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapefall/nikotimecharmfall11.png" id="446_pupjt"]
+[ext_resource type="Texture2D" uid="uid://u0ykgsa2poky" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapefall/nikotimecharmfall12.png" id="447_bf8ay"]
+[ext_resource type="Texture2D" uid="uid://ccu35vx67rq0f" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapefall/nikotimecharmfall13.png" id="448_7ecmv"]
+[ext_resource type="Texture2D" uid="uid://byaj8tr6i78wm" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapefall/nikotimecharmfall14.png" id="449_wkk1d"]
+[ext_resource type="Texture2D" uid="uid://cpiaaxehv2d77" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapefall/nikotimecharmfall15.png" id="450_6lw2p"]
+[ext_resource type="Texture2D" uid="uid://ddr5vqgq1wp3h" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapefall/nikotimecharmfall16.png" id="451_3m2lp"]
+[ext_resource type="Texture2D" uid="uid://co2q4prujqa5m" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapejump/nikotimecharmjump1.png" id="468_ensb3"]
+[ext_resource type="Texture2D" uid="uid://dhcyjeiokssoa" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapejump/nikotimecharmjump2.png" id="469_8c18t"]
+[ext_resource type="Texture2D" uid="uid://bef3dhkwkdoei" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapejump/nikotimecharmjump3.png" id="470_j0105"]
+[ext_resource type="Texture2D" uid="uid://musmtomt2mn2" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapejump/nikotimecharmjump4.png" id="471_8qr7j"]
+[ext_resource type="Texture2D" uid="uid://cbmmi6ys33ku3" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapejump/nikotimecharmjump5.png" id="472_4wg1b"]
+[ext_resource type="Texture2D" uid="uid://bp3h3en52yq4v" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapejump/nikotimecharmjump6.png" id="473_gg6io"]
+[ext_resource type="Texture2D" uid="uid://blq8kh6h7urg5" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapejump/nikotimecharmjump7.png" id="474_0xcct"]
+[ext_resource type="Texture2D" uid="uid://dfqmntsvshlst" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapejump/nikotimecharmjump8.png" id="475_52der"]
+[ext_resource type="Texture2D" uid="uid://ivnkyv0vqo15" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapejump/nikotimecharmjump9.png" id="476_mcnif"]
+[ext_resource type="Texture2D" uid="uid://bxbuojkglxgxl" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapejump/nikotimecharmjump10.png" id="477_w1yh5"]
+[ext_resource type="Texture2D" uid="uid://bkad2no38g7ue" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapejump/nikotimecharmjump11.png" id="478_ips81"]
+[ext_resource type="Texture2D" uid="uid://bnqtqlk87gdni" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapejump/nikotimecharmjump12.png" id="479_ld8cm"]
+[ext_resource type="Texture2D" uid="uid://debs5tyvygu3b" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapejump/nikotimecharmjump13.png" id="480_avrkm"]
+[ext_resource type="Texture2D" uid="uid://s8un804bcfjr" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapejump/nikotimecharmjump14.png" id="481_fwi7y"]
+[ext_resource type="Texture2D" uid="uid://cfd8sd7r8ukqk" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapejump/nikotimecharmjump15.png" id="482_0uwsc"]
+[ext_resource type="Texture2D" uid="uid://cfd2iy1858ib2" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/taperun/nikotimecharmrun1.png" id="484_nc00v"]
+[ext_resource type="Texture2D" uid="uid://dfi3jro53cww5" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/taperun/nikotimecharmrun2.png" id="485_uhe8u"]
+[ext_resource type="Texture2D" uid="uid://d2dmsskde6d51" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/taperun/nikotimecharmrun3.png" id="486_b38sn"]
+[ext_resource type="Texture2D" uid="uid://c5m5xklenj4e5" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/taperun/nikotimecharmrun4.png" id="487_8kaxv"]
+[ext_resource type="Texture2D" uid="uid://lqhl0kopv4jo" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/taperun/nikotimecharmrun5.png" id="488_kl48n"]
+[ext_resource type="Texture2D" uid="uid://weh5vm2fkirk" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/taperun/nikotimecharmrun6.png" id="489_l8bxs"]
+[ext_resource type="Texture2D" uid="uid://cjucd24pul1e4" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/taperun/nikotimecharmrun7.png" id="490_88w2n"]
+[ext_resource type="Texture2D" uid="uid://86qsnig5u27n" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/taperun/nikotimecharmrun8.png" id="491_cr88y"]
+[ext_resource type="Texture2D" uid="uid://d1wufauw2klmo" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/taperun/nikotimecharmrun9.png" id="492_rj2h2"]
+[ext_resource type="Texture2D" uid="uid://efpg2msgqair" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/taperun/nikotimecharmrun10.png" id="493_gv2bk"]
+[ext_resource type="Texture2D" uid="uid://dnqt50kfadi6u" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/taperun/nikotimecharmrun11.png" id="494_hrtvn"]
+[ext_resource type="Texture2D" uid="uid://tkjlptalqhbs" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/taperun/nikotimecharmrun12.png" id="495_kvse1"]
+[ext_resource type="Texture2D" uid="uid://dn7fojs1pfqwr" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/taperun/nikotimecharmrun13.png" id="496_87auq"]
+[ext_resource type="Texture2D" uid="uid://c3bwidlijxmub" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/taperun/nikotimecharmrun14.png" id="497_vu610"]
+[ext_resource type="Texture2D" uid="uid://tj7kqa4g4svk" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/taperun/nikotimecharmrun15.png" id="498_pdj5t"]
+[ext_resource type="Texture2D" uid="uid://c81okwl3pndif" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/taperun/nikotimecharmrun16.png" id="499_ufr54"]
+[ext_resource type="Texture2D" uid="uid://fjpaqx4th7gh" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapewalkcrouch/nikotimecharmwalkcrouch1.png" id="500_mmu5v"]
+[ext_resource type="Texture2D" uid="uid://d0oq158ueypv6" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapewalkcrouch/nikotimecharmwalkcrouch2.png" id="501_oo2mf"]
+[ext_resource type="Texture2D" uid="uid://dpmc2j5ifoiqc" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapewalkcrouch/nikotimecharmwalkcrouch3.png" id="502_fsqfn"]
+[ext_resource type="Texture2D" uid="uid://cfjd3kxnyjuj8" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapewalkcrouch/nikotimecharmwalkcrouch4.png" id="503_8um03"]
+[ext_resource type="Texture2D" uid="uid://b7ep0le4vhwky" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapewalkcrouch/nikotimecharmwalkcrouch5.png" id="504_bgrhy"]
+[ext_resource type="Texture2D" uid="uid://dka6lbqx1eeeg" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapewalkcrouch/nikotimecharmwalkcrouch6.png" id="505_642ik"]
+[ext_resource type="Texture2D" uid="uid://bq1lcgcfdaf82" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapewalkcrouch/nikotimecharmwalkcrouch7.png" id="506_gsww0"]
+[ext_resource type="Texture2D" uid="uid://bfm1lief3y3ci" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapewalkcrouch/nikotimecharmwalkcrouch8.png" id="507_wo5q5"]
+[ext_resource type="Texture2D" uid="uid://cgnr0m8kfu45l" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapewalkcrouch/nikotimecharmwalkcrouch9.png" id="508_s2osu"]
+[ext_resource type="Texture2D" uid="uid://wrkoffbchc4l" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapewalkcrouch/nikotimecharmwalkcrouch10.png" id="509_tj7hb"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wpc7d"]
 animations = [{
@@ -1568,458 +1654,6 @@ animations = [{
 "speed": 9.0
 }]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_q6eev"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("189_8wy4t")
-}, {
-"duration": 1.0,
-"texture": ExtResource("190_f7ghy")
-}, {
-"duration": 1.0,
-"texture": ExtResource("191_55mp4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("192_cvnf1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("193_wtekw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("194_o7xx7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("195_h026h")
-}, {
-"duration": 1.0,
-"texture": ExtResource("196_17nnp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("197_fhoqw")
-}],
-"loop": true,
-"name": &"crouch",
-"speed": 8.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("153_l7x25")
-}, {
-"duration": 1.0,
-"texture": ExtResource("154_lksi4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("155_1566a")
-}, {
-"duration": 1.0,
-"texture": ExtResource("156_cs70h")
-}, {
-"duration": 1.0,
-"texture": ExtResource("157_2jwe8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("158_7005l")
-}, {
-"duration": 1.0,
-"texture": ExtResource("159_t1bh6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("160_eoquf")
-}, {
-"duration": 1.0,
-"texture": ExtResource("161_37ryb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("162_p43bj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("163_gfjh0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("164_3h6a5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("165_3lneu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("166_g2tiu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("167_ym32j")
-}, {
-"duration": 1.0,
-"texture": ExtResource("168_hx4fm")
-}],
-"loop": true,
-"name": &"fall",
-"speed": 12.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("98_f765s")
-}, {
-"duration": 1.0,
-"texture": ExtResource("99_vxhpw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("100_1qouw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("101_8mink")
-}, {
-"duration": 1.0,
-"texture": ExtResource("102_e8331")
-}, {
-"duration": 1.0,
-"texture": ExtResource("103_qs4qs")
-}, {
-"duration": 1.0,
-"texture": ExtResource("104_w8x0c")
-}, {
-"duration": 1.0,
-"texture": ExtResource("105_m2so3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("106_5y6gd")
-}, {
-"duration": 1.0,
-"texture": ExtResource("107_bixoo")
-}, {
-"duration": 1.0,
-"texture": ExtResource("108_b8335")
-}, {
-"duration": 1.0,
-"texture": ExtResource("109_xn4l2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("110_bfnya")
-}, {
-"duration": 1.0,
-"texture": ExtResource("111_a6kcl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("112_hdval")
-}, {
-"duration": 1.0,
-"texture": ExtResource("113_uruuo")
-}],
-"loop": true,
-"name": &"idle",
-"speed": 12.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("185_1p6ol")
-}, {
-"duration": 1.0,
-"texture": ExtResource("186_du83i")
-}, {
-"duration": 1.0,
-"texture": ExtResource("187_2e8f2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("188_baben")
-}, {
-"duration": 1.0,
-"texture": ExtResource("189_my7jr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("190_4t3hs")
-}, {
-"duration": 1.0,
-"texture": ExtResource("191_oi5ih")
-}, {
-"duration": 1.0,
-"texture": ExtResource("192_mcgpp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("193_cl3wb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("194_h3spw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("195_wb0fa")
-}, {
-"duration": 1.0,
-"texture": ExtResource("196_ab8ie")
-}, {
-"duration": 1.0,
-"texture": ExtResource("197_u2bkj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("198_biojw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("199_jo550")
-}],
-"loop": true,
-"name": &"jump",
-"speed": 16.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("146_xucp3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("147_s7xe5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("148_xpaq7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("149_4gid7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("150_l3m48")
-}, {
-"duration": 1.0,
-"texture": ExtResource("151_4pjo6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("152_crxeb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("153_jmisc")
-}, {
-"duration": 1.0,
-"texture": ExtResource("154_eflk2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("155_i2b1k")
-}, {
-"duration": 1.0,
-"texture": ExtResource("156_lcg7x")
-}, {
-"duration": 1.0,
-"texture": ExtResource("157_wixfg")
-}, {
-"duration": 1.0,
-"texture": ExtResource("158_2qd0h")
-}, {
-"duration": 1.0,
-"texture": ExtResource("159_vtl51")
-}, {
-"duration": 1.0,
-"texture": ExtResource("160_ddwp0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("161_v6pmp")
-}],
-"loop": true,
-"name": &"run",
-"speed": 12.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("189_8wy4t")
-}, {
-"duration": 1.0,
-"texture": ExtResource("190_f7ghy")
-}, {
-"duration": 1.0,
-"texture": ExtResource("191_55mp4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("192_cvnf1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("193_wtekw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("194_o7xx7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("195_h026h")
-}, {
-"duration": 1.0,
-"texture": ExtResource("196_17nnp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("197_fhoqw")
-}],
-"loop": true,
-"name": &"shootcrouch",
-"speed": 8.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("98_f765s")
-}, {
-"duration": 1.0,
-"texture": ExtResource("99_vxhpw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("100_1qouw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("101_8mink")
-}, {
-"duration": 1.0,
-"texture": ExtResource("102_e8331")
-}, {
-"duration": 1.0,
-"texture": ExtResource("103_qs4qs")
-}, {
-"duration": 1.0,
-"texture": ExtResource("104_w8x0c")
-}, {
-"duration": 1.0,
-"texture": ExtResource("105_m2so3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("106_5y6gd")
-}, {
-"duration": 1.0,
-"texture": ExtResource("107_bixoo")
-}, {
-"duration": 1.0,
-"texture": ExtResource("108_b8335")
-}, {
-"duration": 1.0,
-"texture": ExtResource("109_xn4l2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("110_bfnya")
-}, {
-"duration": 1.0,
-"texture": ExtResource("111_a6kcl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("112_hdval")
-}, {
-"duration": 1.0,
-"texture": ExtResource("113_uruuo")
-}],
-"loop": true,
-"name": &"shootidle",
-"speed": 12.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("146_xucp3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("147_s7xe5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("148_xpaq7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("149_4gid7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("150_l3m48")
-}, {
-"duration": 1.0,
-"texture": ExtResource("151_4pjo6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("152_crxeb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("153_jmisc")
-}, {
-"duration": 1.0,
-"texture": ExtResource("154_eflk2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("155_i2b1k")
-}, {
-"duration": 1.0,
-"texture": ExtResource("156_lcg7x")
-}, {
-"duration": 1.0,
-"texture": ExtResource("157_wixfg")
-}, {
-"duration": 1.0,
-"texture": ExtResource("158_2qd0h")
-}, {
-"duration": 1.0,
-"texture": ExtResource("159_vtl51")
-}, {
-"duration": 1.0,
-"texture": ExtResource("160_ddwp0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("161_v6pmp")
-}],
-"loop": true,
-"name": &"shootrun",
-"speed": 12.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("301_o5sgk")
-}, {
-"duration": 1.0,
-"texture": ExtResource("302_wpfkw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("303_8ogn1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("304_hy7ay")
-}, {
-"duration": 1.0,
-"texture": ExtResource("305_7mxhx")
-}, {
-"duration": 1.0,
-"texture": ExtResource("306_7ctm0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("307_o1eil")
-}, {
-"duration": 1.0,
-"texture": ExtResource("308_vwkib")
-}, {
-"duration": 1.0,
-"texture": ExtResource("309_8l2rt")
-}, {
-"duration": 1.0,
-"texture": ExtResource("310_mskmx")
-}],
-"loop": true,
-"name": &"shootwalkcrouch",
-"speed": 9.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("301_o5sgk")
-}, {
-"duration": 1.0,
-"texture": ExtResource("302_wpfkw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("303_8ogn1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("304_hy7ay")
-}, {
-"duration": 1.0,
-"texture": ExtResource("305_7mxhx")
-}, {
-"duration": 1.0,
-"texture": ExtResource("306_7ctm0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("307_o1eil")
-}, {
-"duration": 1.0,
-"texture": ExtResource("308_vwkib")
-}, {
-"duration": 1.0,
-"texture": ExtResource("309_8l2rt")
-}, {
-"duration": 1.0,
-"texture": ExtResource("310_mskmx")
-}],
-"loop": true,
-"name": &"walkcrouch",
-"speed": 9.0
-}]
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_6t0cr"]
 animations = [{
 "frames": [{
@@ -2669,9 +2303,924 @@ animations = [{
 "speed": 12.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_xpmix"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("345_h7cgi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("346_ybjn6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("347_otaxo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("348_84q80")
+}, {
+"duration": 1.0,
+"texture": ExtResource("349_bt3vn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("350_6qx6c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("351_q1rhn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("352_ct34p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("353_on2hi")
+}],
+"loop": true,
+"name": &"clockcrouch",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("354_gr58d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("355_put6t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("356_o5kqc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("357_egnkt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("358_uukrf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("359_eg1pc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("360_x6fj3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("361_c283o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("362_ywj6b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("363_bwtqi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("364_awnnx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("365_vggy6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("366_n0uxk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("367_hkjod")
+}, {
+"duration": 1.0,
+"texture": ExtResource("368_woo8t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("369_q6he1")
+}],
+"loop": true,
+"name": &"clockfall",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("345_4mbpa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("346_6j4gm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("347_tpqqj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("348_4yfll")
+}, {
+"duration": 1.0,
+"texture": ExtResource("349_gqnft")
+}, {
+"duration": 1.0,
+"texture": ExtResource("350_ug6dd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("351_tqghj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("352_iaglp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("353_1q2yh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("354_m1hnp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("355_1ka2w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("356_7gi4e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("357_h1ifi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("358_r0vy0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("359_nsus7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("360_5mloi")
+}],
+"loop": true,
+"name": &"clockidle",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("386_kcriv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("387_u00kh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("388_jvkuj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("389_oqm06")
+}, {
+"duration": 1.0,
+"texture": ExtResource("390_qtcum")
+}, {
+"duration": 1.0,
+"texture": ExtResource("391_m3jbs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("392_ms4o6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("393_sjq0o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("394_bjgli")
+}, {
+"duration": 1.0,
+"texture": ExtResource("395_h341b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("396_fmole")
+}, {
+"duration": 1.0,
+"texture": ExtResource("397_h6o3v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("398_4j2tq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("399_qxyr7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("400_lop81")
+}],
+"loop": true,
+"name": &"clockjump",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("401_rchjf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("402_kqqbb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("403_i3b5t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("404_4e8t6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("405_6heif")
+}, {
+"duration": 1.0,
+"texture": ExtResource("406_r2k88")
+}, {
+"duration": 1.0,
+"texture": ExtResource("407_ne50b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("408_3kvqc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("409_kgosx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("410_qna23")
+}, {
+"duration": 1.0,
+"texture": ExtResource("411_visxn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("412_n807m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("413_gwyyb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("414_84rs1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("415_wiowe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("416_n1nyx")
+}],
+"loop": true,
+"name": &"clockrun",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("345_h7cgi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("346_ybjn6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("347_otaxo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("348_84q80")
+}, {
+"duration": 1.0,
+"texture": ExtResource("349_bt3vn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("350_6qx6c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("351_q1rhn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("352_ct34p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("353_on2hi")
+}],
+"loop": true,
+"name": &"clockshootcrouch",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("345_4mbpa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("346_6j4gm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("347_tpqqj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("348_4yfll")
+}, {
+"duration": 1.0,
+"texture": ExtResource("349_gqnft")
+}, {
+"duration": 1.0,
+"texture": ExtResource("350_ug6dd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("351_tqghj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("352_iaglp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("353_1q2yh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("354_m1hnp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("355_1ka2w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("356_7gi4e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("357_h1ifi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("358_r0vy0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("359_nsus7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("360_5mloi")
+}],
+"loop": true,
+"name": &"clockshootidle",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("401_rchjf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("402_kqqbb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("403_i3b5t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("404_4e8t6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("405_6heif")
+}, {
+"duration": 1.0,
+"texture": ExtResource("406_r2k88")
+}, {
+"duration": 1.0,
+"texture": ExtResource("407_ne50b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("408_3kvqc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("409_kgosx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("410_qna23")
+}, {
+"duration": 1.0,
+"texture": ExtResource("411_visxn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("412_n807m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("413_gwyyb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("414_84rs1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("415_wiowe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("416_n1nyx")
+}],
+"loop": true,
+"name": &"clockshootrun",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("417_q8rs7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("418_5bl33")
+}, {
+"duration": 1.0,
+"texture": ExtResource("419_5d8a6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("420_meqcr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("421_yajls")
+}, {
+"duration": 1.0,
+"texture": ExtResource("422_gv16x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("423_aedrh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("424_xg50r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("425_qc38c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("426_cw7ca")
+}],
+"loop": true,
+"name": &"clockshootwalkcrouch",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("417_q8rs7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("418_5bl33")
+}, {
+"duration": 1.0,
+"texture": ExtResource("419_5d8a6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("420_meqcr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("421_yajls")
+}, {
+"duration": 1.0,
+"texture": ExtResource("422_gv16x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("423_aedrh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("424_xg50r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("425_qc38c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("426_cw7ca")
+}],
+"loop": true,
+"name": &"clockwalkcrouch",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("427_50cqf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("428_55piu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("429_p1cq6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("430_fmw06")
+}, {
+"duration": 1.0,
+"texture": ExtResource("431_4bg71")
+}, {
+"duration": 1.0,
+"texture": ExtResource("432_2rhoq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("433_a0a80")
+}, {
+"duration": 1.0,
+"texture": ExtResource("434_v881j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("435_me2b2")
+}],
+"loop": true,
+"name": &"tapemeasurercrouch",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("436_altjc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("437_ev5g3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("438_1ptd4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("439_dgr34")
+}, {
+"duration": 1.0,
+"texture": ExtResource("440_ue3qs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("441_0ie8k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("442_r4xxu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("443_srxmf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("444_3vptn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("445_4a7yn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("446_pupjt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("447_bf8ay")
+}, {
+"duration": 1.0,
+"texture": ExtResource("448_7ecmv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("449_wkk1d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("450_6lw2p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("451_3m2lp")
+}],
+"loop": true,
+"name": &"tapemeasurerfall",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("361_15c7q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("362_5fk3q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("363_7vd7w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("364_12wns")
+}, {
+"duration": 1.0,
+"texture": ExtResource("365_akg0c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("366_38ipi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("367_acmsi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("368_y4dgc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("369_gn4on")
+}, {
+"duration": 1.0,
+"texture": ExtResource("370_g4gyd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("371_7cubo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("372_3cogy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("373_kybja")
+}, {
+"duration": 1.0,
+"texture": ExtResource("374_jnn4g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("375_yctdl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("376_6v1d2")
+}],
+"loop": true,
+"name": &"tapemeasureridle",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("468_ensb3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("469_8c18t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("470_j0105")
+}, {
+"duration": 1.0,
+"texture": ExtResource("471_8qr7j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("472_4wg1b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("473_gg6io")
+}, {
+"duration": 1.0,
+"texture": ExtResource("474_0xcct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("475_52der")
+}, {
+"duration": 1.0,
+"texture": ExtResource("476_mcnif")
+}, {
+"duration": 1.0,
+"texture": ExtResource("477_w1yh5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("478_ips81")
+}, {
+"duration": 1.0,
+"texture": ExtResource("479_ld8cm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("480_avrkm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("481_fwi7y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("482_0uwsc")
+}],
+"loop": true,
+"name": &"tapemeasurerjump",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("484_nc00v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("485_uhe8u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("486_b38sn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("487_8kaxv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("488_kl48n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("489_l8bxs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("490_88w2n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("491_cr88y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("492_rj2h2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("493_gv2bk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("494_hrtvn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("495_kvse1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("496_87auq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("497_vu610")
+}, {
+"duration": 1.0,
+"texture": ExtResource("498_pdj5t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("499_ufr54")
+}],
+"loop": true,
+"name": &"tapemeasurerrun",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("427_50cqf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("428_55piu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("429_p1cq6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("430_fmw06")
+}, {
+"duration": 1.0,
+"texture": ExtResource("431_4bg71")
+}, {
+"duration": 1.0,
+"texture": ExtResource("432_2rhoq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("433_a0a80")
+}, {
+"duration": 1.0,
+"texture": ExtResource("434_v881j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("435_me2b2")
+}],
+"loop": true,
+"name": &"tapemeasurershootcrouch",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("361_15c7q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("362_5fk3q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("363_7vd7w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("364_12wns")
+}, {
+"duration": 1.0,
+"texture": ExtResource("365_akg0c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("366_38ipi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("367_acmsi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("368_y4dgc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("369_gn4on")
+}, {
+"duration": 1.0,
+"texture": ExtResource("370_g4gyd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("371_7cubo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("372_3cogy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("373_kybja")
+}, {
+"duration": 1.0,
+"texture": ExtResource("374_jnn4g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("375_yctdl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("376_6v1d2")
+}],
+"loop": true,
+"name": &"tapemeasurershootidle",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("484_nc00v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("485_uhe8u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("486_b38sn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("487_8kaxv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("488_kl48n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("489_l8bxs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("490_88w2n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("491_cr88y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("492_rj2h2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("493_gv2bk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("494_hrtvn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("495_kvse1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("496_87auq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("497_vu610")
+}, {
+"duration": 1.0,
+"texture": ExtResource("498_pdj5t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("499_ufr54")
+}],
+"loop": true,
+"name": &"tapemeasurershootrun",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("500_mmu5v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("501_oo2mf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("502_fsqfn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("503_8um03")
+}, {
+"duration": 1.0,
+"texture": ExtResource("504_bgrhy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("505_642ik")
+}, {
+"duration": 1.0,
+"texture": ExtResource("506_gsww0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("507_wo5q5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("508_s2osu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("509_tj7hb")
+}],
+"loop": true,
+"name": &"tapemeasurershootwalkcrouch",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("500_mmu5v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("501_oo2mf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("502_fsqfn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("503_8um03")
+}, {
+"duration": 1.0,
+"texture": ExtResource("504_bgrhy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("505_642ik")
+}, {
+"duration": 1.0,
+"texture": ExtResource("506_gsww0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("507_wo5q5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("508_s2osu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("509_tj7hb")
+}],
+"loop": true,
+"name": &"tapemeasurerwalkcrouch",
+"speed": 9.0
+}]
+
 [node name="Player" type="CharacterBody2D"]
 texture_filter = 2
 script = ExtResource("1_ycdkt")
+
+[node name="Grapple" type="Node2D" parent="."]
+rotation = 1.5707964
+script = ExtResource("426_4l2j7")
+
+[node name="Sprite2D" type="Sprite2D" parent="Grapple"]
+texture_filter = 1
+position = Vector2(-0.12500024, -0.55092597)
+scale = Vector2(0.78125, 0.84375)
+texture = ExtResource("427_3hq8v")
+
+[node name="retract" type="AudioStreamPlayer2D" parent="Grapple"]
+stream = ExtResource("4_ybjn6")
+volume_db = 0.5
 
 [node name="PlayerBody" type="Node2D" parent="."]
 texture_filter = 1
@@ -2688,13 +3237,9 @@ animation = &"shootrun"
 sprite_frames = SubResource("SpriteFrames_sbqy7")
 animation = &"shootrun"
 
-[node name="charm" type="AnimatedSprite2D" parent="PlayerBody"]
-sprite_frames = SubResource("SpriteFrames_q6eev")
-animation = &"shootcrouch"
-
 [node name="arms" type="AnimatedSprite2D" parent="PlayerBody"]
 sprite_frames = SubResource("SpriteFrames_6t0cr")
-animation = &"shootrun"
+animation = &"jump"
 
 [node name="gun" type="AnimatedSprite2D" parent="PlayerBody"]
 sprite_frames = SubResource("SpriteFrames_4f606")
@@ -2709,11 +3254,17 @@ animation = &"sync"
 autoplay = "sync"
 frame_progress = 0.822007
 
+[node name="charm" type="AnimatedSprite2D" parent="PlayerBody"]
+sprite_frames = SubResource("SpriteFrames_xpmix")
+animation = &"tapemeasurerjump"
+frame = 3
+frame_progress = 0.24333535
+
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(-15, 2, -5, -21, 5, -21, 15, 1, 6, 24, -6, 24)
+polygon = PackedVector2Array(-6, 1, -3, -15, 2, -15, 6, 1, 4, 23, 0, 23, -4, 23)
 
 [node name="CrouchCollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(0, 24, -6, 24, -15, 2, -13, -3, 13, -3, 15, 1, 6, 24)
+polygon = PackedVector2Array(0, 23, -4, 23, -6, 1, -5, -2, 0.80825806, -1.4191742, 5, -1, 6, 1, 4, 23)
 
 [node name="CeilingCheck" type="RayCast2D" parent="."]
 position = Vector2(0, -3)
@@ -2721,3 +3272,7 @@ target_position = Vector2(0, -19)
 
 [node name="ShootTimer" type="Timer" parent="."]
 wait_time = 0.2
+
+[node name="shootsound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("425_hjary")
+volume_db = -10.0

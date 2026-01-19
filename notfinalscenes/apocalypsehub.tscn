@@ -1,8 +1,9 @@
 [gd_scene load_steps=14 format=3 uid="uid://bhevc5dh2wnwt"]
 
-[ext_resource type="Script" uid="uid://1j4gddcl6dcy" path="res://hub.gd" id="1_mjhjl"]
+[ext_resource type="Script" uid="uid://1j4gddcl6dcy" path="res://Scripts/hub.gd" id="1_mjhjl"]
 [ext_resource type="Texture2D" uid="uid://b5mwvkmcny457" path="res://Nick O. Time Assets/hub/mercator.png" id="2_owhvu"]
 [ext_resource type="Shader" uid="uid://16f6ikyyguwx" path="res://fire.gdshader" id="3_454w4"]
+
 
 [sub_resource type="SphereMesh" id="SphereMesh_g73tb"]
 radial_segments = 128

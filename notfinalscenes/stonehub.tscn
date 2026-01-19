@@ -3,7 +3,8 @@
 [ext_resource type="Script" uid="uid://bbbclkaajqq1j" path="res://notfinalscenes/stonehub.gd" id="1_0dkco"]
 [ext_resource type="Texture2D" uid="uid://cxe0kwlnfwcae" path="res://Nick O. Time Assets/hub/eraselect/stone/stonemercator.png" id="2_d8dak"]
 [ext_resource type="Shader" uid="uid://dmsdlaivdn51h" path="res://outline.gdshader" id="3_ntuad"]
-[ext_resource type="AudioStream" uid="uid://bfb7dbunvjq25" path="res://sounds/stoneage (1).mp3" id="4_d8dak"]
+[ext_resource type="AudioStream" uid="uid://bfb7dbunvjq25" path="res://sounds/music/stoneage (1).mp3" id="4_d8dak"]
+
 
 [sub_resource type="SphereMesh" id="SphereMesh_ybt8w"]
 radial_segments = 128

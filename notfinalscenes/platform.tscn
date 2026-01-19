@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://trgqs7wgrk2w"]
+[gd_scene load_steps=20 format=3 uid="uid://trgqs7wgrk2w"]
 
 [ext_resource type="PackedScene" uid="uid://cstf2ss4i7s0m" path="res://notfinalscenes/player.tscn" id="1_mi635"]
 [ext_resource type="Texture2D" uid="uid://ngtwnk48flqu" path="res://Nick O. Time Assets/tutoriallevel/paralaxbackground/background.png" id="1_x8osn"]
@@ -6,8 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://d12xgs1yj6py5" path="res://Nick O. Time Assets/tutoriallevel/cloudtileset.png" id="2_s8bxr"]
 [ext_resource type="FontFile" uid="uid://cy3h2y25yb67v" path="res://dialogue/StWinterPixel24BoldDemoBold-BWRz5.otf" id="3_c1gtx"]
 [ext_resource type="Texture2D" uid="uid://daixxpjtymm3g" path="res://Nick O. Time Assets/tutoriallevel/paralaxbackground/cloudfront.png" id="3_xucfa"]
+[ext_resource type="Script" uid="uid://4s5uc4m6nqqi" path="res://notfinalscenes/camera_following_x.gd" id="4_8tgm5"]
 [ext_resource type="PackedScene" uid="uid://d2bq6t3531u1p" path="res://target_dummy.tscn" id="4_ry5bi"]
-[ext_resource type="Script" uid="uid://cf4a4j683lyyb" path="res://nextscene.gd" id="8_ardar"]
+[ext_resource type="Script" uid="uid://cf4a4j683lyyb" path="res://Scripts/nextscene.gd" id="8_ardar"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_x8osn"]
 polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
@@ -159,7 +160,7 @@ default_font = ExtResource("3_c1gtx")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xucfa"]
 size = Vector2(3314, 19)
 
-[node name="Node2D" type="Node2D"]
+[node name="Platform" type="Node2D"]
 position = Vector2(398, 104)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -199,12 +200,16 @@ position = Vector2(-425, -240)
 texture = ExtResource("3_xucfa")
 centered = false
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-222, 109)
+script = ExtResource("4_8tgm5")
+
 [node name="Player" parent="." instance=ExtResource("1_mi635")]
-position = Vector2(-423, -20)
+position = Vector2(33, 102)
 collision_layer = 4
 collision_mask = 4
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
+GRAVITY = 1200
+JUMP_FORCE = 500
 
 [node name="TileMap" type="TileMap" parent="."]
 modulate = Color(1, 1, 1, 0.901961)
@@ -223,11 +228,11 @@ offset_right = -27.0
 offset_bottom = 145.0
 focus_mode = 0
 theme = SubResource("Theme_x8osn")
-theme_override_colors/word_highlighted_color = Color(0, 0, 0, 0)
-theme_override_colors/current_line_color = Color(0, 0, 0, 0)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/caret_background_color = Color(0, 0, 0, 0)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/current_line_color = Color(0, 0, 0, 0)
+theme_override_colors/word_highlighted_color = Color(0, 0, 0, 0)
 theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("3_c1gtx")
 theme_override_font_sizes/font_size = 10
@@ -253,11 +258,11 @@ offset_right = 453.0
 offset_bottom = 126.0
 focus_mode = 0
 theme = SubResource("Theme_x8osn")
-theme_override_colors/word_highlighted_color = Color(0, 0, 0, 0)
-theme_override_colors/current_line_color = Color(0, 0, 0, 0)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/caret_background_color = Color(0, 0, 0, 0)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/current_line_color = Color(0, 0, 0, 0)
+theme_override_colors/word_highlighted_color = Color(0, 0, 0, 0)
 theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("3_c1gtx")
 theme_override_font_sizes/font_size = 10
@@ -283,11 +288,11 @@ offset_right = 893.0
 offset_bottom = 94.0
 focus_mode = 0
 theme = SubResource("Theme_x8osn")
-theme_override_colors/word_highlighted_color = Color(0, 0, 0, 0)
-theme_override_colors/current_line_color = Color(0, 0, 0, 0)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/caret_background_color = Color(0, 0, 0, 0)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/current_line_color = Color(0, 0, 0, 0)
+theme_override_colors/word_highlighted_color = Color(0, 0, 0, 0)
 theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("3_c1gtx")
 theme_override_font_sizes/font_size = 10

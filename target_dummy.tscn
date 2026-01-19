@@ -1,12 +1,13 @@
 [gd_scene load_steps=9 format=3 uid="uid://d2bq6t3531u1p"]
 
-[ext_resource type="Script" uid="uid://yhtqyarko6ck" path="res://target_dummy.gd" id="1_tgppn"]
+[ext_resource type="Script" uid="uid://yhtqyarko6ck" path="res://Scripts/target_dummy.gd" id="1_tgppn"]
 [ext_resource type="Texture2D" uid="uid://6qnuygwah1mw" path="res://Nick O. Time Assets/tutoriallevel/targetdummy/targetdummyhit/Hited(NoArmor)1.png" id="2_iapyw"]
 [ext_resource type="Texture2D" uid="uid://c2mmsy7ymtahq" path="res://Nick O. Time Assets/tutoriallevel/targetdummy/targetdummyhit/Hited(NoArmor)2.png" id="3_31fys"]
 [ext_resource type="Texture2D" uid="uid://nv5xrchaibj7" path="res://Nick O. Time Assets/tutoriallevel/targetdummy/targetdummyhit/Hited(NoArmor)3.png" id="4_hwj01"]
 [ext_resource type="Texture2D" uid="uid://x6fbfq0skvh5" path="res://Nick O. Time Assets/tutoriallevel/targetdummy/targetdummyhit/Hited(NoArmor)4.png" id="5_o6qt2"]
 [ext_resource type="Texture2D" uid="uid://bsy4pbcit7vbx" path="res://Nick O. Time Assets/tutoriallevel/targetdummy/targetdummyhit/Hited(NoArmor)5.png" id="6_m3vtt"]
 [ext_resource type="Texture2D" uid="uid://cx07rm2jk044x" path="res://Nick O. Time Assets/tutoriallevel/targetdummy/Idle(NoArmor).png" id="7_3gihc"]
+
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ccnp3"]
 animations = [{

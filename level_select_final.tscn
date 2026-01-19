@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://ctyu83upp8cu1" path="res://Nick O. Time Assets/hub/eraselect/presse/pressa3.png" id="6_dyeb5"]
 [ext_resource type="Texture2D" uid="uid://d0ncypexyu4ss" path="res://Nick O. Time Assets/hub/eraselect/presse/presse2.png" id="6_rlb3w"]
 [ext_resource type="Texture2D" uid="uid://bcbcph3hwwe5g" path="res://Nick O. Time Assets/hub/eraselect/presse/presse3.png" id="7_td03h"]
-[ext_resource type="Script" uid="uid://t5rsficuu6wk" path="res://interaction_label.gd" id="10_wc01q"]
+[ext_resource type="Script" uid="uid://t5rsficuu6wk" path="res://Scripts/interaction_label.gd" id="10_wc01q"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_36xph"]
 animations = [{

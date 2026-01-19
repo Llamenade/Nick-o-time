@@ -1,7 +1,7 @@
 [gd_scene load_steps=74 format=3 uid="uid://bsrgw5gwema53"]
 
 [ext_resource type="PackedScene" uid="uid://cepy7sth3vg1f" path="res://notfinalscenes/opening_cutscene.tscn" id="1_ea2pr"]
-[ext_resource type="Script" uid="uid://mflxg4p02unn" path="res://opening_cutscene_final.gd" id="1_rrbbl"]
+[ext_resource type="Script" uid="uid://mflxg4p02unn" path="res://Scripts/opening_cutscene_final.gd" id="1_rrbbl"]
 [ext_resource type="Texture2D" uid="uid://bq8075ay37rc7" path="res://Nick O. Time Assets/openingscene/fathertimeclock/fathertimeclock1.png" id="3_w6j4t"]
 [ext_resource type="Texture2D" uid="uid://b7nr4yf8lorta" path="res://Nick O. Time Assets/openingscene/fathertimeclock/fathertimeclock2.png" id="4_os4la"]
 [ext_resource type="Texture2D" uid="uid://b8tv0vb387pr" path="res://Nick O. Time Assets/openingscene/fathertimeclock/fathertimeclock3.png" id="5_iph2q"]
@@ -72,6 +72,7 @@
 [ext_resource type="Texture2D" uid="uid://bdibnylfq6pep" path="res://Nick O. Time Assets/openingscene/fathertimeclock/fathertimeclock68.png" id="70_25ieq"]
 [ext_resource type="Texture2D" uid="uid://dom45liibdi6a" path="res://Nick O. Time Assets/openingscene/fathertimeclock/fathertimeclock69.png" id="71_q3ifo"]
 [ext_resource type="Texture2D" uid="uid://bjcl3x7tpnrwq" path="res://Nick O. Time Assets/openingscene/fathertimeclock/fathertimeclock70.png" id="72_yl4um"]
+
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_14sqr"]
 animations = [{

@@ -3,18 +3,14 @@ extends Sprite2D
 @onready var armselect = $armselect
 
 func _process(delta: float):
-	if Global.is_arms_selected:
-		armselect.play("defaultselect")
+	
+	if Global.current_head == 'mino':
+		$".".texture = preload("res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/arms/minoarms.png")
+	elif Global.current_head == 'tina':
+		$".".texture = preload("res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/arms/tinaarms.png")
+	elif Global.current_head == 'martian':
+		$".".texture = preload("res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/arms/martianarms.png")
+	elif Global.current_head == 'demon':
+		$".".texture = preload("res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/arms/demonarms.png")
 	else:
-		armselect.play("invis")
-# Called when the node enters the scene tree for the first time.
-func _input(event):
-	if event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			if is_pixel_opaque(get_local_mouse_position()):
-				Global.is_arms_selected = true
-				Global.is_head_selected = false
-				Global.is_torso_selected = false
-				Global.is_legs_selected = false
-				Global.is_charm_selected = false
-				Global.is_gun_selected = false
+		$".".texture = preload("res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/arms/arms.png")

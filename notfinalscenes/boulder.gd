@@ -2,12 +2,9 @@ extends Sprite2D
 
 func _input(event):
 	if event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and Global.is_charm_selected:
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and Global.part_selected == 'Charm':
 			if is_pixel_opaque(get_local_mouse_position()):
-				Global.clockcharm = false
-				Global.jumpcharm = false
-				Global.shadowcharm = false
-				Global.bouldercharm = true
+				Global.current_charm = 'boulder'
 				
 @onready var highlight = $highlight
 
@@ -15,7 +12,7 @@ func _ready() -> void:
 	highlight.hide()
 				
 func _process(delta: float) -> void:
-	if Global.bouldercharm:
+	if Global.current_charm == 'boulder':
 		highlight.show()
 	else:
 		highlight.hide()	

@@ -1,4 +1,4 @@
-[gd_scene load_steps=105 format=3 uid="uid://cspbaox8x6fd3"]
+[gd_scene load_steps=108 format=3 uid="uid://cspbaox8x6fd3"]
 
 [ext_resource type="Texture2D" uid="uid://bl8tvvaqka2ap" path="res://Nick O. Time Assets/nikotime/HEAD/idle/nikotimeheadidle1.png" id="1_sb5uh"]
 [ext_resource type="Script" uid="uid://b3mpjp0oclbj" path="res://notfinalscenes/loadoutselect.gd" id="1_tn4xg"]
@@ -12,63 +12,62 @@
 [ext_resource type="Texture2D" uid="uid://dxx1mv82er5il" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/head/nikotime.png" id="4_41p7n"]
 [ext_resource type="Script" uid="uid://c4jn8wrsu5uq3" path="res://notfinalscenes/options.gd" id="4_p0n81"]
 [ext_resource type="Texture2D" uid="uid://drlnbjgny6d2d" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/head/justintime.png" id="5_lhy4i"]
-[ext_resource type="Script" uid="uid://cj1othg7442t0" path="res://notfinalscenes/nikotime.gd" id="5_nwun0"]
+[ext_resource type="Script" uid="uid://cj1othg7442t0" path="res://Scripts/headselect/nikotime.gd" id="5_nwun0"]
 [ext_resource type="Texture2D" uid="uid://npgnybi5jsdb" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/outlines/default/torso.png" id="5_u7oxg"]
 [ext_resource type="Texture2D" uid="uid://bm7fv5tqtl8ub" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/selecthighlight/selecthighlight1.png" id="6_7goou"]
 [ext_resource type="Script" uid="uid://ksllycr5kksr" path="res://notfinalscenes/torsoselect.gd" id="6_8li3q"]
 [ext_resource type="Texture2D" uid="uid://cxuvm0k5sm7iq" path="res://Nick O. Time Assets/nikotime/GUN/gun.png" id="6_poe3m"]
-[ext_resource type="Texture2D" uid="uid://nqg0h4ms0cis" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/outlines/default/arms.png" id="7_8li3q"]
 [ext_resource type="Texture2D" uid="uid://sojeg43gq00t" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/selecthighlight/selecthighlight2.png" id="7_bgd1g"]
-[ext_resource type="Script" uid="uid://b56201gbhiedo" path="res://notfinalscenes/justintime.gd" id="7_nwun0"]
+[ext_resource type="Script" uid="uid://b56201gbhiedo" path="res://Scripts/headselect/justintime.gd" id="7_nwun0"]
 [ext_resource type="Texture2D" uid="uid://cld5okbhtosps" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/selecthighlight/selecthighlight3.png" id="8_16p4o"]
 [ext_resource type="Texture2D" uid="uid://ca21swkxpm8mw" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/head/archytime.png" id="8_q7e5d"]
-[ext_resource type="Script" uid="uid://di5trche1vgex" path="res://notfinalscenes/archytime.gd" id="9_byspc"]
+[ext_resource type="Script" uid="uid://di5trche1vgex" path="res://Scripts/headselect/archytime.gd" id="9_byspc"]
 [ext_resource type="Texture2D" uid="uid://dpwsyk16q3jqn" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/outlines/default/legs.png" id="9_oivvn"]
 [ext_resource type="Script" uid="uid://b43d0mop5e0aa" path="res://notfinalscenes/armselect.gd" id="9_yqtmv"]
 [ext_resource type="Texture2D" uid="uid://gyl8fc645jpm" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/head/chilltime.png" id="10_8gd2p"]
-[ext_resource type="Script" uid="uid://cnrahs2gcq645" path="res://notfinalscenes/chilltime.gd" id="11_r6yu1"]
+[ext_resource type="Script" uid="uid://cnrahs2gcq645" path="res://Scripts/headselect/chilltime.gd" id="11_r6yu1"]
 [ext_resource type="Texture2D" uid="uid://k3vw2a75iw27" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/outlines/default/charm.png" id="11_yqtmv"]
 [ext_resource type="Texture2D" uid="uid://cjodv61f87u5j" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/head/oogatime.png" id="12_ohqcc"]
 [ext_resource type="Script" uid="uid://doyemw1p4t8u4" path="res://notfinalscenes/legselect.gd" id="12_yqtmv"]
 [ext_resource type="Texture2D" uid="uid://co1f8x81qm3j8" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/outlines/default/gun.png" id="13_4nmdu"]
 [ext_resource type="Texture2D" uid="uid://fh2qqno7pqlx" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/legsfix.png" id="13_5osbr"]
-[ext_resource type="Script" uid="uid://dylwmb0ho5jcj" path="res://notfinalscenes/oogatime.gd" id="13_es346"]
+[ext_resource type="Script" uid="uid://dylwmb0ho5jcj" path="res://Scripts/headselect/oogatime.gd" id="13_es346"]
 [ext_resource type="Script" uid="uid://dfvws8ko0vb4w" path="res://notfinalscenes/charmselect.gd" id="15_4nmdu"]
 [ext_resource type="Texture2D" uid="uid://bdyrtvirnxchv" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/outlines/archytime/headarchytime.png" id="16_byspc"]
 [ext_resource type="Texture2D" uid="uid://bl61sed83pyh5" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/head/minotime.png" id="17_16p4o"]
 [ext_resource type="Script" uid="uid://c4kct30d6vm1y" path="res://notfinalscenes/gunselect.gd" id="18_4nmdu"]
-[ext_resource type="Script" uid="uid://bat2g1c4618yy" path="res://notfinalscenes/minotime.gd" id="18_8q3fq"]
+[ext_resource type="Script" uid="uid://bat2g1c4618yy" path="res://Scripts/headselect/minotime.gd" id="18_8q3fq"]
 [ext_resource type="Texture2D" uid="uid://cwxr8o6u3dbdr" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/outlines/chilltime/headchilltime.png" id="19_rybv7"]
 [ext_resource type="Texture2D" uid="uid://2g75uobd1yt0" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/head/caesartime.png" id="20_pkd0d"]
-[ext_resource type="Script" uid="uid://cfqocvxuu05ns" path="res://notfinalscenes/caesartime.gd" id="21_vkqwk"]
+[ext_resource type="Script" uid="uid://cfqocvxuu05ns" path="res://Scripts/headselect/caesartime.gd" id="21_vkqwk"]
 [ext_resource type="Texture2D" uid="uid://bto86i7vhcuka" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/head/sirtime.png" id="22_gcsra"]
-[ext_resource type="Script" uid="uid://v8dx4ui6cke1" path="res://notfinalscenes/sirtime.gd" id="23_ioa7k"]
+[ext_resource type="Script" uid="uid://v8dx4ui6cke1" path="res://Scripts/headselect/sirtime.gd" id="23_ioa7k"]
 [ext_resource type="Texture2D" uid="uid://cbl2fifctfio4" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/outlines/oogatime/oogatimehead.png" id="23_sjdyc"]
-[ext_resource type="Script" uid="uid://bbxvcok8y760x" path="res://notfinalscenes/echotime.gd" id="24_m4bje"]
+[ext_resource type="Script" uid="uid://bbxvcok8y760x" path="res://Scripts/headselect/echotime.gd" id="24_m4bje"]
 [ext_resource type="Texture2D" uid="uid://044sydavf3dk" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/head/echotime.png" id="24_ugnxx"]
 [ext_resource type="Texture2D" uid="uid://clsqv3m8chirv" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/charm/clock/clockcharm1.png" id="26_1nebg"]
 [ext_resource type="Texture2D" uid="uid://8loqx1nnvjmh" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/head/acetime.png" id="26_j2dme"]
 [ext_resource type="Script" uid="uid://pqa74ixbesx" path="res://notfinalscenes/clockcharm.gd" id="27_1nebg"]
-[ext_resource type="Script" uid="uid://vm328hu6wbp1" path="res://notfinalscenes/acetime.gd" id="27_kde3p"]
+[ext_resource type="Script" uid="uid://vm328hu6wbp1" path="res://Scripts/headselect/acetime.gd" id="27_kde3p"]
 [ext_resource type="Texture2D" uid="uid://dblmh4nglm7j2" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/charm/clock/clockcharm2.png" id="27_nmmnb"]
 [ext_resource type="Texture2D" uid="uid://be2i2p2luve2v" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/charm/clock/clockcharm3.png" id="28_1h778"]
 [ext_resource type="Texture2D" uid="uid://16y81ce8pdxo" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/outlines/minotime/headminotime.png" id="28_8q3fq"]
-[ext_resource type="Script" uid="uid://bch7ys4l7tgc0" path="res://notfinalscenes/privatetime.gd" id="28_ay0e3"]
+[ext_resource type="Script" uid="uid://bch7ys4l7tgc0" path="res://Scripts/headselect/privatetime.gd" id="28_ay0e3"]
 [ext_resource type="Texture2D" uid="uid://jgtauxecq366" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/head/privatetime.png" id="28_f7g86"]
 [ext_resource type="Texture2D" uid="uid://bx42nvyjonbd4" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/charm/clock/clockcharm4.png" id="29_6fvji"]
 [ext_resource type="Texture2D" uid="uid://1sk6jrpqy1ki" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/outlines/caesartime/caesartimehead.png" id="29_gcsra"]
 [ext_resource type="Texture2D" uid="uid://c7vvrkovmke8v" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/head/tinatime.png" id="30_7knfw"]
 [ext_resource type="FontFile" uid="uid://cy3h2y25yb67v" path="res://dialogue/StWinterPixel24BoldDemoBold-BWRz5.otf" id="30_la3hg"]
 [ext_resource type="Texture2D" uid="uid://dnksg40m8x4bh" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/charm/clock/clockcharm5.png" id="30_ye2dh"]
-[ext_resource type="Script" uid="uid://oucn8h52gj45" path="res://notfinalscenes/tinatime.gd" id="31_4lyjf"]
+[ext_resource type="Script" uid="uid://oucn8h52gj45" path="res://Scripts/headselect/tinatime.gd" id="31_4lyjf"]
 [ext_resource type="Texture2D" uid="uid://bmw0n0x27g0b5" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/charm/clock/clockcharm6.png" id="31_jvurq"]
-[ext_resource type="Script" uid="uid://cxrjqtqmkdg2y" path="res://notfinalscenes/whatcharacter.gd" id="31_m3dty"]
+[ext_resource type="Script" uid="uid://cxrjqtqmkdg2y" path="res://Scripts/headselect/whatcharacter.gd" id="31_m3dty"]
 [ext_resource type="Texture2D" uid="uid://628qv8v0jdgy" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/head/martiantime.png" id="32_cvkg0"]
 [ext_resource type="Texture2D" uid="uid://cgkkkaqejnodh" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/charm/clock/clockcharm7.png" id="32_p7k52"]
 [ext_resource type="Texture2D" uid="uid://oa815c8ie6ny" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/charm/clock/clockcharm8.png" id="33_tnb6h"]
-[ext_resource type="Script" uid="uid://co03cq2yvvag" path="res://notfinalscenes/martiantime.gd" id="33_vhyed"]
+[ext_resource type="Script" uid="uid://co03cq2yvvag" path="res://Scripts/headselect/martiantime.gd" id="33_vhyed"]
 [ext_resource type="Texture2D" uid="uid://d1klq7y1sfekj" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/head/demontime.png" id="34_olnuu"]
-[ext_resource type="Script" uid="uid://b3qrtuy3qk542" path="res://notfinalscenes/demontime.gd" id="35_okwa5"]
+[ext_resource type="Script" uid="uid://b3qrtuy3qk542" path="res://Scripts/headselect/demontime.gd" id="35_okwa5"]
 [ext_resource type="Texture2D" uid="uid://cse282tvo1pj5" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/outlines/sirtime/sirtimehead.png" id="36_ioa7k"]
 [ext_resource type="Texture2D" uid="uid://b4mxt7lw80hua" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/charm/jump/jumpcharm1.png" id="36_jvurq"]
 [ext_resource type="Texture2D" uid="uid://b55h8ycgwba10" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/outlines/echotime/echotimehead.png" id="36_p1acq"]
@@ -82,12 +81,16 @@
 [ext_resource type="Texture2D" uid="uid://bcwtheol7urg4" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/charm/shadow/shadowcharm3.png" id="44_gf6mk"]
 [ext_resource type="Script" uid="uid://rvuumno70ihi" path="res://notfinalscenes/boulder.gd" id="45_hjsqj"]
 [ext_resource type="Texture2D" uid="uid://dryxwnynoney1" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/outlines/acetime/acetimehead.png" id="54_ay0e3"]
+[ext_resource type="Texture2D" uid="uid://ridh7ms5nw20" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/charm/tapemeasurercharm.png" id="57_1c47s"]
+[ext_resource type="Script" uid="uid://cjjqtkk60flhe" path="res://notfinalscenes/tape_measurer.gd" id="58_kq7tj"]
 [ext_resource type="Texture2D" uid="uid://cucj48ivcin6n" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/outlines/default/normalcharm.png" id="62_p7k52"]
 [ext_resource type="Texture2D" uid="uid://bl7u7oj3siyac" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/outlines/privatetime/privatetimehead.png" id="63_f7g86"]
 [ext_resource type="Texture2D" uid="uid://cw431nkrjv5rm" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/outlines/martiantime/martiantimehead.png" id="66_vhyed"]
 [ext_resource type="Texture2D" uid="uid://bvlu1kitx8y14" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/outlines/demontime/demontimehead.png" id="67_okwa5"]
 [ext_resource type="Texture2D" uid="uid://c7arlhyu06j1i" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/outlines/tinatime/tinatimehead.png" id="68_4lyjf"]
 [ext_resource type="Texture2D" uid="uid://bd86w7y7w38b6" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/customizer/charm/bouldercharm.png" id="68_c0upc"]
+[ext_resource type="Texture2D" uid="uid://bkesag2bmueuy" path="res://Nick O. Time Assets/hub/loadout/loudoutselect/outlines/default/tapemeasurercharmoutline.png" id="85_kq7tj"]
+[ext_resource type="AudioStream" uid="uid://bx4a1t3gnshuo" path="res://sounds/sfx/select.wav" id="91_u5k5e"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5osbr"]
 shader = ExtResource("1_uycqc")
@@ -329,6 +332,23 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_u5k5e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_7goou")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_bgd1g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_16p4o")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_5osbr"]
 animations = [{
 "frames": [{
@@ -463,25 +483,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_xq3rp"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("7_8li3q")
-}],
-"loop": true,
-"name": &"defaultselect",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_tn4xg")
-}],
-"loop": true,
-"name": &"invis",
-"speed": 5.0
-}]
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_fs68q"]
 animations = [{
 "frames": [{
@@ -525,6 +526,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"invis",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("85_kq7tj")
+}],
+"loop": true,
+"name": &"tapeselect",
 "speed": 5.0
 }]
 
@@ -605,6 +614,14 @@ animations = [{
 "loop": true,
 "name": &"shadowcharm",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("57_1c47s")
+}],
+"loop": true,
+"name": &"tapemeasurercharm",
+"speed": 5.0
 }]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lhy4i"]
@@ -671,6 +688,7 @@ texture = ExtResource("2_xq3rp")
 script = ExtResource("4_p0n81")
 
 [node name="HeadOptions" type="Node2D" parent="CanvasLayer/Options"]
+visible = false
 
 [node name="nikotime" type="Sprite2D" parent="CanvasLayer/Options/HeadOptions"]
 position = Vector2(480, 855)
@@ -855,7 +873,6 @@ frame = 1
 frame_progress = 0.0435299
 
 [node name="CharmOptions" type="Node2D" parent="CanvasLayer/Options"]
-visible = false
 
 [node name="Clock" type="Sprite2D" parent="CanvasLayer/Options/CharmOptions"]
 position = Vector2(444, 750)
@@ -942,6 +959,18 @@ scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_rrggw")
 autoplay = "default"
 
+[node name="Tape Measurer" type="Sprite2D" parent="CanvasLayer/Options/CharmOptions"]
+position = Vector2(444, 879)
+scale = Vector2(6, 6)
+texture = ExtResource("57_1c47s")
+script = ExtResource("58_kq7tj")
+
+[node name="highlight" type="AnimatedSprite2D" parent="CanvasLayer/Options/CharmOptions/Tape Measurer"]
+position = Vector2(6.16666, 12.1667)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_u5k5e")
+autoplay = "default"
+
 [node name="Node2D" type="Node2D" parent="CanvasLayer"]
 modulate = Color(1, 1, 1, 0)
 z_index = 2000
@@ -979,12 +1008,6 @@ scale = Vector2(9, 9)
 texture = ExtResource("3_631i3")
 script = ExtResource("9_yqtmv")
 
-[node name="armselect" type="AnimatedSprite2D" parent="CanvasLayer/Node2D/Arms"]
-z_index = 10
-sprite_frames = SubResource("SpriteFrames_xq3rp")
-animation = &"invis"
-autoplay = "invis"
-
 [node name="Legs" type="Sprite2D" parent="CanvasLayer/Node2D"]
 position = Vector2(960, 540)
 scale = Vector2(9, 9)
@@ -1007,7 +1030,7 @@ script = ExtResource("15_4nmdu")
 
 [node name="charmselect" type="AnimatedSprite2D" parent="CanvasLayer/Node2D/Charm"]
 sprite_frames = SubResource("SpriteFrames_41p7n")
-animation = &"defaultselect"
+animation = &"tapeselect"
 autoplay = "invis"
 
 [node name="Control" type="Control" parent="CanvasLayer/Node2D/Charm"]
@@ -1019,7 +1042,7 @@ mouse_filter = 2
 
 [node name="animatedcharm" type="AnimatedSprite2D" parent="CanvasLayer/Node2D/Charm/Control"]
 sprite_frames = SubResource("SpriteFrames_nmmnb")
-animation = &"bouldercharm"
+animation = &"tapemeasurercharm"
 
 [node name="Gun" type="Sprite2D" parent="CanvasLayer/Node2D"]
 position = Vector2(942, 278)
@@ -1050,3 +1073,6 @@ text = "NICK O. Time"
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("31_m3dty")
+
+[node name="SelectSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("91_u5k5e")

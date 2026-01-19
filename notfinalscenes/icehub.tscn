@@ -3,7 +3,8 @@
 [ext_resource type="Script" uid="uid://crq8qnmilphn2" path="res://notfinalscenes/icehub.gd" id="1_7mj3y"]
 [ext_resource type="Material" uid="uid://db78c0rad3bfa" path="res://hub.tres" id="2_pvvt1"]
 [ext_resource type="Shader" uid="uid://dmsdlaivdn51h" path="res://outline.gdshader" id="3_ryw0d"]
-[ext_resource type="AudioStream" uid="uid://be64tdshnut8d" path="res://sounds/iceage-2.mp3" id="4_mx628"]
+[ext_resource type="AudioStream" uid="uid://be64tdshnut8d" path="res://sounds/music/iceage-2.mp3" id="4_mx628"]
+
 
 [sub_resource type="SphereMesh" id="SphereMesh_7mj3y"]
 radial_segments = 256

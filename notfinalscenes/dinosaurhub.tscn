@@ -3,7 +3,8 @@
 [ext_resource type="Script" uid="uid://c8rr4mqwob88o" path="res://notfinalscenes/dinosaurhub.gd" id="1_g73jt"]
 [ext_resource type="Texture2D" uid="uid://mjcd71b8mhe2" path="res://Nick O. Time Assets/hub/eraselect/dinosaur/mercatordinosaurage.png" id="2_dgng3"]
 [ext_resource type="Shader" uid="uid://dmsdlaivdn51h" path="res://outline.gdshader" id="3_n5fdj"]
-[ext_resource type="AudioStream" uid="uid://ch7tw0uquqnw3" path="res://sounds/dinosaur-1.mp3" id="4_dgng3"]
+[ext_resource type="AudioStream" uid="uid://ch7tw0uquqnw3" path="res://sounds/music/dinosaur-1.mp3" id="4_dgng3"]
+
 
 [sub_resource type="SphereMesh" id="SphereMesh_amvbb"]
 radial_segments = 128

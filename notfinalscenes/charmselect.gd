@@ -4,19 +4,23 @@ extends Sprite2D
 @onready var charmselect = $charmselect
 
 func _process(delta: float):
-	if Global.clockcharm:
+	if Global.current_charm == 'clock':
 		charm.play("clockcharm")
-	elif Global.jumpcharm:
+	elif Global.current_charm == 'jump':
 		charm.play("jumpcharm")
-	elif Global.shadowcharm:
+	elif Global.current_charm == 'shadow':
 		charm.play("shadowcharm")
-	elif Global.bouldercharm:
+	elif Global.current_charm == 'boulder':
 		charm.play("bouldercharm")
+	elif Global.current_charm == 'tapemeasurer':
+		charm.play("tapemeasurercharm")
 	
-	if Global.is_charm_selected:
-		if Global.clockcharm:
+	if Global.part_selected == 'Charm':
+		if Global.current_charm == 'clock':
 			charmselect.play("clockselect")
-		if Global.jumpcharm or Global.shadowcharm or Global.bouldercharm:
+		if Global.current_charm == 'tapemeasurer':
+			charmselect.play("tapeselect")
+		else:
 			charmselect.play("defaultselect")
 	else:
 		charmselect.play("invis")
@@ -25,9 +29,4 @@ func _input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			if is_pixel_opaque(get_local_mouse_position()):
-				Global.is_arms_selected = false
-				Global.is_head_selected = false
-				Global.is_torso_selected = false
-				Global.is_legs_selected = false
-				Global.is_charm_selected = true
-				Global.is_gun_selected = false
+				Global.part_selected = 'Charm'

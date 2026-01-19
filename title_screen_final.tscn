@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=4 uid="uid://bjwstmtbwwump"]
 
-[ext_resource type="Script" uid="uid://bnnsmmh0mia25" path="res://title_screen.gd" id="1_cbind"]
+[ext_resource type="Script" uid="uid://bnnsmmh0mia25" path="res://Scripts/title_screen.gd" id="1_cbind"]
 [ext_resource type="PackedScene" uid="uid://duxf4iwwplk02" path="res://notfinalscenes/title_screen.tscn" id="1_qyeod"]
 [ext_resource type="Theme" uid="uid://bfjxxqkg0w2ms" path="res://Nick O. Time Assets/nikotime/quit_theme.tres" id="4_eknjh"]
 
