@@ -39,8 +39,8 @@ animations = [{
 size = Vector2(10, 4)
 
 [node name="Bullet" type="CharacterBody2D"]
-collision_layer = 128
-collision_mask = 5
+collision_layer = 64
+collision_mask = 133
 script = ExtResource("1_v8qja")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

@@ -11,6 +11,7 @@ extends CharacterBody2D
 @export var CROUCH_SPEED_BOOST : float = 0.3
 
 @export var bullet_scene = preload("res://notfinalscenes/bullet.tscn") as PackedScene
+@export var death_screen = preload("res://deathscreen.tscn") as PackedScene
 @onready var shoot_sound = $shootsound
 @onready var shoot_timer = $ShootTimer
 
@@ -31,7 +32,59 @@ var is_crouching = false
 var is_shooting = false
 var last_direction = 1
 
+@onready var invincibility = $Invincibility
+@onready var hit_stop = $"Hit Stop"
+@onready var damaged_sound = $damaged
+var invincible := false
+var health = 3
+var hearts_list : Array[TextureRect]
+
+func _invincibility_timer(time: float) -> void:
+	var timer := get_tree().create_timer(time)
+	timer.process_mode = Node.PROCESS_MODE_ALWAYS
+	await timer.timeout
+
+
+
+func take_damage():
+	if invincible or health <= 0:
+		return
+
+	invincible = true
+	health -= 1
+	damaged_sound.play()
+	update_heart_display()
+	if health == 0:
+		get_tree().root.get_node("samurai_level_final/CanvasLayer").add_child(death_screen.instantiate())
+		self.hide()
+
+	# HIT STOP
+	get_tree().paused = true
+	hit_stop.start()
+	await hit_stop.timeout
+	get_tree().paused = false
+
+	# FLASH
+	playerbody.modulate = Color(2, 2, 2, 1)
+	await get_tree().create_timer(0.05).timeout
+	playerbody.modulate = Color(1, 1, 1, 1)
+
+	# I-FRAMES
+	invincibility.start()
+	await invincibility.timeout
+	invincible = false
+
+		
+func update_heart_display():
+	for i in range(hearts_list.size()):
+		hearts_list[i].visible = i < health
+	
+
 func _ready(): 
+	var hearts_parent = $UI/HBoxContainer
+	for child in hearts_parent.get_children():
+		hearts_list.append(child)
+	print(hearts_list)
 	
 	
 	collision_shape.disabled = false

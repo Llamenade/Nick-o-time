@@ -27,6 +27,7 @@ func _on_hit(body):
 
 	if body.has_method("receive_hit"):  # Only call receive_hit if the method exists
 		body.receive_hit()
+		
 
 	# Play the destroy animation if available
 	if sprite.sprite_frames.has_animation("bulletbreak"):

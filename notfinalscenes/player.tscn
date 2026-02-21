@@ -1,4 +1,4 @@
-[gd_scene load_steps=518 format=3 uid="uid://cstf2ss4i7s0m"]
+[gd_scene load_steps=523 format=3 uid="uid://cstf2ss4i7s0m"]
 
 [ext_resource type="Script" uid="uid://uq5fwmhfoo1r" path="res://notfinalscenes/newplayer.gd" id="1_ycdkt"]
 [ext_resource type="Texture2D" uid="uid://baq1c0nwqf1t1" path="res://Nick O. Time Assets/nikotime/TORSO/idle/nikotimetorsoidle1.png" id="2_alq1c"]
@@ -510,6 +510,18 @@
 [ext_resource type="Texture2D" uid="uid://bfm1lief3y3ci" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapewalkcrouch/nikotimecharmwalkcrouch8.png" id="507_wo5q5"]
 [ext_resource type="Texture2D" uid="uid://cgnr0m8kfu45l" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapewalkcrouch/nikotimecharmwalkcrouch9.png" id="508_s2osu"]
 [ext_resource type="Texture2D" uid="uid://wrkoffbchc4l" path="res://Nick O. Time Assets/nikotime/CHARM/Tape Measurer/tapewalkcrouch/nikotimecharmwalkcrouch10.png" id="509_tj7hb"]
+[ext_resource type="Texture2D" uid="uid://b5e52hsdnq8a2" path="res://Nick O. Time Assets/nikotime/Health/Heart.png" id="511_otaxo"]
+[ext_resource type="Texture2D" uid="uid://cipdfp7ljhrpy" path="res://Nick O. Time Assets/nikotime/Health/Heart Canisters.png" id="511_ybjn6"]
+[ext_resource type="AudioStream" uid="uid://bnppxs6p4rhqk" path="res://sounds/sfx/Hit19.wav" id="513_84q80"]
+
+[sub_resource type="Gradient" id="Gradient_h7cgi"]
+offsets = PackedFloat32Array(0, 0.68)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ybjn6"]
+gradient = SubResource("Gradient_h7cgi")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wpc7d"]
 animations = [{
@@ -3205,8 +3217,19 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D"]
+visibility_layer = 2
+z_index = 3
 texture_filter = 2
 script = ExtResource("1_ycdkt")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+z_index = -1
+z_as_relative = false
+color = Color(0.81960785, 1, 0.49803922, 1)
+energy = 0.4
+range_item_cull_mask = 2
+texture = SubResource("GradientTexture2D_ybjn6")
+texture_scale = 1.32
 
 [node name="Grapple" type="Node2D" parent="."]
 rotation = 1.5707964
@@ -3276,3 +3299,41 @@ wait_time = 0.2
 [node name="shootsound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("425_hjary")
 volume_db = -10.0
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI"]
+offset_right = 36.0
+offset_bottom = 30.0
+theme_override_constants/separation = 0
+
+[node name="Heart1" type="TextureRect" parent="UI/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("511_otaxo")
+stretch_mode = 2
+
+[node name="Heart2" type="TextureRect" parent="UI/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("511_otaxo")
+stretch_mode = 2
+
+[node name="Heart3" type="TextureRect" parent="UI/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("511_otaxo")
+stretch_mode = 2
+
+[node name="Canisters" type="TextureRect" parent="UI"]
+offset_bottom = 40.0
+texture = ExtResource("511_ybjn6")
+expand_mode = 1
+stretch_mode = 2
+
+[node name="damaged" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("513_84q80")
+
+[node name="Hit Stop" type="Timer" parent="."]
+process_mode = 3
+wait_time = 0.05
+
+[node name="Invincibility" type="Timer" parent="."]
+process_mode = 3
